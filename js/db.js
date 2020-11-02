@@ -4,8 +4,8 @@ console.log("Database loaded...");
 //     return whatString.replace("      ", "");
 // }
 
-const DATABASE = {
-    q001: {
+const DATABASE = [
+    {
         question:
             `
                 // How do you add something to the beginning and end of an array?
@@ -27,9 +27,9 @@ const DATABASE = {
 
                 console.log(myArray);
             `,
-       source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
+        source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
     },
-    q002: {
+    {
         question:
             `
                 // How do you create a private variable in JavaScript?
@@ -61,8 +61,8 @@ const DATABASE = {
                  * /
             `,
         source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
-     },
-     q003: {
+    },
+    {
         question:
             `
                 // What is the output?
@@ -86,8 +86,8 @@ const DATABASE = {
                 ===> 3
             `,
         source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
-     },
-     q004: {
+    },
+    {
         question:
             `
                 // What is the output?
@@ -100,8 +100,8 @@ const DATABASE = {
                 // 2. typeof "number" is turned to "string"
             `,
         source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
-     },
-     q005: {
+    },
+    {
         question:
             `
                 // What is the output?
@@ -129,52 +129,49 @@ const DATABASE = {
                 var stoleSecretIdenity = hero.getSecretIdentity.bind(hero);
             `,
         source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
-     }
-}
+    },
+    {
+        question:
+            `
+                // what is the order of the output of the letters and why?
 
-// https://www.geeksforgeeks.org/how-to-iterate-over-a-javascript-object/
-for (let key in DATABASE) { 
-    if (DATABASE.hasOwnProperty(key)) { 
-        // console.log(DATABASE[key].question);
-        // console.log(DATABASE[key].answer);
-        // console.log(key);
+                console.log('a');
+        
+                let timmy = setTimeout(function () {
+                    console.log('b');
+                }, 0);
+        
+                console.log('c');
+            `,
+        answer:
+            `
+                ===> a
+                ===> c
+                ===> b
+            `,
+        source: "https://www.youtube.com/watch?v=USbiLiF9NDY&list=PLyuRouwmQCjlLW9NjqoBbf9eVaFX4F9UZ"
+    },
+    {
+        question:
+            `
+                // What is the output?
 
-        // document.querySelector("main").innerHTML +=
-        // `
-        //     <div><pre>
-        //         ${(DATABASE[key].question)}
-        //     </pre></div>
+                let num = 0;
+                async function increment() {
+                    num += await 2;
+                    console.log(num);
+                }
+                increment();
+                num += 1;
+                console.log(num);
+            `,
+        answer:
+            `
+                ===> 1
+                ===> 2
+            `,
+        source: "https://www.youtube.com/watch?v=j1ykOrC2f0A&list=PLyuRouwmQCjlLW9NjqoBbf9eVaFX4F9UZ&index=2"
+    }
+]
 
-        //     <div><pre>
-        //         ${DATABASE[key].answer}
-        //     </pre></div>
-        // `
-
-        document.querySelector("#accordion").innerHTML +=
-        `
-        ${key}
-            <div class="card">
-                <div class="card-header" id="heading-${key}">
-                    <h5 class="mb-0">
-                        <div class="collapsed" data-toggle="collapse" data-target="#${key}" aria-expanded="false" aria-controls="${key}">
-                            <pre>
-                                ${(DATABASE[key]).question}
-                            </pre>
-                        </div>
-                    </h5>
-                </div>
-
-                <div id="${key}" class="collapse" aria-labelledby="${key}" data-parent="#accordion">
-                    <div class="card-body">
-                        <pre>
-                            ${(DATABASE[key]).answer}
-                        </pre>
-
-                        <a href="${(DATABASE[key]).source}" title="Source for this question">Link to the source</a>
-                    </div>
-                </div>
-            </div>
-        `;
-    } 
-} 
 

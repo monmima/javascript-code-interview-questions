@@ -9,9 +9,27 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 
     <style>
+        @font-face {
+            font-family: roboto;
+            src: url(fonts/roboto-regular-webfont.woff2);
+        }
+        body {
+            font-family: roboto;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 20px;
+        }
         header {
-            display: flex;
+            display: flex;  
             justify-content: center;
+        }
+        .buttons {
+            padding: 20px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
         }
         .card-header {
             cursor: pointer;
@@ -29,6 +47,13 @@
             <!-- code injected here -->
     
         </div>
+
+        <div class="buttons">
+            <button class="btn btn-primary" id="left-arrow"><===</button>
+            <div id="question-number">Question</div>
+            <button class="btn btn-primary" id="right-arrow">===></button>
+        </div>
+
     </main>
 
     <!--LIBRAIRIES JS-->
@@ -37,5 +62,89 @@
     <script src="./js/jquery-3.3.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+
+    <script>
+        ////////////
+
+        let currentIndex = 0;
+
+        function printQuestion() {
+            document.querySelector("#accordion").innerHTML =
+            `
+                <div class="card">
+                    <div class="card-header" id="heading-${currentIndex}">
+                        <h5 class="mb-0">
+                            <div class="collapsed" data-toggle="collapse" data-target="#key-${currentIndex}" aria-expanded="false" aria-controls="key-${currentIndex}">
+                                <pre>
+                                    ${DATABASE[currentIndex].question}
+                                </pre>
+                            </div>
+                        </h5>
+                    </div>
+
+                    <div id="key-${currentIndex}" class="collapse" aria-labelledby="key-${currentIndex}" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre>
+                                ${DATABASE[currentIndex].answer}
+                            </pre>
+
+                            <a href="${DATABASE[currentIndex].source}" title="Source for this question">Link to the source</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function updateQuestionNumber() {
+            document.querySelector("#question-number").innerHTML = `${currentIndex + 1} / ${DATABASE.length}`;
+        }
+
+        function handleArrowEvents(whatDirection) {
+            if (whatDirection === "left") {
+                if (currentIndex - 1 >= 0) {
+                    currentIndex = currentIndex - 1;
+                }
+            } else {
+                if (currentIndex + 1 <= DATABASE.length - 1) {
+                    currentIndex = currentIndex + 1;
+                }
+            }
+
+            printQuestion();
+            updateQuestionNumber();
+
+            // console.log(whatDirection, currentIndex, DATABASE.length);
+        }
+
+        // event handlers
+        document.querySelector("#left-arrow").addEventListener("click", function() {
+            handleArrowEvents("left");
+        });
+
+        document.querySelector("#right-arrow").addEventListener("click", function() {
+            handleArrowEvents("right");
+        });
+
+        // touches du clavier
+        document.addEventListener("keydown", function(e) {
+            console.log(e.key);
+
+            if (e.key === "ArrowLeft") {
+                handleArrowEvents("left");
+            }
+
+            else if (e.key === "ArrowRight") {
+                handleArrowEvents("right");
+            }
+
+
+        });
+
+        // function calls
+
+        printQuestion();
+        updateQuestionNumber();
+
+    </script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 0;
+        async function increment() {
+            num = num + await 2;
+            console.log(num);
+        }
+        increment();
+        num += 1;
+        console.log(num);
+
+
+    </script>
+</body>
+</html>
