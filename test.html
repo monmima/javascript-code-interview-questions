@@ -7,15 +7,27 @@
 </head>
 <body>
     <script>
-        let num = 0;
-        async function increment() {
-            num = num + await 2;
-            console.log(num);
-        }
-        increment();
-        num += 1;
-        console.log(num);
 
+// IIFE
+// The way the reveal works is because these are declared insided of a function, they cease to exist after the function has finished running
+let myModule = (function(){
+    let _data = [];
+    let _render = function() {
+        // e.g. click listeners for _add and _remove
+    }
+    let _add = function() {
+
+    }
+    let _remove = function() {
+
+    }
+    return {
+        render: _render
+    }
+})();
+
+myModule.render(); // will work
+myModule._add(); // will fail
 
     </script>
 </body>

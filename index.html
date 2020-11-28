@@ -24,6 +24,10 @@
             display: flex;  
             justify-content: center;
         }
+        textarea {
+            margin-bottom: 20px;
+            width: 100%;
+        }
         .buttons {
             padding: 20px;
             
@@ -42,17 +46,19 @@
     </header>
 
     <main class="container">
-        <div id="accordion">
-
-            <!-- code injected here -->
-    
-        </div>
-
         <div class="buttons">
             <button class="btn btn-primary" id="left-arrow"><===</button>
             <div id="question-number">Question</div>
             <button class="btn btn-primary" id="right-arrow">===></button>
         </div>
+
+        <div id="accordion">
+
+            <!-- code injected here -->
+    
+        </div>
+        
+        <textarea name="notes" id="notes" cols="30" rows="5" placeholder="Text notes here if you need"></textarea>
 
     </main>
 
@@ -76,7 +82,7 @@
                         <h5 class="mb-0">
                             <div class="collapsed" data-toggle="collapse" data-target="#key-${currentIndex}" aria-expanded="false" aria-controls="key-${currentIndex}">
                                 <pre>
-                                    ${DATABASE[currentIndex].question}
+                                    ${DATABASE[currentIndex].questionPre}
                                 </pre>
                             </div>
                         </h5>
@@ -85,7 +91,7 @@
                     <div id="key-${currentIndex}" class="collapse" aria-labelledby="key-${currentIndex}" data-parent="#accordion">
                         <div class="card-body">
                             <pre>
-                                ${DATABASE[currentIndex].answer}
+                                ${DATABASE[currentIndex].answerPre}
                             </pre>
 
                             <a href="${DATABASE[currentIndex].source}" title="Source for this question">Link to the source</a>

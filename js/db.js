@@ -6,13 +6,13 @@ console.log("Database loaded...");
 
 const DATABASE = [
     {
-        question:
+        questionPre:
             `
                 // How do you add something to the beginning and end of an array?
 
                 var myArray = [1, 2, 3, 4];
             `,
-        answer:
+        answerPre:
             `
                 // ES5
                 myArray.unshift("start");
@@ -30,7 +30,7 @@ const DATABASE = [
         source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
     },
     {
-        question:
+        questionPre:
             `
                 // How do you create a private variable in JavaScript?
 
@@ -38,7 +38,7 @@ const DATABASE = [
                     var private = "Super secret code";
                 }
             `,
-        answer:
+        answerPre:
             `
                 // The only way to do that is to mess with the scope.
 
@@ -63,7 +63,7 @@ const DATABASE = [
         source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
     },
     {
-        question:
+        questionPre:
             `
                 // What is the output?
 
@@ -79,7 +79,7 @@ const DATABASE = [
                 }
                 outer();
             `,
-        answer:
+        answerPre:
             `
                 // This has to do with closures.
 
@@ -88,13 +88,13 @@ const DATABASE = [
         source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
     },
     {
-        question:
+        questionPre:
             `
                 // What is the output?
 
                 ===> console.log(typeof typeof 1);
             `,
-        answer:
+        answerPre:
             `
                 // 1. typeof 1 is turned to "number"
                 // 2. typeof "number" is turned to "string"
@@ -102,7 +102,7 @@ const DATABASE = [
         source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
     },
     {
-        question:
+        questionPre:
             `
                 // What is the output?
 
@@ -118,7 +118,7 @@ const DATABASE = [
                 console.log(stoleSecretIdentity);
                 console.log(hero.getSecretIdentity());
             `,
-        answer:
+        answerPre:
             `
                 ===> undefined
                 ===> John Doe
@@ -131,7 +131,7 @@ const DATABASE = [
         source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
     },
     {
-        question:
+        questionPre:
             `
                 // what is the order of the output of the letters and why?
 
@@ -143,7 +143,7 @@ const DATABASE = [
         
                 console.log('c');
             `,
-        answer:
+        answerPre:
             `
                 ===> a
                 ===> c
@@ -152,7 +152,7 @@ const DATABASE = [
         source: "https://www.youtube.com/watch?v=USbiLiF9NDY&list=PLyuRouwmQCjlLW9NjqoBbf9eVaFX4F9UZ"
     },
     {
-        question:
+        questionPre:
             `
                 // What is the output?
 
@@ -165,12 +165,57 @@ const DATABASE = [
                 num += 1;
                 console.log(num);
             `,
-        answer:
+        answerPre:
             `
                 ===> 1
                 ===> 2
             `,
         source: "https://www.youtube.com/watch?v=j1ykOrC2f0A&list=PLyuRouwmQCjlLW9NjqoBbf9eVaFX4F9UZ&index=2"
+    },
+    {
+        questionPre:
+            `
+                // Revealing module pattern
+                // Turn this object literal into a module that only exposes the render method
+                
+                let myModule = {
+                    data: [],
+                    render: () => {
+                
+                    },
+                    add: () => {
+                
+                    },
+                    remove: () => {
+                
+                    }
+                };
+            `,
+        answerPre:
+            `
+                // IIFE
+                // The way the reveal works is because these are declared insided of a function, they cease to exist after the function has finished running
+
+                let myModule = (function(){
+                    let _data = [];
+                    let _render = function() {
+                        // e.g. click listeners for _add and _remove
+                    }
+                    let _add = function() {
+                
+                    }
+                    let _remove = function() {
+                
+                    }
+                    return {
+                        render: _render
+                    }
+                })();
+                
+                myModule.render(); // will work
+                myModule._add(); // will fail
+            `,
+        source: "https://www.youtube.com/watch?v=e0u8z-9aAEw&list=PLyuRouwmQCjlLW9NjqoBbf9eVaFX4F9UZ&index=3"
     }
 ]
 
