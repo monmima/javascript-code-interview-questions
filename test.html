@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .test {
+            animation: spin 3s infinite;
+            background-color: lightgreen;
+            height: 10px;
+            width: 100px;
+        }
+
+    </style>
 </head>
 <body>
+
+    <div class="test">
+
+    </div>
     <script>
 
-// IIFE
-// The way the reveal works is because these are declared insided of a function, they cease to exist after the function has finished running
-let myModule = (function(){
-    let _data = [];
-    let _render = function() {
-        // e.g. click listeners for _add and _remove
-    }
-    let _add = function() {
+        var number = 10.3416;
+        var newNumber = number.toFixed(2);
 
-    }
-    let _remove = function() {
+        console.log(newNumber);
 
-    }
-    return {
-        render: _render
-    }
-})();
-
-myModule.render(); // will work
-myModule._add(); // will fail
 
     </script>
 </body>

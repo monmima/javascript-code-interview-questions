@@ -78,25 +78,23 @@
             document.querySelector("#accordion").innerHTML =
             `
                 <div class="card">
+
                     <div class="card-header" id="heading-${currentIndex}">
                         <h5 class="mb-0">
                             <div class="collapsed" data-toggle="collapse" data-target="#key-${currentIndex}" aria-expanded="false" aria-controls="key-${currentIndex}">
-                                <pre>
-                                    ${DATABASE[currentIndex].questionPre}
-                                </pre>
+
+                                ${DATABASE[currentIndex].question}
+
                             </div>
                         </h5>
                     </div>
 
                     <div id="key-${currentIndex}" class="collapse" aria-labelledby="key-${currentIndex}" data-parent="#accordion">
                         <div class="card-body">
-                            <pre>
-                                ${DATABASE[currentIndex].answerPre}
-                            </pre>
-
-                            <a href="${DATABASE[currentIndex].source}" title="Source for this question">Link to the source</a>
+                            <pre>${DATABASE[currentIndex].answer}</pre>
                         </div>
                     </div>
+
                 </div>
             `;
         }
@@ -142,7 +140,6 @@
             else if (e.key === "ArrowRight") {
                 handleArrowEvents("right");
             }
-
 
         });
 

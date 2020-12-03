@@ -6,217 +6,243 @@ console.log("Database loaded...");
 
 const DATABASE = [
     {
-        questionPre:
+        question:
             `
-                // How do you add something to the beginning and end of an array?
+                Node.js: How do you load the module for writing/reading files?
+            `,
+        answer:
+`var fs = require("fs");`
+    },
+    {
+        question:
+            `
+                Node.js: How do you read a file?
+            `,
+        answer:
+`// blocking way
+var data = fs.readFileSync("file.txt", "utf8");`
+    },
+    {
+        question:
+            `
+                Node.js: How do you write a file?
+            `,
+        answer:
+`fs.writeFileSync("new-file.txt", "File content.");`
+    },
+    {
+        question:
+            `
+                JS: How do you add something to the beginning of an array?
+
+                <hr>
 
                 var myArray = [1, 2, 3, 4];
             `,
-        answerPre:
-            `
-                // ES5
-                myArray.unshift("start");
-                myArray.push("end);
+        answer:
+`// ES5
+myArray.unshift("start");
 
-                console.log(myArray);
+// ES6
+// Spread operator
 
-                // ES6
-                // Spread operator
-
-                myArray = ["start", ...myArray, "end"];
-
-                console.log(myArray);
-            `,
-        source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
+myArray = ["start", ...myArray];`
     },
     {
-        questionPre:
+        question:
             `
-                // How do you create a private variable in JavaScript?
+                JS: How do you add something to the end of an array?
 
-                function secretVariable() {
-                    var private = "Super secret code";
-                }
+                <hr>
+
+                var myArray = [1, 2, 3, 4];
             `,
-        answerPre:
-            `
-                // The only way to do that is to mess with the scope.
+        answer:
+`// ES5
+myArray.push("end);
 
-                function secretVariable() {
-                    var private = "Super secret code";
-                    return function() {
-                        return private;
-                    }
-                }
+// ES6
+// Spread operator
 
-                var getPrivateVariable = secretVariable();
-
-                console.log(getPrivateVariable());
-
-                /**
-                 * The following would just return "undefined".
-                 * 
-                 * console.log(secretVariable());
-                 * 
-                 * /
-            `,
-        source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
+myArray = [...myArray, "end"];
+`
     },
     {
-        questionPre:
+        question:
             `
-                // What is the output?
+                JS: How do you reverse a string?
 
-                var num = 4;
-                function outer() {
-                    var num = 2;
-                    function inner() {
-                        num++;
-                        var num = 3;
-                        console.log(num)
-                    }
-                    inner();
-                }
-                outer();
-            `,
-        answerPre:
-            `
-                // This has to do with closures.
+                <hr>
 
-                ===> 3
+                var myString = "1234";
             `,
-        source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
+        answer:
+`var newString = myString.split("").reverse().join("")`
     },
-    {
-        questionPre:
-            `
-                // What is the output?
 
-                ===> console.log(typeof typeof 1);
-            `,
-        answerPre:
+    {
+        question:
             `
-                // 1. typeof 1 is turned to "number"
-                // 2. typeof "number" is turned to "string"
+                JS: What is the output?
+
+                <hr>
+
+<pre>if (27) {
+    console.log(true);
+} else {
+    console.log(false);
+}</pre>
             `,
-        source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
+        answer:
+`// true
+All numbers other than zero are "truthy".
+They evaluate to "true"`
     },
+
     {
-        questionPre:
+        question:
             `
-                // What is the output?
-
-                var hero = {
-                    _name: "John Doe",
-                    getSecretIdentity: function() {
-                        return this._name;
-                    }
-                };
-
-                var stoleSecretIdenity = hero.getSecretIdentity;
-
-                console.log(stoleSecretIdentity);
-                console.log(hero.getSecretIdentity());
+                JS: Create a simple Class.
             `,
-        answerPre:
-            `
-                ===> undefined
-                ===> John Doe
-
-                // To get John Doe twice, you need to use the bind method.
-                // Because we set it to a new variable, you need you have that bind.
-
-                var stoleSecretIdenity = hero.getSecretIdentity.bind(hero);
-            `,
-        source: "https://www.youtube.com/watch?v=6Wzj7kxfRdI"
-    },
-    {
-        questionPre:
-            `
-                // what is the order of the output of the letters and why?
-
-                console.log('a');
-        
-                let timmy = setTimeout(function () {
-                    console.log('b');
-                }, 0);
-        
-                console.log('c');
-            `,
-        answerPre:
-            `
-                ===> a
-                ===> c
-                ===> b
-            `,
-        source: "https://www.youtube.com/watch?v=USbiLiF9NDY&list=PLyuRouwmQCjlLW9NjqoBbf9eVaFX4F9UZ"
-    },
-    {
-        questionPre:
-            `
-                // What is the output?
-
-                let num = 0;
-                async function increment() {
-                    num += await 2;
-                    console.log(num);
-                }
-                increment();
-                num += 1;
-                console.log(num);
-            `,
-        answerPre:
-            `
-                ===> 1
-                ===> 2
-            `,
-        source: "https://www.youtube.com/watch?v=j1ykOrC2f0A&list=PLyuRouwmQCjlLW9NjqoBbf9eVaFX4F9UZ&index=2"
-    },
-    {
-        questionPre:
-            `
-                // Revealing module pattern
-                // Turn this object literal into a module that only exposes the render method
-                
-                let myModule = {
-                    data: [],
-                    render: () => {
-                
-                    },
-                    add: () => {
-                
-                    },
-                    remove: () => {
-                
-                    }
-                };
-            `,
-        answerPre:
-            `
-                // IIFE
-                // The way the reveal works is because these are declared insided of a function, they cease to exist after the function has finished running
-
-                let myModule = (function(){
-                    let _data = [];
-                    let _render = function() {
-                        // e.g. click listeners for _add and _remove
-                    }
-                    let _add = function() {
-                
-                    }
-                    let _remove = function() {
-                
-                    }
-                    return {
-                        render: _render
-                    }
-                })();
-                
-                myModule.render(); // will work
-                myModule._add(); // will fail
-            `,
-        source: "https://www.youtube.com/watch?v=e0u8z-9aAEw&list=PLyuRouwmQCjlLW9NjqoBbf9eVaFX4F9UZ&index=3"
+        answer:
+`class Test {
+    constructor(string) {
+        this.string = string;
     }
+
+    printString() {
+        console.log(this.string);
+    }
+}`
+    },
+
+    {
+        question:
+            `
+                JS: Create an instance of this class.
+                <hr>
+<pre>
+class Test {
+    constructor(string) {
+        this.string = string;
+    }
+
+    printString() {
+        console.log(this.string);
+    }
+}
+</pre>
+            `,
+        answer:
+`let inst = new Test("myString");`
+    },
+
+    {
+        question:
+            `
+                JS: Create a call to the method.
+                <hr>
+<pre>
+class Test {
+    constructor(string) {
+        this.string = string;
+    }
+
+    printString() {
+        console.log(this.string);
+    }
+}
+
+let inst = new Test("myString");
+</pre>
+            `,
+        answer:
+`inst.printString();`
+    },
+
+    {
+        question:
+            `
+                JS: Store a random number in the variable.
+                <hr>
+<pre>
+let myVar;
+</pre>
+            `,
+        answer:
+`myVar = Math.floor(Math.random() * 10 + 1);`
+    },
+
+    {
+        question:
+            `
+                JS: Keep only two decimals to the number.
+                <hr>
+<pre>
+var number = 10.3416;
+</pre>
+            `,
+        answer:
+`var newNumber = number.toFixed(2);`
+    },
+
+    {
+        question:
+            `
+                JS: Draw a CSS circle.
+            `,
+        answer:
+`.circle {
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+}`
+    },
+    
+    {
+        question:
+            `
+                JS: Create a simple keyframe spin animation.
+            `,
+        answer:
+`@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}`
+    },
+
+    {
+        question:
+            `
+                JS: Add the animation to the "test" class.
+                <hr>
+<pre>@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.test {
+    background-color: lightgreen;
+    height: 10px;
+    width: 100px;
+}</pre>
+            `,
+        answer:
+`.test {
+    ***animation: spin 3s infinite;***
+    background-color: lightgreen;
+    height: 10px;
+    width: 100px;
+}`
+    },
+
 ]
-
-
