@@ -1,9 +1,5 @@
 console.log("Database loaded...");
 
-// function replaceWhiteSpaces (whatString) {
-//     return whatString.replace("      ", "");
-// }
-
 const DATABASE = [
     {
         question:

@@ -48,7 +48,7 @@
 </head>
 <body>
     <header>
-        <h1>Super Coding Interview Questions</h1>
+        <h1>Super Coding Questions</h1>
     </header>
 
     <main class="container">
@@ -83,6 +83,19 @@
     <script>
         ////////////
 
+        class Dice {
+            constructor(number) {
+                number = this.number
+            }
+
+            rollDice(number) {
+                return Math.floor(Math.random() * number + 1);
+            }
+        }
+
+        let dice = new Dice(10);
+        console.log(dice.rollDice(DATABASE.length));
+
         let currentIndex = 0;
 
         function printQuestion() {
@@ -111,15 +124,28 @@
         }
 
         function updateQuestionNumber() {
-            document.querySelector("#question-number-a").value = `${currentIndex + 1}`;
+            document.querySelector("#question-number-a").value = `${currentIndex}`;
             document.querySelector("#question-number-b").innerHTML = `${DATABASE.length}`;
         }
 
         function handleInputChange() {
-            currentIndex = document.querySelector("input").value;
-            // console.log(document.querySelector("input").value);
+            // if you are within the limit of the database
+            if (document.querySelector("input").value <= DATABASE.length && document.querySelector("input").value > 0) {
+                console.log(true);
+                currentIndex = document.querySelector("input").value;
+            // if you are over the limit
+            } else if (document.querySelector("input").value > DATABASE.length) {
+                console.log(false);
+                currentIndex = DATABASE.length - 1;
+                console.log(DATABASE.length);
+            // below zero
+            } else {
+                currentIndex = 1;
+            }
+
+            // currentIndex = document.querySelector("input").value;
+
             main();
- 
         }
 
         function handleArrowEvents(whatDirection) {
