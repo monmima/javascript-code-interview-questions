@@ -41,6 +41,9 @@
         .card-header {
             cursor: pointer;
         }
+        .collapse, .collapsed {
+            overflow-x: scroll;
+        }
     </style>
 </head>
 <body>
@@ -52,7 +55,7 @@
         <div class="buttons">
             <button class="btn btn-primary" id="left-arrow"><===</button>
             <div>
-                <input id="question-number-a" type="number" min="1" max="">
+                <input id="question-number-a" type="number" min="0" max="">
                 <span> / </span>
                 <span id="question-number-b">0</span>
             </div>
@@ -80,7 +83,7 @@
     <script>
         ////////////
 
-        let currentIndex = 1;
+        let currentIndex = 0;
 
         function printQuestion() {
             document.querySelector("#accordion").innerHTML =
@@ -108,7 +111,7 @@
         }
 
         function updateQuestionNumber() {
-            document.querySelector("#question-number-a").value = `${currentIndex}`;
+            document.querySelector("#question-number-a").value = `${currentIndex + 1}`;
             document.querySelector("#question-number-b").innerHTML = `${DATABASE.length}`;
         }
 
