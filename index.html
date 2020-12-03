@@ -31,7 +31,7 @@
             margin-bottom: 20px;
             width: 100%;
         }
-        .buttons {
+        .menu {
             padding: 20px;
             
             display: flex;
@@ -52,21 +52,13 @@
     </header>
 
     <main class="container">
-        <div class="buttons">
-            <button class="btn btn-primary" id="left-arrow"><===</button>
-            <div>
-                <input id="question-number-a" type="number" min="0" max="">
-                <span> / </span>
-                <span id="question-number-b">0</span>
-            </div>
-
-            <button class="btn btn-primary" id="right-arrow">===></button>
+        <div class="menu">
+            <div id="question-number"><!-- code injected here --></div>
+            <button class="btn btn-primary" id="next">Next</button>
         </div>
 
         <div id="accordion">
-
             <!-- code injected here -->
-    
         </div>
         
         <textarea name="notes" id="notes" cols="30" rows="5" placeholder="Text notes here if you need"></textarea>
@@ -96,26 +88,22 @@
         let dice = new Dice(10);
         console.log(dice.rollDice(DATABASE.length));
 
-        let currentIndex = 0;
-
-        function printQuestion() {
+        function printQuestion(whatNumber) {
             document.querySelector("#accordion").innerHTML =
             `
                 <div class="card">
 
-                    <div class="card-header" id="heading-${currentIndex}">
+                    <div class="card-header" id="heading-${whatNumber}">
                         <h5 class="mb-0">
-                            <div class="collapsed" data-toggle="collapse" data-target="#key-${currentIndex}" aria-expanded="false" aria-controls="key-${currentIndex}">
-
-                                ${DATABASE[currentIndex].question}
-
+                            <div class="collapsed" data-toggle="collapse" data-target="#key-${whatNumber}" aria-expanded="false" aria-controls="key-${whatNumber}">
+                                ${DATABASE[whatNumber].question}
                             </div>
                         </h5>
                     </div>
 
-                    <div id="key-${currentIndex}" class="collapse" aria-labelledby="key-${currentIndex}" data-parent="#accordion">
+                    <div id="key-${whatNumber}" class="collapse" aria-labelledby="key-${whatNumber}" data-parent="#accordion">
                         <div class="card-body">
-                            <pre>${DATABASE[currentIndex].answer}</pre>
+                            <pre>${DATABASE[whatNumber].answer}</pre>
                         </div>
                     </div>
 
@@ -123,79 +111,22 @@
             `;
         }
 
-        function updateQuestionNumber() {
-            document.querySelector("#question-number-a").value = `${currentIndex}`;
-            document.querySelector("#question-number-b").innerHTML = `${DATABASE.length}`;
+        function updateQuestionNumber(whatNumber) {
+            document.querySelector("#question-number").innerHTML = `${whatNumber} / ${DATABASE.length}`;
         }
 
-        function handleInputChange() {
-            // if you are within the limit of the database
-            if (document.querySelector("input").value <= DATABASE.length && document.querySelector("input").value > 0) {
-                console.log(true);
-                currentIndex = document.querySelector("input").value;
-            // if you are over the limit
-            } else if (document.querySelector("input").value > DATABASE.length) {
-                console.log(false);
-                currentIndex = DATABASE.length - 1;
-                console.log(DATABASE.length);
-            // below zero
-            } else {
-                currentIndex = 1;
-            }
-
-            // currentIndex = document.querySelector("input").value;
-
+        // event listeners
+        document.querySelector("button").addEventListener("click", function () {
             main();
-        }
-
-        function handleArrowEvents(whatDirection) {
-            if (whatDirection === "left") {
-                if (currentIndex - 1 >= 0) {
-                    currentIndex = currentIndex - 1;
-                }
-            } else {
-                if (currentIndex + 1 <= DATABASE.length - 1) {
-                    currentIndex = currentIndex + 1;
-                }
-            }
-
-            main();
-
-            // console.log(whatDirection, currentIndex, DATABASE.length);
-        }
-
-        // event handlers
-        document.querySelector("#left-arrow").addEventListener("click", function() {
-            handleArrowEvents("left");
-        });
-
-        document.querySelector("#right-arrow").addEventListener("click", function() {
-            handleArrowEvents("right");
-        });
-
-        // touches du clavier
-        document.addEventListener("keydown", function(e) {
-            // console.log(e.key);
-
-            if (e.key === "ArrowLeft") {
-                handleArrowEvents("left");
-            }
-
-            else if (e.key === "ArrowRight") {
-                handleArrowEvents("right");
-            }
-
-        });
-
-        document.querySelector("input").addEventListener("change", function() {
-            handleInputChange();
         });
 
         // function calls
 
         function main() {
-            printQuestion();
-            updateQuestionNumber();
+            const number = dice.rollDice(DATABASE.length - 1);
+
+            printQuestion(number);
+            updateQuestionNumber(number);
         }
 
         main();

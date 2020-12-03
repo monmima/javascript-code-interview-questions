@@ -55,7 +55,7 @@ myArray = ["start", ...myArray];`
             `,
         answer:
 `// ES5
-myArray.push("end);
+myArray.push("end");
 
 // ES6
 // Spread operator
