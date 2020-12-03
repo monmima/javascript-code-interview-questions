@@ -24,6 +24,9 @@
             display: flex;  
             justify-content: center;
         }
+        input {
+            width: 60px;
+        }
         textarea {
             margin-bottom: 20px;
             width: 100%;
@@ -48,7 +51,12 @@
     <main class="container">
         <div class="buttons">
             <button class="btn btn-primary" id="left-arrow"><===</button>
-            <div id="question-number">Question</div>
+            <div>
+                <input id="question-number-a" type="number" min="1" max="">
+                <span> / </span>
+                <span id="question-number-b">0</span>
+            </div>
+
             <button class="btn btn-primary" id="right-arrow">===></button>
         </div>
 
@@ -72,7 +80,7 @@
     <script>
         ////////////
 
-        let currentIndex = 0;
+        let currentIndex = 1;
 
         function printQuestion() {
             document.querySelector("#accordion").innerHTML =
@@ -100,7 +108,15 @@
         }
 
         function updateQuestionNumber() {
-            document.querySelector("#question-number").innerHTML = `${currentIndex + 1} / ${DATABASE.length}`;
+            document.querySelector("#question-number-a").value = `${currentIndex}`;
+            document.querySelector("#question-number-b").innerHTML = `${DATABASE.length}`;
+        }
+
+        function handleInputChange() {
+            currentIndex = document.querySelector("input").value;
+            // console.log(document.querySelector("input").value);
+            main();
+ 
         }
 
         function handleArrowEvents(whatDirection) {
@@ -114,8 +130,7 @@
                 }
             }
 
-            printQuestion();
-            updateQuestionNumber();
+            main();
 
             // console.log(whatDirection, currentIndex, DATABASE.length);
         }
@@ -131,7 +146,7 @@
 
         // touches du clavier
         document.addEventListener("keydown", function(e) {
-            console.log(e.key);
+            // console.log(e.key);
 
             if (e.key === "ArrowLeft") {
                 handleArrowEvents("left");
@@ -143,10 +158,18 @@
 
         });
 
+        document.querySelector("input").addEventListener("change", function() {
+            handleInputChange();
+        });
+
         // function calls
 
-        printQuestion();
-        updateQuestionNumber();
+        function main() {
+            printQuestion();
+            updateQuestionNumber();
+        }
+
+        main();
 
     </script>
 </body>

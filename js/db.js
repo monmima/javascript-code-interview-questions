@@ -245,4 +245,33 @@ var number = 10.3416;
 }`
     },
 
+    {
+        question:
+            `
+                JS: What is the output?
+                <hr>
+<pre>if (true) {
+    var varVar = 1;
+    let letVar = 2;
+}
+
+console.log(varVar);
+console.log(letVar);</pre>
+            `,
+        answer:
+`1
+Uncaught ReferenceError: letVar is not defined`
+    },
+
+    {
+        question:
+            `
+                JS: How can you listen to every keypress?
+            `,
+        answer:
+`document.addEventListener("keydown", function(e) {
+    console.log(e.key);
+});`
+    },
+
 ]
