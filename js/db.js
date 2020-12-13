@@ -634,7 +634,7 @@ console.log(multiply(100, 2));
     {
         question:
             `
-            JS: Convert <code>num</code> to a string.
+            JS: Convert a variable named <code>num</code> to a string.
             `,
         answer:
 `const num = num.toString();
@@ -1134,6 +1134,15 @@ a:active`
             `HTML: How do you disable tracking when you open a page through a new tab?`,
         answer:
 `&lt;a href="www.site.com" target="_blank" rel="noopener noreferrer" title=""&gt;`
+    },
+    ///
+    {
+        question:
+            `JS: Erase one item starting from index 0 in the array.
+            <hr>
+            const arr = ["cat", "dog", "horse", "camel"];`,
+        answer:
+`arr.splice(0, 1);`
     },
     ///
 ]

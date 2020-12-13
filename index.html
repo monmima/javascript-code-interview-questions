@@ -141,6 +141,17 @@
             document.querySelector("#id-question").innerHTML = `${DATABASE[whatNumber].question}`;
 
             document.querySelector("#id-answer").innerHTML = `${DATABASE[whatNumber].answer}`;
+
+            eraseLastQuestion(whatNumber);
+
+        }
+
+        function eraseLastQuestion(numToErase) {
+            // Delete the item that was just shown so it is not repeated during the session
+            // console.log(DATABASE[whatNumber].question);
+            DATABASE.splice(numToErase, 1);
+
+            return;
         }
 
         function updateQuestionNumber(whatNumber) {
