@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Coding Interview Questions</title>
+    <title>Super JS Questions</title>
     
-
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
 
     <style>
         @font-face {
@@ -16,10 +15,18 @@
         body {
             font-family: roboto;
         }
+        button {
+            min-height: 44px;
+            min-width: 44px;
+        }
+        div {
+            overflow: visible !important;
+        }
         h1 {
             font-size: 2em;
             margin: 20px;
         }
+        
         header {
             display: flex;  
             justify-content: center;
@@ -31,6 +38,23 @@
             margin-bottom: 20px;
             width: 100%;
         }
+        .answer {
+            display: none;
+        }
+        .answer, .question {
+            background-color: lightgray;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .card-header {
+            cursor: pointer;
+        }
+        .div-answer {
+            color: blue;
+            display: flex;
+            justify-content: center;
+        }
         .menu {
             padding: 20px;
             
@@ -38,12 +62,8 @@
             align-items: center;
             justify-content: space-around;
         }
-        .card-header {
-            cursor: pointer;
-        }
-        .collapse, .collapsed {
-            overflow-x: scroll;
-        }
+
+
     </style>
 </head>
 <body>
@@ -54,26 +74,37 @@
     <main class="container">
         <div class="menu">
             <div id="question-number"><!-- code injected here --></div>
-            <button class="btn btn-primary" id="next">Next</button>
+            <div id="question-count"><!-- code injected here --></div>
+            <button class="btn btn-primary" id="button-done">Done!</button>
         </div>
 
-        <div id="accordion">
+        <!-- <div id="accordion"></div> -->
+
+        <div id="id-question" class="question">
             <!-- code injected here -->
         </div>
-        
-        <textarea name="notes" id="notes" cols="30" rows="5" placeholder="Text notes here if you need"></textarea>
+
+        <div class="div-answer">
+            <button id="button-answer">Answer</button>
+        </div>
+
+        <div class="answer">
+            <pre id="id-answer"><!-- code injected here --></pre>
+        </div>
 
     </main>
 
     <!--LIBRAIRIES JS-->
 
     <script src="./js/db.js"></script>
-    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+    <!-- <script src="./js/jquery-3.3.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script> -->
 
     <script>
         ////////////
+
+        let count = 0;
 
         class Dice {
             constructor(number) {
@@ -81,43 +112,61 @@
             }
 
             rollDice(number) {
-                return Math.floor(Math.random() * number + 1);
+                return Math.floor((Math.random() * number) + 1);
             }
         }
 
-        let dice = new Dice(10);
-        console.log(dice.rollDice(DATABASE.length));
-
         function printQuestion(whatNumber) {
-            document.querySelector("#accordion").innerHTML =
-            `
-                <div class="card">
+            // document.querySelector("#accordion").innerHTML =
+            // `
+            //     <div class="card">
 
-                    <div class="card-header" id="heading-${whatNumber}">
-                        <h5 class="mb-0">
-                            <div class="collapsed" data-toggle="collapse" data-target="#key-${whatNumber}" aria-expanded="false" aria-controls="key-${whatNumber}">
-                                ${DATABASE[whatNumber].question}
-                            </div>
-                        </h5>
-                    </div>
+            //         <div class="card-header" id="heading-${whatNumber}">
+            //             <h5 class="mb-0">
+            //                 <div class="collapsed" data-toggle="collapse" data-target="#key-${whatNumber}" aria-expanded="false" aria-controls="key-${whatNumber}">
+            //                     ${DATABASE[whatNumber].question}
+            //                 </div>
+            //             </h5>
+            //         </div>
 
-                    <div id="key-${whatNumber}" class="collapse" aria-labelledby="key-${whatNumber}" data-parent="#accordion">
-                        <div class="card-body">
-                            <pre>${DATABASE[whatNumber].answer}</pre>
-                        </div>
-                    </div>
+            //         <div id="key-${whatNumber}" class="collapse" aria-labelledby="key-${whatNumber}" data-parent="#accordion">
+            //             <div >
+            //                 <pre>${DATABASE[whatNumber].answer}</pre>
+            //             </div>
+            //         </div>
 
-                </div>
-            `;
+            //     </div>
+            // `;
+
+            document.querySelector("#id-question").innerHTML = `${DATABASE[whatNumber].question}`;
+
+            document.querySelector("#id-answer").innerHTML = `${DATABASE[whatNumber].answer}`;
         }
 
         function updateQuestionNumber(whatNumber) {
             document.querySelector("#question-number").innerHTML = `${whatNumber} / ${DATABASE.length}`;
+            document.querySelector("#question-count").innerHTML = `Question ${count + 1}`;
         }
 
         // event listeners
-        document.querySelector("button").addEventListener("click", function () {
-            main();
+
+        // button-done
+        document.querySelector("#button-done").addEventListener("click", function () {
+            count += 1;
+
+            if (localStorage.questions === "true" && count >= 2) {
+                window.location.assign("reader.html");
+            } else {
+                // 1. loading new question
+                main();
+                // 2. hiding answer div
+                document.querySelector(".answer").style.display = "none";
+            }
+        });
+
+        // button-answer
+        document.querySelector("#button-answer").addEventListener("click", function() {
+            document.querySelector(".answer").style.display = "block";
         });
 
         // function calls
@@ -129,6 +178,7 @@
             updateQuestionNumber(number);
         }
 
+        let dice = new Dice();
         main();
 
     </script>
