@@ -579,7 +579,7 @@ function test2()`
     {
         question:
             `
-            JS: How do you give a default parameter of "1" to "b"?
+            JS: How do you give a default parameter of <code>1</code> to <code>b</code>?
             <hr>
 <pre>function multiply(a, b) {
     return a * b;
