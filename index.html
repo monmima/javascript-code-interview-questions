@@ -183,10 +183,13 @@
         // function calls
 
         function main() {
-            const number = dice.rollDice(DATABASE.length - 1);
+            // if there are questions to be asked...
+            if (DATABASE.length > 1) {
+                const number = dice.rollDice(DATABASE.length - 1);
 
-            printQuestion(number);
-            updateQuestionNumber(number);
+                printQuestion(number);
+                updateQuestionNumber(number);
+            }
         }
 
         let dice = new Dice();
