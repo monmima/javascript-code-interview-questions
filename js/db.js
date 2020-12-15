@@ -526,7 +526,15 @@ function test2()`
             <hr>
 <pre>/blues?/gi</pre>`,
         answer:
-`var patt = new RegExp("blues?", "gi");`
+`var re = /blues?/gi;
+
+or
+
+var re = new RegExp(/blues?/, "gi");
+
+or
+
+var re = new RegExp("blues?", "gi")`
     },
     ///
     {
@@ -830,11 +838,11 @@ console.log(answer);`
         question:
             `JS: Create a <strong>one-line</strong> function that swaps a first name and a last name.
             <hr>
-<pre>const fullName = "John Doe";
-
-function swapName(str) {
+<pre>function swapName(str) {
     ...
-}</pre>
+}
+
+console.log(swapName("John Doe"));</pre>
             `,
         answer:
 `function swapName(str) {
@@ -849,7 +857,9 @@ or
 
 function swapName(str) {
     return str.split(" ").reverse().join(" ");
-}`
+}
+
+console.log(swapName("John Doe"));`
     },
     ///
     {
@@ -865,13 +875,17 @@ function swapName(str) {
             <hr>
 <pre>function swapWords(str) {
     ...
-}</pre>`,
+}
+
+console.log(swapName("John Doe"));</pre>`,
         answer:
 `function swapWords(str) {
     const arr = str.split(" ");
 
     return arr[1] + " " + arr[0];
-}`
+}
+
+console.log(swapName("John Doe"));`
     },
     ///
     {
@@ -906,15 +920,6 @@ function swapName(str) {
         answer:
 `input {
     appearance: none;
-}`
-    },
-    ///
-    {
-        question:
-            `CSS: What is the selector for the last <code>div</code> in a page?`,
-        answer:
-`div:last-child {
-    ...
 }`
     },
     ///
@@ -1091,26 +1096,27 @@ a:active`
             <hr>
 <pre>function rep(str, num) {
     ...
-}</pre>`,
+}
+
+console.log(rep("string", 3));</pre>`,
         answer:
 `function rep(str, num) {
-    let i = 0;
     let newStr = "";
+    let i = 0;
 
     if (num <= 0) {
         return newStr;
     }
 
-    while (i < 10) {
-        if (i <= num) {
-            newStr += str;    
-        }
-
+    while (i < num) {
+        newStr += str;
         i++;
     }
 
     return newStr;
-}`
+}
+
+console.log(rep("string", 3));`
     },
     ///
     {
@@ -1195,6 +1201,51 @@ a:active`
 
     return newArr;
 };`
+    },
+    ///
+    {
+        question:
+            `JS: Create and use a simple <strong>for each</strong> loop on this array.
+            <hr>
+            <pre>const array1 = ['a', 'b', 'c'];</pre>`,
+        answer:
+`arr.forEach(i => console.log(i));
+
+The for each loop is used specifically on arrays.`
+    },
+    ///
+    {
+        question:
+            `Wordpress: What is the difference between a Wordpress page and article?`,
+        answer:
+`The article is dynamic.
+The page is static.`
+    },
+    ///
+    {
+        question:
+            `JS: Create a simple event listener that fires when a page loads.
+            <hr>
+<pre>...
+    console.log("Page ready!");
+...</pre>`,
+        answer:
+`window.addEventListener("load", function() {
+    console.log("Page ready!");
+});`
+    },
+    ///
+    {
+        question:
+            `CSS: Create a rule for having a CSS image taking its full size within a div.
+            <hr>
+<pre>div {
+    background-size: 100% 100%;
+}</pre>`,
+        answer:
+`<pre>div {
+    ...
+}</pre>`
     },
     ///
 ]
