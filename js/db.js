@@ -24,7 +24,7 @@ var data = fs.readFileSync("file.txt", "utf8");`
                 Node.js: How do you write a file?
             `,
         answer:
-`fs.writeFileSync("new-file.txt", "File content.");`
+`fs.writeFileSync("name.txt", "File content.");`
     },
     {
         question:
@@ -614,7 +614,7 @@ console.log(multiply(100, 2));
             `
             JS: What is the output?
             <hr>
-<pre>console.log(typeof("test"));</pre>
+<pre>console.log(typeof "test");</pre>
             `,
         answer:
 `string`
@@ -812,7 +812,7 @@ console.log(typeof print);</pre>`,
 const answer = ...;</pre>
             `,
         answer:
-`const answer = arr.find(element => element > 10);
+`const answer = arr.find(i => i > 10);
 console.log(answer);`
     },
     ///
@@ -914,6 +914,15 @@ function swapName(str) {
             `CSS: What is the selector for the last <code>div</code> in a page?`,
         answer:
 `div:last-child {
+    ...
+}`
+    },
+    ///
+    {
+        question:
+            `CSS: What is the selector for the first <code>div</code> in a page?`,
+        answer:
+`div:first-child {
     ...
 }`
     },
@@ -1143,6 +1152,49 @@ a:active`
             const arr = ["cat", "dog", "horse", "camel"];`,
         answer:
 `arr.splice(0, 1);`
+    },
+    ///
+    {
+        question:
+            `JS Algorithm: Find the longest word in a string using a "for of" loop.`,
+        answer:
+`function longestWordLength(str) {
+    let inMemory = "";
+    let cleanString = str.replace(/\W/g, " ");
+    const arr = cleanString.split(" ");
+
+    for (let i of arr) {
+        if (inMemory.length < i.length) {
+            inMemory = i;
+        }
+    }
+
+    return inMemory.length;
+}`
+    },
+    ///
+    {
+        question:
+            `JS: Besides <code>typeof</code>, what else can you use to find out if a value is of type <code>number</code>?`,
+        answer:
+`Number.isInteger();`
+    },
+    ///
+    {
+        question:
+            `JS Algorithm: Create a function that removes all strings from an array with a <strong>for loop</strong>.`,
+        answer:
+`function removeStrings(arr) {
+    const newArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === "number") {
+            newArr.push(arr[i]);
+        }
+    }
+
+    return newArr;
+};`
     },
     ///
 ]
