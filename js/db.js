@@ -1216,6 +1216,37 @@ The for each loop is used specifically on arrays.`
     ///
     {
         question:
+            `CSS: What is the selector for an <code>li</code> tag which has a class?`,
+        answer:
+`...
+    color: red;
+}`
+    },
+    ///
+    {
+        question:
+            `CSS: What is the selector for an password <code>input</code> tag?`,
+        answer:
+`input[type="password"] {
+    background-color: red;
+}
+
+or 
+
+input[type=password] {
+    background-color: red;
+}`
+    },
+    ///
+    {
+        question:
+            `HTML: How do you call <code>href</code> in a <code>a</code> tag?`,
+        answer:
+`An attribute.`
+    },
+    ///
+    {
+        question:
             `Wordpress: What is the difference between a Wordpress page and article?`,
         answer:
 `The article is dynamic.
@@ -1250,6 +1281,34 @@ The page is static.`
     ///
     {
         question:
+            `Terminal: How do you erase a folder with the name "test"?`,
+        answer:
+            `rm -r test/`
+    },
+    ///
+    {
+        question:
+            `Terminal: How do you create a file with the name "test.txt"?`,
+        answer:
+            `touch test.txt`
+    },
+    ///
+    {
+        question:
+            `Terminal: How do you erase a file with the name "test.txt"?`,
+        answer:
+            `remove test.txt`
+    },
+    ///
+    {
+        question:
+            `Terminal: How do move a folder with the name "test" to the folder "test2"?`,
+        answer:
+            `mv test/ test2/`
+    },
+    ///
+    {
+        question:
             `JS Algorithm: Create a function that removes all strings from an array with the <strong>filter method</strong>.
             <hr>
 <pre>function removeStrings(arr) {
@@ -1274,7 +1333,6 @@ function removeStrings(arr) {
 
 console.log(removeStrings(["word", 34, "another", 78, "one"]));</pre>`
     },
-    ///
     ///
     {
         question:
