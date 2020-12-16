@@ -63,19 +63,36 @@ arr.push("end");
 arr = [...arr, "end"];
 `
     },
+    ///
     {
         question:
             `
-                JS: How do you reverse a string?
+                JS: Create a function that returns a reversed string?
 
                 <hr>
 
-                var myString = "1234";
+<pre>function reverseLetters(str) {
+    ...
+}
+
+console.log(reverseLetters("hello"));</pre>;
             `,
         answer:
-`var newString = myString.split("").reverse().join("");`
-    },
+`function reverseLetters(str) {
+    let arr = str.split("");
+    arr = arr.reverse();
+    return arr.join("");
+}
 
+or
+
+function reverseLetters(str) {
+    return str.split("").reverse().join("");
+}
+
+console.log(reverseLetters("hello"));`
+    },
+    ///
     {
         question:
             `
@@ -125,8 +142,8 @@ They evaluate to "true"`
         this.string = string;
     }
 
-    printString() {
-        console.log(this.string);
+    returnString() {
+        return this.string;
     }
 }</pre>`
     },
@@ -936,8 +953,8 @@ console.log(swapName("John Doe"));`
         question:
             `CSS: How do you select the last <code>div</code> in a page?
             <hr>
-<pre>div:last-child {
-    ...
+<pre>...
+    background-color: blue;
 }</pre>`,
         answer:
 `div:last-child {
@@ -1225,7 +1242,7 @@ The for each loop is used specifically on arrays.`
     ///
     {
         question:
-            `CSS: What is the selector for an password <code>input</code> tag?`,
+            `CSS: What is the selector for an <strong>password input</strong> tag?`,
         answer:
 `input[type="password"] {
     background-color: red;
@@ -1362,6 +1379,29 @@ function restoreAlpha(str) {
 }
 
 console.log(restoreAlpha("testa"));</pre>`
+    },
+    ///
+    {
+        question:
+            `JS algorithm: Create a function that sorts letters in a string using the <strong>spread operator</strong>.
+            <hr>
+<pre>function sortLetters(str) {
+    ...
+}
+
+console.log(sortLetters("hello"));</pre>`,
+        answer:
+`        function sortLetters(str) {
+    let arr = [...str];
+    arr = arr.sort();
+    return arr.join("");
+}
+
+or
+
+function sortLetters(str) {
+    return [...str].sort().join("");
+}</pre>`
     },
     ///
 
