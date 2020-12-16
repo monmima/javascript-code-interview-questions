@@ -1248,4 +1248,63 @@ The page is static.`
 }</pre>`
     },
     ///
+    {
+        question:
+            `JS Algorithm: Create a function that removes all strings from an array with the <strong>filter method</strong>.
+            <hr>
+<pre>function removeStrings(arr) {
+    ...
+}
+
+console.log(removeStrings(["word", 34, "another", 78, "one"]));</pre>`,
+        answer:
+`<pre>function removeStrings(arr) {
+    return arr.filter(function (i) {
+        return typeof i === "number";
+    })
+}
+
+or
+
+function removeStrings(arr) {
+    return arr.filter(function (i) {
+        return Number.isInteger(i);
+    })
+}
+
+console.log(removeStrings(["word", 34, "another", 78, "one"]));</pre>`
+    },
+    ///
+    ///
+    {
+        question:
+            `JS Algorithm: Create a function that restores the alphabetical order in a string..
+            <hr>
+<pre>function restoreAlpha(str) {
+    ...
+}
+
+console.log(restoreAlpha("testa"));</pre>`,
+        answer:
+`<pre>function restoreAlpha(str) {
+    // 1. turn string into array
+    let arr = str.split("");
+
+    // 2. sort array
+    arr.sort();
+
+    // 3. join array and spit out result
+    return arr.join("");
+}
+
+or
+
+function restoreAlpha(str) {
+    return str.split("").sort().join("");
+}
+
+console.log(restoreAlpha("testa"));</pre>`
+    },
+    ///
+
 ]
