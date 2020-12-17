@@ -1404,5 +1404,57 @@ function sortLetters(str) {
 }</pre>`
     },
     ///
+    {
+        question:
+            `JS: Convert the number to a string.
+            <hr>
+<pre>const num = 100;</pre>`,
+        answer:
+`num.toString();`
+    },
+    ///
+    {
+        question:
+            `JS: How do you open a new window with JS (and not by just clicking a link).`,
+        answer:
+`window.open();`
+    },
+    ///
+    {
+        question:
+            `JS algorithm: Create a one-line function that reverses a string with the spread operator.
+            <hr>
+<pre>function revString(str) {
+    ...
+}
+
+console.log(revString("hello"));<pre>`,
+        answer:
+`function revString(str) {
+    return [...str].reverse().join("");
+}`
+    },
+    ///
+    {
+        question:
+            `// JS algorithm: Create a one-line function that reverses a string with the <strong>for loop, starting at the end of the array</strong>.
+            <hr>
+<pre>function revString(str) {
+    ...
+}
+
+console.log(revString("hello"));<pre>`,
+        answer:
+`function revString(str) {
+    let revStr = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        revStr += str[i];
+    }
+
+    return revStr;
+}`
+    },
+    ///
 
 ]
