@@ -67,10 +67,8 @@ arr = [...arr, "end"];
     {
         question:
             `
-                JS: Create a function that returns a reversed string?
-
+                JS: Create a function that returns a reversed string using JS methods.
                 <hr>
-
 <pre>function reverseLetters(str) {
     ...
 }
@@ -1437,7 +1435,7 @@ console.log(revString("hello"));<pre>`,
     ///
     {
         question:
-            `// JS algorithm: Create a one-line function that reverses a string with the <strong>for loop, starting at the end of the array</strong>.
+            `// JS algorithm: Create a function that reverses a string with the <strong>for loop</strong>, starting at the <strong>end of the array</strong>.
             <hr>
 <pre>function revString(str) {
     ...
@@ -1453,6 +1451,25 @@ console.log(revString("hello"));<pre>`,
     }
 
     return revStr;
+}`
+    },
+    ///
+    {
+        question:
+            `JS algorithm: Create a function that reverses a string with the <strong>for of</strong> loop, adding new letters to the <strong>beginning</strong> of the string.
+            <hr>
+<pre>function revString(str) {
+    ...
+}
+
+console.log(revString("hello"));<pre>`,
+        answer:
+`function revString(str) {
+    let newStr = "";
+    for (let i of str) {
+        newStr = i + newStr;
+    }
+    return newStr;
 }`
     },
     ///
