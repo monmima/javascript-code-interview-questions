@@ -888,13 +888,13 @@ console.log(swapName("John Doe"));`
         question:
             `JS: Create a function to swap words using indices.
             <hr>
-<pre>function swapWords(str) {
+<pre>function swapName(str) {
     ...
 }
 
 console.log(swapName("John Doe"));</pre>`,
         answer:
-`function swapWords(str) {
+`function swapName(str) {
     const arr = str.split(" ");
 
     return arr[1] + " " + arr[0];
@@ -966,7 +966,9 @@ console.log(swapName("John Doe"));`
             <hr>
 <pre>function removeOdds(arr) {
     ...
-}</pre>`,
+}
+
+console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
         answer:
 `function removeOdds(arr) {
     const evenArr = [];
@@ -987,7 +989,9 @@ console.log(swapName("John Doe"));`
             <hr>
 <pre>function removeOdds(arr) {
     ...
-}</pre>`,
+}
+
+console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
         answer:
 `function removeOdds(arr) {
     return arr.filter(function(i) {
@@ -1056,7 +1060,8 @@ import`
         question:
             `HTML: What are the two mandatory attributes to use with an <code>a</code> tag?`,
         answer:
-`title and href`
+`title
+href`
     },
     ///
     {
@@ -1140,7 +1145,9 @@ console.log(rep("string", 3));`
             <hr>
 <pre>function findLongest(str) {
     ...
-}</pre>`,
+}
+
+console.log(findLongest("Where in the airport?"));</pre>`,
         answer:
 `function findLongest(str) {
     let cleanString = str.replace(/\W/g, " ");
@@ -1196,9 +1203,11 @@ console.log(rep("string", 3));`
     ///
     {
         question:
-            `JS: Besides <code>typeof</code>, what else can you use to find out if a value is of type <code>number</code>?`,
+            `JS: Besides <code>typeof</code>, what else can you use to find out if a value is of type <code>number</code>?
+            <hr>
+            <pre>const x = 5;<pre>`,
         answer:
-`Number.isInteger();`
+`Number.isInteger(x);`
     },
     ///
     {
@@ -1471,6 +1480,13 @@ console.log(revString("hello"));<pre>`,
     }
     return newStr;
 }`
+    },
+    ///
+    {
+        question:
+            `JS algorithm: What command to you type in the CLI to create a new React project?`,
+        answer:
+`npx create-react-app folder-name`
     },
     ///
 
