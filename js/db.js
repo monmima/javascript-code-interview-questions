@@ -1489,5 +1489,113 @@ console.log(revString("hello"));<pre>`,
 `npx create-react-app folder-name`
     },
     ///
+    {
+        question:
+            `HTML: What do you change to the following to select the select input field by default?
+            <hr>
+<pre>&lt;input type="text"&gt;
+&lt;input type="text"&gt;</pre>`,
+        answer:
+`&lt;input type="text"&gt;
+&lt;input type="text" autofocus&gt;`
+    },
+    ///
+    {
+        question:
+            `JS: How do you find out more about keys that were pressed?`,
+        answer:
+`document.addEventListener("keypress", function(event) {
+    console.log(event);
+});`
+    },
+    ///
+    {
+        question:
+            `JS: What is an impure function?`,
+        answer:
+`A function where external variables are not passed in as arguments. This may cause side effects.`
+    },
+    ///
+    {
+        question:
+            `HTML: How do you target an ID on another HTML page?`,
+        answer:
+`&lt;a href="test2.html#chap6" title="Link to another page"&gt;test&lt;/a&gt;`
+    },
+    ///
+    {
+        question:
+            `JS Algorithm: Create a function that tells you if a word is a palindrome. Make sure to compare lower-case words.`,
+        answer:
+`function isPalindrome(str) {
+    let before = str.toLowerCase();
+    let after = str.split("").reverse().join("");
+    after = after.toLowerCase();
+    console.log(after);
+
+
+    if (before === after) {
+        return true;
+    }
+
+    return false;
+}
+
+console.log(isPalindrome("Laval"));
+console.log(isPalindrome("word"));`
+    },
+    ///
+    {
+        question:
+            `JS Algorithm: Give an example of an invalid variable name.`,
+        answer:
+`let 1stName = "John";
+
+A variable name cannot start with a number.`
+    },
+    ///
+    {
+        question:
+            `JS Algorithm: Create a function that returns the median value (absolute value sum minimization). Use the ternary operator.
+            <hr>
+<pre>
+function absoluteValueSumMinimization(num) {
+    ...
+}
+
+console.log(absoluteValueSumMinimization([2, 4, 7]));
+console.log(absoluteValueSumMinimization([2, 4, 7, 8]));
+console.log(absoluteValueSumMinimization([1, 2, 4, 7, 8]));</pre>`,
+        answer:
+`function absoluteValueSumMinimization(num) {
+    const isEven = num.length % 2 === 0;
+
+    return isEven ? num[num.length / 2 - 1] : num[Math.floor(num.length / 2)];
+}`
+    },
+    ///
+    {
+        question:
+            `JS Algorithm: Create a function that adds all items in an array and returns the total. Use a forEach loop.
+            <hr>
+<pre>function addAllArray(arr) {
+    ...
+}
+
+console.log(addAllArray([2, 4, 7]));
+console.log(addAllArray([2, 4, 7, 8]));
+console.log(addAllArray([1, 2, 4, 7, 8]));</pre>`,
+        answer:
+`function addAllArray(arr) {
+    let total = 0;
+
+    arr.forEach(element => {
+        total += element;
+    });
+
+    return total;
+}`
+    },
+    ///
 
 ]
