@@ -237,7 +237,7 @@ var num = 10.3416;
     {
         question:
             `
-                JS: Create a simple keyframe spin animation.
+                JS: Create a simple keyframes spin animation.
             `,
         answer:
 `@keyframes spin {
@@ -336,7 +336,8 @@ This may seem shorter, but is also less readable.`
 <pre>var x = x * 5;</pre>
             `,
         answer:
-`var x *= 5;`
+`var x = 5;
+x *= 5;`
     },
     ///
     {
@@ -438,6 +439,12 @@ console.log(res);</pre>
         answer:
 `div {
     box-shadow: 5px 5px;
+}
+
+or
+
+div {
+    box-shadow: 5px 5px 5px;
 }`
     },
     ///
@@ -446,8 +453,8 @@ console.log(res);</pre>
             `
             JS: What is the difference?
             <hr>
-            <pre>1. box-shadow: 5px 5px;</pre>
-            <pre>2. box-shadow: 5px 5px inset;</pre>
+            <pre>1. box-shadow: 5px 5px 5px;</pre>
+            <pre>2. box-shadow: 5px 5px 5px inset;</pre>
             `,
         answer:
 `1. Outer shadow.
@@ -461,7 +468,9 @@ console.log(res);</pre>
             <hr>
 <pre>function func(a) {
     return a + 100;
-}</pre>
+}
+
+console.log((func(100)));</pre>
             `,
         answer:
 `const func = a => a + 100;
@@ -658,13 +667,15 @@ console.log(multiply(100, 2));
         question:
             `
             JS: Convert a variable named <code>num</code> to a string.
+            <hr>
+<pre>let num = 100;</pre>
             `,
         answer:
-`const num = num.toString();
+`num = num.toString();
 
 or
 
-const num = String(num);`
+num = String(num);`
     },
     ///
     {
@@ -949,19 +960,6 @@ console.log(swapName("John Doe"));`
     ///
     {
         question:
-            `CSS: How do you select the last <code>div</code> in a page?
-            <hr>
-<pre>...
-    background-color: blue;
-}</pre>`,
-        answer:
-`div:last-child {
-    background-color: blue;
-}`
-    },
-    ///
-    {
-        question:
             `JS algorithm: Create a function that uses a loop to filter out odd numbers.
             <hr>
 <pre>function removeOdds(arr) {
@@ -1038,7 +1036,7 @@ console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
     ///
     {
         question:
-            `JS: What keyword do you use to import a file in ES5 and ES6?`,
+            `JS: What <strong>two</strong> keywords do you use to import a file in ES5 and ES6?`,
         answer:
 `ES5
 require
@@ -1295,11 +1293,11 @@ The page is static.`
             `CSS: Create a rule for having a CSS image taking its full size within a div.
             <hr>
 <pre>div {
-    background-size: 100% 100%;
+    ...
 }</pre>`,
         answer:
 `<pre>div {
-    ...
+    background-size: 100% 100%;
 }</pre>`
     },
     ///
@@ -1398,7 +1396,7 @@ console.log(restoreAlpha("testa"));</pre>`
 
 console.log(sortLetters("hello"));</pre>`,
         answer:
-`        function sortLetters(str) {
+`function sortLetters(str) {
     let arr = [...str];
     arr = arr.sort();
     return arr.join("");
@@ -1409,15 +1407,6 @@ or
 function sortLetters(str) {
     return [...str].sort().join("");
 }</pre>`
-    },
-    ///
-    {
-        question:
-            `JS: Convert the number to a string.
-            <hr>
-<pre>const num = 100;</pre>`,
-        answer:
-`num.toString();`
     },
     ///
     {
@@ -1513,7 +1502,8 @@ console.log(revString("hello"));<pre>`,
         question:
             `JS: What is an impure function?`,
         answer:
-`A function where external variables are not passed in as arguments. This may cause side effects.`
+`A function where external variables are not passed in as arguments.
+This may cause side effects.`
     },
     ///
     {
@@ -1595,6 +1585,15 @@ console.log(addAllArray([1, 2, 4, 7, 8]));</pre>`,
 
     return total;
 }`
+    },
+    ///
+    {
+        question:
+            `JS: Create a line of code that turns text for an <code>h3</code> tag with the class <code>.zone-message</code> to red.
+            <hr>
+<pre></pre>`,
+        answer:
+`document.querySelector("h3, .zone-message").style.color = "red";`
     },
     ///
 
