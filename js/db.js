@@ -1596,5 +1596,38 @@ console.log(addAllArray([1, 2, 4, 7, 8]));</pre>`,
 `document.querySelector("h3, .zone-message").style.color = "red";`
     },
     ///
+    {
+        question:
+            `JS: Given a rectangular matrix of characters, add a border of asterisks to it.
+            <hr>
+<pre>function addBorder(arr) {
+    ...
+}
+
+console.log(addBorder(["aaa", "bbb", "ccc"]));</pre>`,
+        answer:
+`function addBorder(arr) {
+    // 1. copying the array
+    let newArr = [];
+
+    // 2. creating the top and bottom walls
+    const lengthTopAndBottom = arr[0].length + 2;
+    const wall = "*".repeat(lengthTopAndBottom);
+
+    // 3. looping through the old arr and adding asterisks on each side
+    for (let i = 0; i < arr.length; i++) {
+        newArr[i] = "*" + arr[i] + "*";
+    }
+
+    // 4. adding the wall to the new array
+    newArr = [wall, ...newArr, wall];
+
+    return newArr;
+}
+
+console.log(addBorder(["aaa", "bbb", "ccc"]));`
+    },
+    ///
+
 
 ]
