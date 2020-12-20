@@ -1647,6 +1647,21 @@ console.log(addTwoDigits(29));</pre>`,
 console.log(addTwoDigits(29));`
     },
     ///
+    {
+        question:
+            `JS: Write a barebone switch statement.
+            <hr>
+<pre>let myVar = "banana";</pre>`,
+        answer:
+`switch(myVar) {
+    case "banana":
+        console.log("This is a banana.");
+        break;
+    default:
+        console.log("This is not a banana.");
+}`
+    },
+    ///
 
 
 ]
