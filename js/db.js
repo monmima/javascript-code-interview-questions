@@ -1662,6 +1662,31 @@ console.log(addTwoDigits(29));`
 }`
     },
     ///
+    {
+        question:
+            `JS Algorithm: Create a function that returns the pair of adjacent elements with the highest product.
+            <hr>
+<pre>function adjacentElementsProduct(inputArr) {
+    ...
+}
+
+console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));</pre>`,
+        answer:
+`function adjacentElementsProduct(inputArr) {
+    let largestProduct = inputArr[0] * inputArr[1];
+
+    for (let i = 1; i < inputArr.length - 1; i++) {
+        const product = inputArr[i] * inputArr[i + 1];
+        
+        largestProduct = largestProduct < product ? product : largestProduct;
+    }
+
+    return largestProduct;
+}
+
+console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));`
+    },
+    ///
 
 
 ]
