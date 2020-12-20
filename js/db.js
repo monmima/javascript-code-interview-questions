@@ -1229,9 +1229,15 @@ console.log(findLongest("Where in the airport?"));</pre>`,
         question:
             `JS: Create and use a simple <strong>for each</strong> loop on this array.
             <hr>
-            <pre>const array1 = ['a', 'b', 'c'];</pre>`,
+            <pre>const arr = ['a', 'b', 'c'];</pre>`,
         answer:
 `arr.forEach(i => console.log(i));
+
+or 
+
+arr.forEach(element =>  {
+    console.log(element);
+});
 
 The for each loop is used specifically on arrays.`
     },
@@ -1262,7 +1268,7 @@ input[type=password] {
     ///
     {
         question:
-            `HTML: How do you call <code>href</code> in a <code>a</code> tag?`,
+            `HTML: What do you call <code>href</code> or <code>title</code> in a <code>a</code> tag?`,
         answer:
 `An attribute.`
     },
@@ -1715,6 +1721,34 @@ console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));</pre>`,
 }
 
 console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));`
+    },
+    ///
+    {
+        question:
+            `JS Algorithm: Create a function that tells you if a sequence of numbers is increasing from left to right. One mistake can be tolerated in the sequence.
+            <hr>
+<pre>function evalAlmostIncreasing(arr) {
+    ...
+}
+
+console.log(evalAlmostIncreasing([1, 3, 2]));
+console.log(evalAlmostIncreasing([1, 3, 1, 1]));</pre>`,
+        answer:
+`function evalAlmostIncreasing(arr) {
+    let countMistakes = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] <= arr[i - 1]) {
+            countMistakes++;
+        }
+    }
+
+    // as long as there is one mistake or less, returns true
+    return countMistakes <= 1;
+}
+
+console.log(evalAlmostIncreasing([1, 3, 2]));
+console.log(evalAlmostIncreasing([1, 3, 1, 1]));`
     },
     ///
 
