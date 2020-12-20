@@ -1664,7 +1664,7 @@ console.log(addTwoDigits(29));`
     ///
     {
         question:
-            `JS Algorithm: Create a function that returns the pair of adjacent elements with the highest product.
+            `JS Algorithm: Create a function that returns the pair of adjacent elements with the highest product. The result should be 21.
             <hr>
 <pre>function adjacentElementsProduct(inputArr) {
     ...
@@ -1685,6 +1685,36 @@ console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));</pre>`,
 }
 
 console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));`
+    },
+    ///
+    {
+        question:
+            `JS Algorithm: Find the longest strings in an array of strings and return all strings matching this length. Use <strong>forEach</strong> loops.
+            <hr>
+<pre>function findAllLongestStrings(arr) {
+    ...
+}
+
+console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));</pre>`,
+        answer:
+`function findAllLongestStrings(arr) {
+    let topLength = 0;
+    let newArr = [];
+
+    arr.forEach(i => {
+        topLength = topLength > i.length ? topLength : i.length;
+    });
+
+    arr.forEach(i => {
+        if (topLength === i.length) {
+            newArr.push(i);
+        }
+    });
+
+    return newArr;
+}
+
+console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));`
     },
     ///
 
