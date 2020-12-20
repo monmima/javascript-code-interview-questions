@@ -1628,6 +1628,25 @@ console.log(addBorder(["aaa", "bbb", "ccc"]));</pre>`,
 console.log(addBorder(["aaa", "bbb", "ccc"]));`
     },
     ///
+    {
+        question:
+            `JS Algorithm: Create a function that turns a two-digit number to the sum of the two digits. For instance, "29" should return "11".
+            <hr>
+<pre>function addTwoDigits(num) {
+    ...
+}
+
+console.log(addTwoDigits(29));</pre>`,
+        answer:
+`function addTwoDigits(num) {
+    const arr = num.toString().split("");
+
+    return parseInt(arr[0]) + parseInt(arr[1]);
+}
+
+console.log(addTwoDigits(29));`
+    },
+    ///
 
 
 ]
