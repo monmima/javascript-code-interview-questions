@@ -1,5 +1,8 @@
 console.log("Database loaded...");
 
+// To redo later
+// 17.
+
 const DATABASE = [
     {
         question:
@@ -1863,7 +1866,7 @@ console.log(isAlphabetical("abczz"));`
     ///
     {
         question:
-            `CSS What is the purpose of <strong>right 20px</strong> and <strong>30%</strong> below?.
+            `CSS What is the purpose of <strong>right 20px</strong> and <strong>30%</strong> below?
             <hr>
 <pre>background: url(images/moon.png), no repeat right 20px / 30%;</pre>`,
         answer:
@@ -1871,6 +1874,138 @@ console.log(isAlphabetical("abczz"));`
 30% = size`
     },
     ///
+    {
+        question:
+            `JS Algorithm: Given an array with individual weights, create two groups (even group and odd group) and return an array of two elements: total weight for group one and total weight for group two. Use a <strong>forEach loop</strong>.
+            <hr>
+<pre>const weights = [50, 60, 60, 45, 70];
 
+function alternativeSums(weights) {
+    ...
+}
+
+console.log(alternativeSums(weights));</pre>`,
+        answer:
+`const weights = [50, 60, 60, 45, 70];
+
+function alternativeSums(weights) {
+    let groupEven = 0;
+    let groupOdd = 0;
+
+    for (let i = 0; i < weights.length; i++) {
+        if (i % 2 === 0) {
+            groupEven += weights[i];
+        } else {
+            groupOdd += weights[i];
+        }
+    }
+
+    return [groupEven, groupOdd];
+}
+
+or
+
+function alternativeSums(weights) {
+    let groupEven = 0;
+    let groupOdd = 0;
+
+    weights.forEach((element, index) => {
+        
+        if (index % 2 === 0) {
+            groupEven += element;
+        } else {
+            groupOdd += element;
+        }
+    });
+
+    return [groupEven, groupOdd];
+}
+
+console.log(alternativeSums(weights));`
+    },
+    ///
+    {
+        question:
+            `JS Algorithm: Create a function that compares if two people are equally strong. To be equally strong, they have to be able to lift the same weight with their strong arm and their weak arm.
+            <hr>
+<pre>function areEquallyStrong(myLeft, myRight, friendLeft, friendRight)  {
+    // your code here
+}
+
+console.log(areEquallyStrong(10, 15, 15, 10)); // true
+console.log(areEquallyStrong(15, 10, 15, 10)); // true
+console.log(areEquallyStrong(15, 10, 15, 9)); // false
+console.log(areEquallyStrong(14, 11, 15, 10)); // false</pre>`,
+        answer:
+`function areEquallyStrong(myLeft, myRight, friendLeft, friendRight)  {
+    const myStrongArm = myLeft >= myRight ? myLeft : myRight;
+    const myweakArm = myLeft <= myRight ? myLeft : myRight;
+    const friendStrong = friendLeft >= friendRight ? friendLeft : friendRight;
+    const friendWeak = friendLeft <= friendRight ? friendLeft : friendRight;
+
+    return myStrongArm === friendStrong && myweakArm === friendWeak;
+}
+
+console.log(areEquallyStrong(10, 15, 15, 10)); // true
+console.log(areEquallyStrong(15, 10, 15, 10)); // true
+console.log(areEquallyStrong(15, 10, 15, 9)); // false
+console.log(areEquallyStrong(14, 11, 15, 10)); // false`
+    },
+    ///
+    {
+        question:
+            `JS: What is passing by value and passing by reference?`,
+        answer:
+`// Passing by value is what happens when you create a primitive from another primitive.
+a = 5;
+b = a;
+b += 5;
+console.log(a, b);
+
+// Passing by reference is what happens when you create a non-primitive from another non-primtive.
+let arr1 = [1, 2, 3];
+let arr2 = arr1;
+arr2.push("x");
+console.log(arr1, arr2);
+
+// To avoid problems with this, you must create a new non-primtive.
+let arr3 = [1, 2];
+let arr4 = [...arr3, "x"];
+console.log(arr3, arr4);
+
+// Or with objects
+let obj1 = { channel: "Youtube"};
+let obj2 = {...obj1};
+obj2.name = "John";
+console.log(obj1, obj2);`
+    },
+    ///
+    {
+        question:
+            `JS: What are the data types in JS?`,
+        answer:
+`Primitives
+- booleans
+- numbers (whole numbers, floating-point numbers)
+- null (empty value which is user-assigned)
+- undefined (no values)
+- strings
+
+Non-primtives
+- objects
+- arrays (technically are objects)`
+    },
+    ///
+    {
+        question:
+            `JS Algorithm: Given an array of integers, create a function that adds to a counter everytime it is necessary so you end up with a stricly increasing sequence.`,
+        answer:
+`function arrayChange(arr) {
+    // code here
+}
+
+console.log(arrayChange([1, 1, 1])); // should return 3`
+    },
+    ///
 
 ]
