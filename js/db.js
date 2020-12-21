@@ -1751,6 +1751,81 @@ console.log(evalAlmostIncreasing([1, 3, 2]));
 console.log(evalAlmostIncreasing([1, 3, 1, 1]));`
     },
     ///
+    {
+        question:
+            `JS Algorithm: Create a function that shifts to one to the right the the letters in a word. For instance, the output for "test" should be "uftu".
+            <hr>
+<pre>function alphabeticalShift(str) {
+    ...
+}
+
+console.log(evalAlmostIncreasing([1, 3, 2]));
+console.log(evalAlmostIncreasing([1, 3, 1, 1]));</pre>`,
+        answer:
+`function alphabeticalShift(str) {
+    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+    let arr = str.split("");
+    let newString = "";
+    let iCurrLetter = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        iCurrLetter = alphabet.indexOf(arr[i]);
+
+        if (alphabet[iCurrLetter + 1] == undefined) {
+            newString += "a";
+        } else {
+            newString += alphabet[iCurrLetter + 1];
+        }
+
+    }
+
+    return newString;
+}
+
+console.log(alphabeticalShift("test"));
+console.log(alphabeticalShift("crazy"));`
+    },
+    ///
+    {
+        question:
+            `JS Algorithm: Create a function that tells you if a sequence of letters is in alphabetical order. The function returns a boolean. The input should not have repeated characters.
+            <hr>
+<pre>function isAlphabetical(str) {
+    ...
+}
+
+console.log(isAlphabetical("abef"));
+console.log(isAlphabetical("zabc"));
+console.log(isAlphabetical("abczz"));</pre>`,
+        answer:
+`function isAlphabetical(str) {
+    let lastLetter = "a";
+    let arr = str.split("");
+    let uniqueValuesSet = new Set(arr);
+
+    // compares the length of array and set
+    if (arr.length !== uniqueValuesSet.size) {
+        return false;
+    }
+
+    // makes sure you the string only goes forward with the alphabetical order
+    for (let i = 0; i < arr.length; i++) {
+        if (lastLetter > arr[i]) {
+            return false;
+        }
+
+        lastLetter = arr[i];
+    }
+    
+    return true;
+}
+
+console.log(isAlphabetical("abef"));
+console.log(isAlphabetical("zabc"));
+console.log(isAlphabetical("abczz"));`
+    },
+    ///
 
 
 ]
