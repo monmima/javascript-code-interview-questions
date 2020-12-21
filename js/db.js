@@ -29,11 +29,15 @@ var data = fs.readFileSync("file.txt", "utf8");`
     {
         question:
             `
-                JS: How do you add something to the beginning of an array?
+                JS: How do you add something to the start of an array?
 
                 <hr>
 
                 var arr = [1, 2, 3, 4];
+
+                <!-- insert code here -->
+                
+                console.log(x);
             `,
         answer:
 `// ES5
@@ -395,10 +399,16 @@ user.name=username`
             `
                 JS: Remove the last item from the array.
                 <hr>
-<pre>const john = ["john", "smith"];</pre>
+<pre>const john = ["john", "smith"];
+
+// your code here
+
+console.log(john);</pre>
             `,
         answer:
-`john.pop();`
+`john.pop();
+
+console.log(john);`
     },
     ///
     {
@@ -485,7 +495,7 @@ const func = (a) => a + 100;`
             `
             JS: Simplify this code.
             <hr>
-<pre>var multiply = (x, y) => { return x * y};</pre>
+<pre>var multiply = (x, y) => { return x * y };</pre>
             `,
         answer:
 `var multiply = (x, y) => x * y;`
@@ -834,6 +844,12 @@ console.log(typeof print);</pre>`,
         answer:
 `div:before {
     content: "&#92;2618 ";
+}
+
+or
+
+div:before {
+    content: "&#92;2618 ";
 }`
     },
     ///
@@ -1004,7 +1020,9 @@ console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
             <hr>
 <pre>function repeatString(str, num) {
     ...
-}</pre>`,
+}</pre>
+
+console.log(repeatString("car", 3));`,
         answer:
 `function repeatString(str, num) {
     let res = "";
@@ -1016,7 +1034,9 @@ console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
     }
 
     return res;
-}`
+}
+
+console.log(repeatString("car", 3));`
     },
     ///
     {
@@ -1166,7 +1186,9 @@ console.log(findLongest("Where in the airport?"));</pre>`,
     ///
     {
         question:
-            `HTML: How do you disable tracking when you open a page through a new tab?`,
+            `HTML: How do you disable tracking when you open a page through a new tab?
+            <hr>
+<pre>&lt;a href="www.site.com" target="_blank" title=""&gt;</pre>`,
         answer:
 `&lt;a href="www.site.com" target="_blank" rel="noopener noreferrer" title=""&gt;`
     },
@@ -1824,6 +1846,29 @@ console.log(isAlphabetical("abczz"));</pre>`,
 console.log(isAlphabetical("abef"));
 console.log(isAlphabetical("zabc"));
 console.log(isAlphabetical("abczz"));`
+    },
+    ///
+    {
+        question:
+            `HTML: List the names of 7 semantic elements.`,
+        answer:
+`<header>
+<nav>
+<main>
+<article>
+<section>
+<aside>
+<footer>`
+    },
+    ///
+    {
+        question:
+            `CSS What is the purpose of <strong>right 20px</strong> and <strong>30%</strong> below?.
+            <hr>
+<pre>background: url(images/moon.png), no repeat right 20px / 30%;</pre>`,
+        answer:
+`right 20px = position
+30% = size`
     },
     ///
 
