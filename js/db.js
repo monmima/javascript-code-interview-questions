@@ -2089,5 +2089,79 @@ It's better to only use === because you wan't to write your code in the strictes
 `There is a type conversion performed in the background, and then a comparison.`
     },
     ///
+    {
+        question:
+            `JS phone interview: It's a function that returns a function for the purpose of hiding a private variable.`,
+        answer:
+`JS phone interview: It's a function that returns a function for the purpose of hiding a private variable.
+
+Example:
+
+const counter = (function() {
+    let counter = 0;
+
+    return function() {
+        counter++;
+
+        return counter;
+    };
+})();
+
+console.log(counter()); // 1
+console.log(counter()); // 2
+
+Bonus:
+Makes code relevant and easy to debug.
+Limits scope of variables.`
+    },
+    ///
+    {
+        question:
+            `JS phone interview: What is lexical and block scope?`,
+        answer:
+`This is the same as asking the difference between const, let and var.
+
+Var has a lexical scope.
+
+Const and let have a block scope.
+
+Var is hoisted whereas let and const aren't.
+`
+    },
+    ///
+    {
+        question:
+            `JS phone interview: What is hoisting?`,
+        answer:
+`Variables and functions are brought back to the top of the scope if this is not where they were declared. This might cause undesirable effects.
+
+Example: 
+
+console.log(myVar); // returns "undefined"
+var myVar = "string";
+
+console.log(test); // returns "test is not defined"
+let test = "string";`
+    },
+    ///
+    {
+        question:
+            `JS phone interview: What is "use strict"?`,
+        answer:
+`'Defines that JavaScript code should be executed in "strict mode".' [w3schools.com]
+
+Prevents the accidental creation of global variables, etc. Nowadays this isn't as important being people will use Webpack with a linter, etc.
+
+Example:
+
+function doStuff() {
+    x = 10; // "use strict" catches this error (no var declaration) and creates a message in the console;
+
+    return x;
+}
+
+doStuff();`
+    },
+    ///
 
 ]
