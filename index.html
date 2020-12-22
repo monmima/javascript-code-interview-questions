@@ -84,9 +84,7 @@
             <!-- code injected here -->
         </div>
 
-        <div class="div-answer">
-            <button id="button-answer">Answer</button>
-        </div>
+        <hr>
 
         <div class="answer">
             <pre id="id-answer"><!-- code injected here --></pre>
@@ -105,6 +103,7 @@
         ////////////
 
         let count = 0;
+        let firstClick = true;
 
         class Dice {
             constructor(number) {
@@ -159,25 +158,36 @@
             document.querySelector("#question-count").innerHTML = `Question ${count + 1}`;
         }
 
+        function toggleHideShow() {
+            if (document.querySelector(".answer").style.display === "none" || firstClick === true) {
+                document.querySelector(".answer").style.display = "block";
+                console.log("none");
+                firstClick = "false";
+            } else {
+                document.querySelector(".answer").style.display = "none";
+                console.log("show");
+                count++;
+                main();
+            }
+        }
+
         // event listeners
 
         // button-done
         document.querySelector("#button-done").addEventListener("click", function () {
-            count += 1;
 
-            if (localStorage.questions === "true" && count >= 2) {
-                window.location.assign("reader.html");
-            } else {
-                // 1. loading new question
-                main();
-                // 2. hiding answer div
-                document.querySelector(".answer").style.display = "none";
-            }
-        });
+            toggleHideShow();
 
-        // button-answer
-        document.querySelector("#button-answer").addEventListener("click", function() {
-            document.querySelector(".answer").style.display = "block";
+            // if (count % 2 === 0 || count === 1) {
+            //     console.log("test", document.querySelector(".answer").style.display === "block");
+
+            //     // 1. loading new question
+            //     main();
+            //     // 2. hiding answer div
+            //     toggleHideShow();
+            // } else {
+            //     document.querySelector(".answer").style.display = "block";
+            // }
         });
 
         // function calls
