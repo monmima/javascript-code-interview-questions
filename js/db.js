@@ -215,12 +215,18 @@ let myVar;
             `
                 JS: Keep only two decimals to the number.
                 <hr>
-<pre>
-var num = 10.3416;
-</pre>
+<pre>var num = 10.3416;
+
+// your code here
+
+console.log(num);</pre>
             `,
         answer:
-`var newNum = num.toFixed(2);`
+`var num = 10.3416;
+
+num.toFixed(2);
+
+console.log(num);`
     },
 
     {
@@ -409,7 +415,9 @@ user.name=username`
 console.log(john);</pre>
             `,
         answer:
-`john.pop();
+`const john = ["john", "smith"];
+
+john.pop();
 
 console.log(john);`
     },
@@ -589,7 +597,7 @@ var re = new RegExp("blues?", "gi")`
             HTML: What attribute do you use to set tabulation priorities?
             `,
         answer:
-`tab="2"`
+`tabindex="1"`
     },
     ///
     {
@@ -862,10 +870,15 @@ div:before {
             <hr>
 <pre>const arr = [5, 12, 8, 130, 44];
 
-const answer = ...;</pre>
+const answer = ...;
+
+console.log(answer);</pre>
             `,
         answer:
-`const answer = arr.find(i => i > 10);
+`const arr = [5, 12, 8, 130, 44];
+
+const answer = arr.find(i => i > 10);
+
 console.log(answer);`
     },
     ///
@@ -979,7 +992,7 @@ console.log(swapName("John Doe"));`
     ///
     {
         question:
-            `JS algorithm: Create a function that uses a loop to filter out odd numbers.
+            `// JS Algorithm: Create a function that uses a loop to filter out odd numbers.
             <hr>
 <pre>function removeOdds(arr) {
     ...
@@ -1002,7 +1015,7 @@ console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
     ///
     {
         question:
-            `JS algorithm: Create a function using the <strong>filter</strong> method to filter out odd numbers in an array.
+            `// JS Algorithm: Create a function using the <strong>filter</strong> method to filter out odd numbers in an array.
             <hr>
 <pre>function removeOdds(arr) {
     ...
@@ -1019,7 +1032,7 @@ console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
     ///
     {
         question:
-            `JS algorithm: Create a function that multiplies a string by a number with a <strong>for loop</strong>.
+            `// JS Algorithm: Create a function that multiplies a string by a number with a <strong>for loop</strong>.
             <hr>
 <pre>function repeatString(str, num) {
     ...
@@ -1044,7 +1057,7 @@ console.log(repeatString("car", 3));`
     ///
     {
         question:
-            `JS algorithm: Create a function that multiplies a string by a number with a <strong>string method</strong>.
+            `// JS Algorithm: Create a function that multiplies a string by a number with a <strong>string method</strong>.
             <hr>
 <pre>function repeatString(str, num) {
     ...
@@ -1133,7 +1146,7 @@ a:active`
     ///
     {
         question:
-            `JS algorithm: Create a function that repeats a string <code>num</code> times with a <strong>while loop</strong>.
+            `// JS Algorithm: Create a function that repeats a string <code>num</code> times with a <strong>while loop</strong>.
             <hr>
 <pre>function rep(str, num) {
     ...
@@ -1162,7 +1175,7 @@ console.log(rep("string", 3));`
     ///
     {
         question:
-            `JS algorithm: Create a function that finds the longest word in a string. Use regexps and <code>.replace()</code>.
+            `// JS Algorithm: Create a function that finds the longest word in a string. Use regexps and <code>.replace()</code>.
             <hr>
 <pre>function findLongest(str) {
     ...
@@ -1200,14 +1213,22 @@ console.log(findLongest("Where in the airport?"));</pre>`,
         question:
             `JS: Erase one item starting from index 0 in the array.
             <hr>
-            const arr = ["cat", "dog", "horse", "camel"];`,
+            const arr = ["cat", "dog", "horse", "camel"];
+
+            // your code here
+
+            console.log(arr);`,
         answer:
-`arr.splice(0, 1);`
+`const arr = ["cat", "dog", "horse", "camel"];
+
+arr.splice(0, 1);
+
+console.log(arr);`
     },
     ///
     {
         question:
-            `JS Algorithm: Find the longest word in a string using a "for of" loop.`,
+            `// JS Algorithm: Find the longest word in a string using a "for of" loop.`,
         answer:
 `function longestWordLength(str) {
     let inMemory = "";
@@ -1228,14 +1249,22 @@ console.log(findLongest("Where in the airport?"));</pre>`,
         question:
             `JS: Besides <code>typeof</code>, what else can you use to find out if a value is of type <code>number</code>?
             <hr>
-            <pre>const x = 5;<pre>`,
+<pre>const x = 5;
+
+// your code here
+
+console.log(newVar);<pre>`,
         answer:
-`Number.isInteger(x);`
+`const x = 5;
+
+const newVar = Number.isInteger(x);
+
+console.log(newVar);`
     },
     ///
     {
         question:
-            `JS Algorithm: Create a function that removes all strings from an array with a <strong>for loop</strong>.`,
+            `// JS Algorithm: Create a function that removes all strings from an array with a <strong>for loop</strong>.`,
         answer:
 `function removeStrings(arr) {
     const newArr = [];
@@ -1310,9 +1339,9 @@ The page is static.`
         question:
             `JS: Create a simple event listener that fires when a page loads.
             <hr>
-<pre>...
+<pre>// code here
     console.log("Page ready!");
-...</pre>`,
+// code here</pre>`,
         answer:
 `window.addEventListener("load", function() {
     console.log("Page ready!");
@@ -1362,7 +1391,7 @@ The page is static.`
     ///
     {
         question:
-            `JS Algorithm: Create a function that removes all strings from an array with the <strong>filter method</strong>.
+            `// JS Algorithm: Create a function that removes all strings from an array with the <strong>filter method</strong>.
             <hr>
 <pre>function removeStrings(arr) {
     ...
@@ -1389,7 +1418,7 @@ console.log(removeStrings(["word", 34, "another", 78, "one"]));</pre>`
     ///
     {
         question:
-            `JS Algorithm: Create a function that restores the alphabetical order in a string..
+            `// JS Algorithm: Create a function that restores the alphabetical order in a string..
             <hr>
 <pre>function restoreAlpha(str) {
     ...
@@ -1419,7 +1448,7 @@ console.log(restoreAlpha("testa"));</pre>`
     ///
     {
         question:
-            `JS algorithm: Create a function that sorts letters in a string using the <strong>spread operator</strong>.
+            `// JS Algorithm: Create a function that sorts letters in a string using the <strong>spread operator</strong>.
             <hr>
 <pre>function sortLetters(str) {
     ...
@@ -1449,10 +1478,10 @@ function sortLetters(str) {
     ///
     {
         question:
-            `JS algorithm: Create a one-line function that reverses a string with the spread operator.
+            `// JS Algorithm: Create a one-line function that reverses a string with the <strong>spread operator</strong>.
             <hr>
 <pre>function revString(str) {
-    ...
+    // code here
 }
 
 console.log(revString("hello"));<pre>`,
@@ -1485,7 +1514,7 @@ console.log(revString("hello"));<pre>`,
     ///
     {
         question:
-            `JS algorithm: Create a function that reverses a string with the <strong>for of</strong> loop, adding new letters to the <strong>beginning</strong> of the string.
+            `// JS Algorithm: Create a function that reverses a string with the <strong>for of</strong> loop, adding new letters to the <strong>beginning</strong> of the string.
             <hr>
 <pre>function revString(str) {
     ...
@@ -1504,7 +1533,7 @@ console.log(revString("hello"));<pre>`,
     ///
     {
         question:
-            `JS algorithm: What command to you type in the CLI to create a new React project?`,
+            `// JS Algorithm: What command to you type in the CLI to create a new React project?`,
         answer:
 `npx create-react-app folder-name`
     },
@@ -1546,7 +1575,7 @@ This may cause side effects.`
     ///
     {
         question:
-            `JS Algorithm: Create a function that tells you if a word is a palindrome. Make sure to compare lower-case words.`,
+            `// JS Algorithm: Create a function that tells you if a word is a palindrome. Make sure to compare lower-case words.`,
         answer:
 `function isPalindrome(str) {
     let before = str.toLowerCase();
@@ -1568,7 +1597,7 @@ console.log(isPalindrome("word"));`
     ///
     {
         question:
-            `JS Algorithm: Give an example of an invalid variable name.`,
+            `// JS Algorithm: Give an example of an invalid variable name.`,
         answer:
 `let 1stName = "John";
 
@@ -1577,7 +1606,7 @@ A variable name cannot start with a number.`
     ///
     {
         question:
-            `JS Algorithm: Create a function that returns the median value (absolute value sum minimization). Use the ternary operator.
+            `// JS Algorithm: Create a function that returns the median value (absolute value sum minimization). Use the ternary operator.
             <hr>
 <pre>
 function absoluteValueSumMinimization(num) {
@@ -1597,7 +1626,7 @@ console.log(absoluteValueSumMinimization([1, 2, 4, 7, 8]));</pre>`,
     ///
     {
         question:
-            `JS Algorithm: Create a function that adds all items in an array and returns the total. Use a forEach loop.
+            `// JS Algorithm: Create a function that adds all items in an array and returns the total. Use a forEach loop.
             <hr>
 <pre>function addAllArray(arr) {
     ...
@@ -1620,11 +1649,9 @@ console.log(addAllArray([1, 2, 4, 7, 8]));</pre>`,
     ///
     {
         question:
-            `JS: Create a line of code that turns text for an <code>h3</code> tag with the class <code>.zone-message</code> to red.
-            <hr>
-<pre></pre>`,
+            `JS: Create a line of code that turns text for an <code>h3</code> tag with the class <code>.zone-message</code> to red.`,
         answer:
-`document.querySelector("h3, .zone-message").style.color = "red";`
+`document.querySelector("h3.zone-message").style.color = "red";`
     },
     ///
     {
@@ -1661,7 +1688,7 @@ console.log(addBorder(["aaa", "bbb", "ccc"]));`
     ///
     {
         question:
-            `JS Algorithm: Create a function that turns a two-digit number to the sum of the two digits. For instance, "29" should return "11".
+            `// JS Algorithm: Create a function that turns a two-digit number to the sum of the two digits. For instance, "29" should return "11".
             <hr>
 <pre>function addTwoDigits(num) {
     ...
@@ -1695,7 +1722,7 @@ console.log(addTwoDigits(29));`
     ///
     {
         question:
-            `JS Algorithm: Create a function that returns the pair of adjacent elements with the highest product. The result should be 21.
+            `// JS Algorithm: Create a function that returns the pair of adjacent elements with the highest product. The result should be 21.
             <hr>
 <pre>function adjacentElementsProduct(inputArr) {
     ...
@@ -1720,7 +1747,7 @@ console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));`
     ///
     {
         question:
-            `JS Algorithm: Find the longest strings in an array of strings and return all strings matching this length. Use <strong>forEach</strong> loops.
+            `// JS Algorithm: Find the longest strings in an array of strings and return all strings matching this length. Use <strong>forEach</strong> loops.
             <hr>
 <pre>function findAllLongestStrings(arr) {
     ...
@@ -1750,7 +1777,7 @@ console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));`
     ///
     {
         question:
-            `JS Algorithm: Create a function that tells you if a sequence of numbers is increasing from left to right. One mistake can be tolerated in the sequence.
+            `// JS Algorithm: Create a function that tells you if a sequence of numbers is increasing from left to right. One mistake can be tolerated in the sequence.
             <hr>
 <pre>function evalAlmostIncreasing(arr) {
     ...
@@ -1778,7 +1805,7 @@ console.log(evalAlmostIncreasing([1, 3, 1, 1]));`
     ///
     {
         question:
-            `JS Algorithm: Create a function that shifts to one to the right the the letters in a word. For instance, the output for "test" should be "uftu".
+            `// JS Algorithm: Create a function that shifts to one to the right the the letters in a word. For instance, the output for "test" should be "uftu".
             <hr>
 <pre>function alphabeticalShift(str) {
     ...
@@ -1814,7 +1841,7 @@ console.log(alphabeticalShift("crazy"));`
     ///
     {
         question:
-            `JS Algorithm: Create a function that tells you if a sequence of letters is in alphabetical order. The function returns a boolean. The input should not have repeated characters.
+            `// JS Algorithm: Create a function that tells you if a sequence of letters is in alphabetical order. The function returns a boolean. The input should not have repeated characters.
             <hr>
 <pre>function isAlphabetical(str) {
     ...
@@ -1876,7 +1903,7 @@ console.log(isAlphabetical("abczz"));`
     ///
     {
         question:
-            `JS Algorithm: Given an array with individual weights, create two groups (even group and odd group) and return an array of two elements: total weight for group one and total weight for group two. Use a <strong>forEach loop</strong>.
+            `// JS Algorithm: Given an array with individual weights, create two groups (even group and odd group) and return an array of two elements: total weight for group one and total weight for group two. Use a <strong>forEach loop</strong>.
             <hr>
 <pre>const weights = [50, 60, 60, 45, 70];
 
@@ -1926,7 +1953,7 @@ console.log(alternativeSums(weights));`
     ///
     {
         question:
-            `JS Algorithm: Create a function that compares if two people are equally strong. To be equally strong, they have to be able to lift the same weight with their strong arm and their weak arm.
+            `// JS Algorithm: Create a function that compares if two people are equally strong. To be equally strong, they have to be able to lift the same weight with their strong arm and their weak arm.
             <hr>
 <pre>function areEquallyStrong(myLeft, myRight, friendLeft, friendRight)  {
     // your code here
@@ -1998,7 +2025,7 @@ Non-primtives
     ///
     {
         question:
-            `JS Algorithm: Given an array of integers, create a function that adds to a counter everytime it is necessary so you end up with a stricly increasing sequence.`,
+            `// JS Algorithm: Given an array of integers, create a function that adds to a counter everytime it is necessary so you end up with a stricly increasing sequence.`,
         answer:
 `function arrayChange(arr) {
     // code here
