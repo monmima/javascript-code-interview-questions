@@ -2,6 +2,8 @@ console.log("Database loaded...");
 
 // To redo later
 // 17.
+// 19.
+// 21.
 
 const DATABASE = [
     {
@@ -2032,6 +2034,59 @@ Non-primtives
 }
 
 console.log(arrayChange([1, 1, 1])); // should return 3`
+    },
+    ///
+    {
+        question:
+            `JS algorithm: Create a function that finds the maximal difference between two consecutive elements in an array (21).
+            <hr>
+<pre>function arrayMaximalAdjactentDifference(arr) {
+    // your code here
+}
+
+console.log(arrayMaximalAdjactentDifference([2, 4, 1, 0])); // returns 3 (4 - 3 = 1);</pre>`,
+        answer:
+`function arrayMaximalAdjactentDifference(arr) {
+    let inMemory = 0;
+
+
+    // "arr.length" - 1 to make sure you don't go beyond the limit
+    for (let i = 0; i < arr.length - 1; i++) {
+        let difference = Math.abs(arr[i] - arr[i + 1]);
+
+        if (difference > inMemory) {
+            inMemory = difference;
+        }
+    }
+
+    return inMemory;
+}
+
+console.log(arrayMaximalAdjactentDifference([2, 4, 1, 0])); // returns 3 (4 - 3 = 1);`
+    },
+    ///
+    {
+        question:
+            `JS phone interview: What is the difference between == and ===?`,
+        answer:
+`== compares the value
+=== compares both the value and the type
+
+Example:
+
+5 == "5" would return true
+5 === "5" would return false
+
+Bonus:
+
+It's better to only use === because you wan't to write your code in the strictest fashion possible.`
+    },
+    ///
+    {
+        question:
+            `JS phone interview: How does it work in the background for 5 == "5" to evaluate to true?`,
+        answer:
+`There is a type conversion performed in the background, and then a comparison.`
     },
     ///
 
