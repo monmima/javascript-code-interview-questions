@@ -40,9 +40,9 @@ var data = fs.readFileSync("file.txt", "utf8");`
 
                 var arr = [1, 2, 3, 4];
 
-                <!-- insert code here -->
+                // your code here
                 
-                console.log(x);
+                console.log(arr);
             `,
         answer:
 `// ES5
@@ -1230,11 +1230,17 @@ console.log(arr);`
     ///
     {
         question:
-            `// JS Algorithm: Find the longest word in a string using a "for of" loop.`,
+            `// JS Algorithm: Find the longest word in a string using a <strong>for of</strong> loop.
+            <hr>
+<pre>function longestWordLength(str) {
+    // your code here
+}
+
+console.log(longestWord("Where is the airport?")</pre>`,
         answer:
 `function longestWordLength(str) {
     let inMemory = "";
-    let cleanString = str.replace(/\W/g, " ");
+    let cleanString = str.replace(/W/g, " ");
     const arr = cleanString.split(" ");
 
     for (let i of arr) {
@@ -1244,7 +1250,9 @@ console.log(arr);`
     }
 
     return inMemory.length;
-}`
+}
+
+console.log(longestWord("Where is the airport?")`
     },
     ///
     {
@@ -1423,7 +1431,7 @@ console.log(removeStrings(["word", 34, "another", 78, "one"]));</pre>`
             `// JS Algorithm: Create a function that restores the alphabetical order in a string..
             <hr>
 <pre>function restoreAlpha(str) {
-    ...
+    // code here
 }
 
 console.log(restoreAlpha("testa"));</pre>`,
@@ -1577,20 +1585,20 @@ This may cause side effects.`
     ///
     {
         question:
-            `// JS Algorithm: Create a function that tells you if a word is a palindrome. Make sure to compare lower-case words.`,
+            `// JS Algorithm: Create a function that tells you if a word is a palindrome. Make sure to compare lower-case words.
+            <hr>
+<pre>function isPalindrome(str) {
+    // your code here
+}
+
+console.log(isPalindrome("Laval"));
+console.log(isPalindrome("word"));</pre>`,
         answer:
 `function isPalindrome(str) {
-    let before = str.toLowerCase();
-    let after = str.split("").reverse().join("");
-    after = after.toLowerCase();
-    console.log(after);
+    const before = str.toLowerCase();
+    const after = str.split("").reverse().join("").toLowerCase();
 
-
-    if (before === after) {
-        return true;
-    }
-
-    return false;
+    return before === after;
 }
 
 console.log(isPalindrome("Laval"));
@@ -1651,9 +1659,9 @@ console.log(addAllArray([1, 2, 4, 7, 8]));</pre>`,
     ///
     {
         question:
-            `JS: Create a line of code that turns text for an <code>h3</code> tag with the class <code>.zone-message</code> to red.`,
+            `JS: Create a line of code that turns text for an <code>h3</code> to red.`,
         answer:
-`document.querySelector("h3.zone-message").style.color = "red";`
+`document.querySelector("h3").style.color = "red";`
     },
     ///
     {
@@ -1782,7 +1790,7 @@ console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));`
             `// JS Algorithm: Create a function that tells you if a sequence of numbers is increasing from left to right. One mistake can be tolerated in the sequence.
             <hr>
 <pre>function evalAlmostIncreasing(arr) {
-    ...
+    // code here
 }
 
 console.log(evalAlmostIncreasing([1, 3, 2]));
@@ -2182,7 +2190,7 @@ console.log(arr[1]); // undefined`
     ///
     {
         question:
-            `JS phone interview: How can you remove an item from an object?`,
+            `JS phone interview: How can you remove an item from an <strong>object</strong>? Write the code for this.`,
         answer:
 `const obj = {
     prop1: "chair",
