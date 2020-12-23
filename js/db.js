@@ -2163,5 +2163,66 @@ function doStuff() {
 doStuff();`
     },
     ///
+    {
+        question:
+            `JS phone interview: What is the difference between splice and delete on an array?`,
+        answer:
+`1. Splice removes the item and shifts the rest of the array.
+2. Delete removes the item but does not shift the rest of the array. Consequently, the arr keeps the same length but has a value which left "undefined".
+
+Example:
+
+let arr = ["cat", "dog", "horse", "tortoise"];
+delete arr[2];
+arr.splice(0, 1);
+
+console.log(arr); // ["dog", , "tortoise"]
+console.log(arr[1]); // undefined`
+    },
+    ///
+    {
+        question:
+            `JS phone interview: How can you remove an item from an object?`,
+        answer:
+`const obj = {
+    prop1: "chair",
+    prop2: "table"
+}
+
+console.log(obj); // { prop1: "chair", prop2: "table" }
+delete obj.prop1;
+console.log(obj); // { prop2: "table" }`
+    },
+    ///
+    {
+        question:
+            `JS phone interview: What is the this keyword?`,
+        answer:
+`It refers to the context you are working in.
+Often used with OOP.
+
+Example:
+
+class Person {
+    constructor(firstN, lastN) {
+        this.firstN = firstN,
+        this.lastN = lastN
+    }
+
+    fullName() {
+        return this.firstN + " " + this.lastN
+    }
+}
+
+let john = new Person("John", "Doe");
+console.log(john.fullName()); // John Doe
+
+Bonus:
+
+Arrow functions don't work well with the this keyword.
+
+`
+    },
+    ///
 
 ]
