@@ -2219,9 +2219,57 @@ console.log(john.fullName()); // John Doe
 
 Bonus:
 
-Arrow functions don't work well with the this keyword.
-
-`
+Arrow functions don't work well with the this keyword.`
+    },
+    ///
+    {
+        question:
+            `JS: What do you call "string" and "number"?`,
+        answer:
+`These are two different types.`
+    },
+    ///
+    {
+        question:
+            `HTML: What does ARIA stand for?`,
+        answer:
+`Accessible rich Internet application. This is a way to make web content and web applications more accessible to people with disabilities.`
+    },
+    ///
+    {
+        question:
+            `CSS: What is the CSS shortcut for this?
+            <hr>
+            color: #666;`,
+        answer:
+`c#666666`
+    },
+    ///
+    {
+        question:
+            `CSS: What is the CSS shortcut for this?
+            <hr>
+            font-weight: bold;`,
+        answer:
+`fwb`
+    },
+    ///
+    {
+        question:
+            `CSS: What is the CSS shortcut for this?
+            <hr>
+            text-decoration: none;`,
+        answer:
+`tdn`
+    },
+    ///
+    {
+        question:
+            `JS: What do you use to know if a number is positive, negative or zero?`,
+        answer:
+`Math.sign(20);
+Math.sign(-20);
+Math.sign(0);`
     },
     ///
 
