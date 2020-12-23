@@ -2280,5 +2280,24 @@ Math.sign(-20);
 Math.sign(0);`
     },
     ///
+    {
+        question:
+            `JS: What are some of the ways you can create an array?`,
+        answer:
+`const arr1 = [1]
+
+or
+
+// map
+const arr2 = example1.map((val) => {
+    return val + 1;
+});
+
+or
+
+// not recommended!
+const badArr = new Array();`
+    },
+    ///
 
 ]
