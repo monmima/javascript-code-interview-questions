@@ -2299,5 +2299,232 @@ or
 const badArr = new Array();`
     },
     ///
+    {
+        question:
+            `JS: What is the difference between undefined and null?`,
+        answer:
+`Undefined is a variable that has not been assigned a value.
+
+Null is an assigned value, which is "nothing".
+
+Example:
+
+var test;
+console.log(test); // returns undefined
+
+Bonus:
+Undeclared = doesn't even exist
+Undefined = has not been given a value yet`
+    },
+    ///
+    {
+        question:
+            `// JS algorithm: Create a function that loops through an array.
+            // For every occurrence of an old value, a new value should replace it.
+            // Use a <strong>forEach</strong> loop.
+            <hr>
+<pre>function arrayPreviousLess(arr, oldV, newV) {
+    // your code here
+}
+
+console.log(arrayPreviousLess([1, 2, 1], 1, 3)); // [3, 2, 3]</pre>`,
+        answer:
+`function arrayPreviousLess(arr, oldV, newV) {
+    const newArr = [...arr];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === oldV) {
+            newArr[i] = newV;
+        }
+    }
+
+    return newArr;
+}
+
+// or
+
+function arrayPreviousLess(arr, oldV, newV) {
+    const newArr = [...arr];
+
+    arr.forEach((element, i) => {
+        if (element === oldV) {
+            newArr[i] = newV;
+        }
+    });
+
+    return newArr;
+}
+
+console.log(arrayPreviousLess([1, 2, 1], 1, 3)); // [3, 2, 3]`
+    },
+    ///
+    {
+        question:
+            `JS: How do you find the last item in an array?
+            <hr>
+<pre>const arr = [1, 2, 3, 4];
+// your code here
+
+console.log(last);</pre>`,
+        answer:
+`const arr = [1, 2, 3, 4];
+const last = arr[arr.length - 1];
+
+console.log(last);`
+    },
+    ///
+    {
+        question:
+            `// JS algorithm: You have a stash of x candies for y children. Distribute all candies equally between the kids. Your function should return the amount that can be distributed.
+            <hr>
+<pre>function distCandies(candies, kids) {
+    // ...
+}
+
+console.log(distCandies(10, 3));</pre>`,
+        answer:
+`function distCandies(candies, kids) {
+    const candiesPerKids = Math.floor(candies / kids);
+    const distributedCandies = candiesPerKids * kids;
+
+    return distributedCandies;
+}
+
+console.log(distCandies(10, 3));`
+    },
+    ///
+    {
+        question:
+            `JS: What is the output?
+            <hr>
+<pre>console.log(0.2 + 0.1)</pre>`,
+        answer:
+`0.30000000000000004
+
+One thing that can be done to solve this issues is:
+console.log((0.2 + 0.1).toFixed(2))
+
+Anothing possibility is to validate with a server-side language.`
+    },
+    ///
+    {
+        question:
+            `JS: What is instanceof and when should you use it?`,
+        answer:
+`Instanceof should not be used to find the type of a value.
+Typeof is there for that.
+
+// Bad practice
+console.log("string" instanceof String); // false
+
+// Instance of tells you is something is a class.
+class Test {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+let test = new Test("mytest");
+console.log(test instanceof Test);
+
+// careful! A class is also an Object.
+console.log(test instanceof Object);`
+    },
+    ///
+    {
+        question:
+            `JS algorith: Create a function that tells you what century a year is.
+            <hr>
+<pre>function findCenturyForYear(year) {
+    // code here
+}
+
+console.log(findCenturyForYear(1905)); // 19
+console.log(findCenturyForYear(1700)); // 17
+console.log(findCenturyForYear(1701)); // 18</pre>`,
+        answer:
+`function findCenturyForYear(year) {
+    // for years such as 1700, 1800, etc.
+    if (year % 100 === 0) {
+        return year / 100;
+    }
+
+    // + one century since 1905 is 20th, etc.
+    return Math.floor(year / 100) + 1;
+}
+
+console.log(findCenturyForYear(1905)); // 19
+console.log(findCenturyForYear(1700)); // 17
+console.log(findCenturyForYear(1701)); // 18`
+    },
+    ///
+    {
+        question:
+            `// JS algorithm: Create a function that tells you is a character is a <strong>odd</strong>, <strong>even</strong> or is <strong>not even a digit</strong>.
+            <hr>
+<pre>function findOddEven(ch) {
+    // your code here
+}
+
+console.log(findOddEven(5)); // odd
+console.log(findOddEven(6)); // even
+console.log(findOddEven("q")); // not a digit
+console.log(findOddEven("2")); // even</pre>`,
+        answer:
+`function findOddEven(ch) {
+    // conversion of number strings into numbers
+    let testCh = parseInt(ch);
+
+    if (ch % 2 === 0) {
+        return "even";
+    } else if (ch % 2 > 0) {
+        return "odd";
+    } else if (isNaN(testCh)) {
+        return ("not a digit");
+    }
+}
+
+console.log(findOddEven(5)); // odd
+console.log(findOddEven(6)); // even
+console.log(findOddEven("q")); // not a digit
+console.log(findOddEven("2")); // even`
+    },
+    ///
+    {
+        question:
+            `// JS algorithm: Find the color of a cell on a chessboard, knowing that a cell whose coordinates are even is black. You'll have to convert letters to numbers too (A = 1, B = 2, etc.);.
+            <hr>
+<pre>function findChessBoardCellColor(cell) {
+    // code here
+}
+
+console.log(findChessBoardCellColor("C6")); // white
+console.log(findChessBoardCellColor("A1")); // black
+console.log(findChessBoardCellColor("A2")); // white</pre>`,
+        answer:
+`function findChessBoardCellColor(cell) {
+    const board = {
+        "A": 1,
+        "B": 2,
+        "C": 3,
+        "D": 4,
+        "E": 5,
+        "F": 6,
+        "G": 7,
+        "H": 8
+    }
+
+    // console.log(board[cell[0]] + parseInt(cell[1]));
+
+    const evenOrOdd = (board[cell[0]] + parseInt(cell[1])) % 2 === 0;
+
+    return evenOrOdd ? "black" : "white";
+}
+
+console.log(findChessBoardCellColor("C6")); // white
+console.log(findChessBoardCellColor("A1")); // black
+console.log(findChessBoardCellColor("A2")); // white`
+    },
+    ///
 
 ]
