@@ -38,11 +38,11 @@ var data = fs.readFileSync("file.txt", "utf8");`
 
                 <hr>
 
-                var arr = [1, 2, 3, 4];
+<pre>var arr = [1, 2, 3, 4];
 
-                // your code here
-                
-                console.log(arr);
+// your code here
+
+console.log(arr);</pre>
             `,
         answer:
 `// ES5
@@ -337,10 +337,12 @@ This may seem shorter, but is also less readable.`
             `
                 JS: Shorten the operator.
                 <hr>
-<pre>var x = x + 5;</pre>
+<pre>var x = 0;
+x = x + 5;</pre>
             `,
         answer:
-`var x += 5;`
+`var x = 0;
+x += 5;`
     },
     ///
     {
@@ -348,7 +350,8 @@ This may seem shorter, but is also less readable.`
             `
                 JS: Shorten the operator.
                 <hr>
-<pre>var x = x * 5;</pre>
+<pre>var x = 5;
+x = x * 5;</pre>
             `,
         answer:
 `var x = 5;
@@ -691,14 +694,22 @@ console.log(multiply(100, 2));
             `
             JS: Convert a variable named <code>num</code> to a string.
             <hr>
-<pre>let num = 100;</pre>
+<pre>let num = 100;
+
+// your code here
+
+console.log(typeof num);</pre>
             `,
         answer:
-`num = num.toString();
+`let num = 100;
+
+num = num.toString();
 
 or
 
-num = String(num);`
+num = String(num);
+
+console.log(typeof num);`
     },
     ///
     {
@@ -931,10 +942,10 @@ console.log(swapName("John Doe"));`
     ///
     {
         question:
-            `JS: Create a function to swap words using indices.
+            `JS: Create a function to swap words. Use indices.
             <hr>
 <pre>function swapName(str) {
-    ...
+    // code here
 }
 
 console.log(swapName("John Doe"));</pre>`,
@@ -1215,15 +1226,19 @@ console.log(findLongest("Where in the airport?"));</pre>`,
         question:
             `JS: Erase one item starting from index 0 in the array.
             <hr>
-            const arr = ["cat", "dog", "horse", "camel"];
+<pre>const arr = ["cat", "dog", "horse", "camel"];
 
-            // your code here
+// your code here
 
-            console.log(arr);`,
+console.log(arr);</pre>`,
         answer:
 `const arr = ["cat", "dog", "horse", "camel"];
 
 arr.splice(0, 1);
+
+or
+
+arr.shift();
 
 console.log(arr);`
     },
@@ -1578,7 +1593,7 @@ This may cause side effects.`
     ///
     {
         question:
-            `HTML: How do you target an ID on another HTML page?`,
+            `HTML: How do you create a link tag that targets an ID on another HTML page?`,
         answer:
 `&lt;a href="test2.html#chap6" title="Link to another page"&gt;test&lt;/a&gt;`
     },
@@ -1636,10 +1651,10 @@ console.log(absoluteValueSumMinimization([1, 2, 4, 7, 8]));</pre>`,
     ///
     {
         question:
-            `// JS Algorithm: Create a function that adds all items in an array and returns the total. Use a forEach loop.
+            `// JS Algorithm: Create a function that adds all items in an array and returns the total. Use a <strong>forEach</strong> loop.
             <hr>
 <pre>function addAllArray(arr) {
-    ...
+    // code here
 }
 
 console.log(addAllArray([2, 4, 7]));
@@ -1659,7 +1674,7 @@ console.log(addAllArray([1, 2, 4, 7, 8]));</pre>`,
     ///
     {
         question:
-            `JS: Create a line of code that turns text for an <code>h3</code> to red.`,
+            `JS: Create a line of code that turns text an <code>h3</code> tag to red.`,
         answer:
 `document.querySelector("h3").style.color = "red";`
     },
@@ -2524,6 +2539,47 @@ console.log(findChessBoardCellColor("A2")); // white</pre>`,
 console.log(findChessBoardCellColor("C6")); // white
 console.log(findChessBoardCellColor("A1")); // black
 console.log(findChessBoardCellColor("A2")); // white`
+    },
+    ///
+    {
+        question:
+            `JS algorithm: What line of code do you use to create a redirection to another HTML page?`,
+        answer:
+`window.location.replace("https://www.protonmail.com");
+
+or
+
+location.replace("https://www.protonmail.com");`
+    },
+    ///
+    {
+        question:
+            `JS interview: What are falsy values?`,
+        answer:
+`Everything is truthy, except for 6 values.
+These values are falsy:
+
+undefined
+null
+NaN
+0
+""
+false`
+    },
+    ///
+    {
+        question:
+            `JS interview: Tell me about global variables.`,
+        answer:
+`In Javascript, the window object is a global variable.
+
+In day-to-day life, it's better to avoid global variables.
+
+Their scope is global, hence the name.
+
+It's a bad coding convention to use globals.
+
+Usually, it's not necessary to create globals.`
     },
     ///
 
