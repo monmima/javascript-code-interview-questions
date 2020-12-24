@@ -14,6 +14,7 @@
         }
         body {
             font-family: roboto;
+            height: 100vh;
         }
         button {
             min-height: 44px;
@@ -21,6 +22,11 @@
         }
         div {
             overflow: visible !important;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            margin: 50px;
         }
         h1 {
             font-size: 2em;
@@ -34,6 +40,9 @@
         input {
             width: 60px;
         }
+        main {
+            min-height: 70vh;
+        }
         textarea {
             margin-bottom: 20px;
             width: 100%;
@@ -42,7 +51,7 @@
             display: none;
         }
         .answer, .question {
-            background-color: lightgray;
+            border: 2px solid lightgreen;
             border-radius: 10px;
             margin: 10px;
             padding: 10px;
@@ -91,6 +100,10 @@
         </div>
 
     </main>
+
+    <footer>
+        <small>Many of the algorithms in this project are from a tutorial by <a href="http://www.dylanisrael.com/" title="Link to Dylan's Web site">Dylan Israel</a>, which are themselves in large part from <a href="https://codefights.com/" title="Link to CodeFights">CodeFights</a>.</small>
+    </footer>
 
     <!--LIBRAIRIES JS-->
 

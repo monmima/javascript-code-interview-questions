@@ -2582,5 +2582,31 @@ It's a bad coding convention to use globals.
 Usually, it's not necessary to create globals.`
     },
     ///
+    {
+        question:
+            `// JS Algorithm: Create a function that takes 2 arguments: an array and a number. The function should return a two-dimensional array with the second argument as the length of the nested arrays.
+            <hr>
+<pre>function chunkyMonkey (arr, size) {
+    // code here
+}
+
+console.log(chunkyMonkey(["a", "b", "c", "d"], 2)); // returns [["a", "b"], ["c", "d"]]
+console.log(chunkyMonkey([0, 1, 2, 3, 4, 5], 4)); // returns [[0, 1, 2, 3], [4, 5]]</pre>`,
+        answer:
+`function chunkyMonkey (arr, size) {
+    const nested = [];
+    let count = 0;
+
+    while (count < arr.length) {
+        nested.push(arr.slice(count, count += size));
+    }
+
+    return nested;
+}
+
+console.log(chunkyMonkey(["a", "b", "c", "d"], 2)); // returns [["a", "b"], ["c", "d"]]
+console.log(chunkyMonkey([0, 1, 2, 3, 4, 5], 4)); // returns [[0, 1, 2, 3], [4, 5]]`
+    },
+    ///
 
 ]
