@@ -79,7 +79,7 @@ arr = [...arr, "end"];
                 JS: Create a function that returns a reversed string using JS methods.
                 <hr>
 <pre>function reverseLetters(str) {
-    ...
+    // code here
 }
 
 console.log(reverseLetters("hello"));</pre>;
@@ -237,7 +237,7 @@ console.log(num);`
                 JS: Draw a CSS circle.
                 <hr>
 <pre>.circle {
-    ...
+    <!--  code here -->
 </pre>}
             `,
         answer:
@@ -459,7 +459,7 @@ console.log(res);</pre>
             JS: How do you give a shadow to a <code>div</code>?
             <hr>
 <pre>div {
-    ...
+    <!--  code here -->
 }</pre>
             `,
         answer:
@@ -910,7 +910,7 @@ console.log(answer);`
             `JS: Create a <strong>one-line</strong> function that swaps a first name and a last name.
             <hr>
 <pre>function swapName(str) {
-    ...
+    // code here
 }
 
 console.log(swapName("John Doe"));</pre>
@@ -964,7 +964,7 @@ console.log(swapName("John Doe"));`
             `CSS: Create a rule making images responsive.
             <hr>
 <pre>img.responsive {
-    ...
+    <!--  code here -->
 }</pre>`,
         answer:
 `img.responsive {
@@ -986,7 +986,7 @@ console.log(swapName("John Doe"));`
             `CSS: How do you remove default styles to an <code>input</code> field?
             <hr>
 <pre>input {
-    ...
+    <!--  code here -->
 }</pre>`,
         answer:
 `input {
@@ -999,7 +999,7 @@ console.log(swapName("John Doe"));`
             `CSS: What is the selector for the first <code>div</code> in a page?`,
         answer:
 `div:first-child {
-    ...
+    <!--  code here -->
 }`
     },
     ///
@@ -1008,7 +1008,7 @@ console.log(swapName("John Doe"));`
             `// JS Algorithm: Create a function that uses a loop to filter out odd numbers.
             <hr>
 <pre>function removeOdds(arr) {
-    ...
+    // code here
 }
 
 console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
@@ -1031,7 +1031,7 @@ console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
             `// JS Algorithm: Create a function using the <strong>filter</strong> method to filter out odd numbers in an array.
             <hr>
 <pre>function removeOdds(arr) {
-    ...
+    // code here
 }
 
 console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
@@ -1048,7 +1048,7 @@ console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
             `// JS Algorithm: Create a function that multiplies a string by a number with a <strong>for loop</strong>.
             <hr>
 <pre>function repeatString(str, num) {
-    ...
+    // code here
 }</pre>
 
 console.log(repeatString("car", 3));`,
@@ -1073,7 +1073,7 @@ console.log(repeatString("car", 3));`
             `// JS Algorithm: Create a function that multiplies a string by a number with a <strong>string method</strong>.
             <hr>
 <pre>function repeatString(str, num) {
-    ...
+    // code here
 }</pre>`,
         answer:
 `function repeatString(str, num) {
@@ -1136,10 +1136,10 @@ a:active`
             `CSS: Create two rules to hide two different <code>divs</code> in different manners.
             <hr>
 <pre>.div-1 {
-    ...
+    <!--  code here -->
 }
 .div-2 {
-    ...
+    <!--  code here -->
 }</pre>`,
         answer:
 `.div-1 {
@@ -1162,7 +1162,7 @@ a:active`
             `// JS Algorithm: Create a function that repeats a string <code>num</code> times with a <strong>while loop</strong>.
             <hr>
 <pre>function rep(str, num) {
-    ...
+    // code here
 }
 
 console.log(rep("string", 3));</pre>`,
@@ -1191,7 +1191,7 @@ console.log(rep("string", 3));`
             `// JS Algorithm: Create a function that finds the longest word in a string. Use regexps and <code>.replace()</code>.
             <hr>
 <pre>function findLongest(str) {
-    ...
+    // code here
 }
 
 console.log(findLongest("Where in the airport?"));</pre>`,
@@ -1378,7 +1378,7 @@ The page is static.`
             `CSS: Create a rule for having a CSS image taking its full size within a div.
             <hr>
 <pre>div {
-    ...
+    <!--  code here -->
 }</pre>`,
         answer:
 `<pre>div {
@@ -1419,7 +1419,7 @@ The page is static.`
             `// JS Algorithm: Create a function that removes all strings from an array with the <strong>filter method</strong>.
             <hr>
 <pre>function removeStrings(arr) {
-    ...
+    // code here
 }
 
 console.log(removeStrings(["word", 34, "another", 78, "one"]));</pre>`,
@@ -1476,7 +1476,7 @@ console.log(restoreAlpha("testa"));</pre>`
             `// JS Algorithm: Create a function that sorts letters in a string using the <strong>spread operator</strong>.
             <hr>
 <pre>function sortLetters(str) {
-    ...
+    // code here
 }
 
 console.log(sortLetters("hello"));</pre>`,
@@ -1521,7 +1521,7 @@ console.log(revString("hello"));<pre>`,
             `// JS algorithm: Create a function that reverses a string with the <strong>for loop</strong>, starting at the <strong>end of the array</strong>.
             <hr>
 <pre>function revString(str) {
-    ...
+    // code here
 }
 
 console.log(revString("hello"));<pre>`,
@@ -1542,7 +1542,7 @@ console.log(revString("hello"));<pre>`,
             `// JS Algorithm: Create a function that reverses a string with the <strong>for of</strong> loop, adding new letters to the <strong>beginning</strong> of the string.
             <hr>
 <pre>function revString(str) {
-    ...
+    // code here
 }
 
 console.log(revString("hello"));<pre>`,
@@ -1635,7 +1635,7 @@ A variable name cannot start with a number.`
             <hr>
 <pre>
 function absoluteValueSumMinimization(num) {
-    ...
+    // code here
 }
 
 console.log(absoluteValueSumMinimization([2, 4, 7]));
@@ -1684,7 +1684,7 @@ console.log(addAllArray([1, 2, 4, 7, 8]));</pre>`,
             `JS: Given a rectangular matrix of characters, add a border of asterisks to it.
             <hr>
 <pre>function addBorder(arr) {
-    ...
+    // code here
 }
 
 console.log(addBorder(["aaa", "bbb", "ccc"]));</pre>`,
@@ -1716,7 +1716,7 @@ console.log(addBorder(["aaa", "bbb", "ccc"]));`
             `// JS Algorithm: Create a function that turns a two-digit number to the sum of the two digits. For instance, "29" should return "11".
             <hr>
 <pre>function addTwoDigits(num) {
-    ...
+    // code here
 }
 
 console.log(addTwoDigits(29));</pre>`,
@@ -1750,7 +1750,7 @@ console.log(addTwoDigits(29));`
             `// JS Algorithm: Create a function that returns the pair of adjacent elements with the highest product. The result should be 21.
             <hr>
 <pre>function adjacentElementsProduct(inputArr) {
-    ...
+    // code here
 }
 
 console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));</pre>`,
@@ -1775,7 +1775,7 @@ console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));`
             `// JS Algorithm: Find the longest strings in an array of strings and return all strings matching this length. Use <strong>forEach</strong> loops.
             <hr>
 <pre>function findAllLongestStrings(arr) {
-    ...
+    // code here
 }
 
 console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));</pre>`,
@@ -1833,7 +1833,7 @@ console.log(evalAlmostIncreasing([1, 3, 1, 1]));`
             `// JS Algorithm: Create a function that shifts to one to the right the the letters in a word. For instance, the output for "test" should be "uftu".
             <hr>
 <pre>function alphabeticalShift(str) {
-    ...
+    // code here
 }
 
 console.log(evalAlmostIncreasing([1, 3, 2]));
@@ -1869,7 +1869,7 @@ console.log(alphabeticalShift("crazy"));`
             `// JS Algorithm: Create a function that tells you if a sequence of letters is in alphabetical order. The function returns a boolean. The input should not have repeated characters.
             <hr>
 <pre>function isAlphabetical(str) {
-    ...
+    // code here
 }
 
 console.log(isAlphabetical("abef"));
@@ -1933,7 +1933,7 @@ console.log(isAlphabetical("abczz"));`
 <pre>const weights = [50, 60, 60, 45, 70];
 
 function alternativeSums(weights) {
-    ...
+    // code here
 }
 
 console.log(alternativeSums(weights));</pre>`,
@@ -2606,6 +2606,52 @@ console.log(chunkyMonkey([0, 1, 2, 3, 4, 5], 4)); // returns [[0, 1, 2, 3], [4, 
 
 console.log(chunkyMonkey(["a", "b", "c", "d"], 2)); // returns [["a", "b"], ["c", "d"]]
 console.log(chunkyMonkey([0, 1, 2, 3, 4, 5], 4)); // returns [[0, 1, 2, 3], [4, 5]]`
+    },
+    ///
+    {
+        question:
+            `// JS Algorithm: Find common unique characters between two strings passed as arguments.
+            <hr>
+<pre>function findCommonCharacters(str1, str2) {
+    // code here
+}
+
+console.log(findCommonCharacters("abccca", "acac")); // returns ["a", "c"]</pre>`,
+        answer:
+`function findCommonCharacters(str1, str2) {
+    let arr1 = str1.split("");
+    let arr2 = str2.split("");
+
+    arr1 = [...new Set(arr1)];
+    arr2 = [...new Set(arr2)];
+
+    const intersection = arr1.filter(value => arr2.includes(value));
+
+    return intersection;
+}
+
+console.log(findCommonCharacters("abccca", "acac")); // returns ["a", "c"]`
+    },
+    ///
+    {
+        question:
+            `// JS Algorithm: Create a function that returns a boolean based on whether or not the input array contains a duplicate.
+            <hr>
+<pre>function containsDuplicates(arr) {
+    // code here
+}
+
+console.log(containsDuplicates([1, 2, 3, 3])); // false
+console.log(containsDuplicates([1, 2, 3])); // true</pre>`,
+        answer:
+`function containsDuplicates(arr) {
+    const cleanArr = [...new Set(arr)];
+
+    return arr.length === cleanArr.length;
+}
+
+console.log(containsDuplicates([1, 2, 3, 3])); // false
+console.log(containsDuplicates([1, 2, 3])); // true`
     },
     ///
 
