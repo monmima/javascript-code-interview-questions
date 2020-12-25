@@ -1390,6 +1390,25 @@ The page is static.`
         question:
             `Terminal: How do you erase a folder with the name "test"?`,
         answer:
+`dir
+
+or
+
+ls`
+    },
+    ///
+    {
+        question:
+            `HTML: What are the two mandatory attributes for any input field?`,
+        answer:
+`name
+id`
+    },
+    ///
+    {
+        question:
+            `Terminal: How do you list the files from a folder`,
+        answer:
             `rm -r test/`
     },
     ///
