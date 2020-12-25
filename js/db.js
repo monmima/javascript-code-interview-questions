@@ -2735,5 +2735,73 @@ console.log(isNaN(NaN)); // true`
 `undefined`
     },
     ///
+    {
+        question:
+            `// JS Algorithm: Convert Celcius to Fahrenheit, knowing that the formula is Celcius times 9/5 + 32.
+            <hr>
+<pre>function celsiusToF(celcius) {
+    // code here
+}
+
+console.log(celsiusToF(-30)); // -22
+console.log(celsiusToF(-10)); // -14
+console.log(celsiusToF(0)); // 32</pre>`,
+        answer:
+`function celsiusToF(celcius) {
+    return num * (9 / 5) + 32;
+}
+
+console.log(celsiusToF(-30)); // -22
+console.log(celsiusToF(-10)); // -14
+console.log(celsiusToF(0)); // 32`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Return the factorial of the integer provided as a parameter. For instance, for the number five: 1 * 2 * 3 * 4 * 5 = 120.
+            <hr>
+<pre>function factorialize(limit) {
+    // code here
+}
+
+console.log(factorialize(5)); // 120
+console.log(factorialize(10)); // 3628800</pre>`,
+        answer:
+`function factorialize(limit) {
+    let total = 1;
+
+    for (let i = 1; i <= limit; i++) {
+        total *= i;
+        console.log(total);
+    }
+
+    return total;
+}
+
+console.log(factorialize(5)); // 120
+console.log(factorialize(10)); // 3628800`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Return the domain name from an email adress.
+            <hr>
+<pre>function findEmailDomain(address) {
+    // code here
+}
+
+console.log(findEmailDomain("mysimpleaddress@email.com"));
+console.log(findEmailDomain("*(%?%$T%/?&/%FD@email.com"));`,
+        answer:
+`function findEmailDomain(address) {
+    const lastIndex = address.lastIndexOf("@");
+
+    return address.slice(lastIndex + 1, address.length);
+}
+
+console.log(findEmailDomain("mysimpleaddress@email.com"));
+console.log(findEmailDomain("*(%?%$T%/?&/%FD@email.com"));`
+    },
+    ///
 
 ]
