@@ -206,10 +206,14 @@ let inst = new Test("myString");
                 <hr>
 <pre>
 let myVar;
+// code here
+console.log(myVar);
 </pre>
             `,
         answer:
-`myVar = Math.floor((Math.random() * 10) + 1);`
+`let myVar;
+myVar = Math.floor((Math.random() * 10) + 1);
+console.log(myVar);`
     },
 
     {
@@ -381,7 +385,9 @@ console.log(test);</pre>
 <pre>&lt;button onClick="alert('Alert!')"&gt;Click me.&lt;/button&gt;</pre>
             `,
         answer:
-`&lt;button **onclick**="alert('Alert!')"&gt;Click me.&lt;/button&gt;`
+`"onclick" is not camel-cased.
+
+&lt;button onclick="alert('Alert!')"&gt;Click me.&lt;/button&gt;`
     },
     ///
     {
@@ -809,8 +815,7 @@ console.log(area);</pre>
     ///
     {
         question:
-            `
-            JS: What is the output?
+            `// JS: What is the output?
             <hr>
 <pre>console.log(100 / 0);</pre>
             `,
@@ -820,25 +825,27 @@ console.log(area);</pre>
     ///
     {
         question:
-            `
-            JS: What is the output?
+            `// JS: What is the output?
             <hr>
-<pre>console.log(5 / []);</pre>
-            `,
+<pre>console.log(5 / []);</pre>`,
         answer:
 `Infinity`
     },
     ///
     {
         question:
-            `JS: How do you find the type of an array?`,
+            `// JS: How do you find the type of an array?
+            <hr>
+<pre>// code here
+console.log(x);</pre>`,
         answer:
-`Array.isArray(arr);`
+`let x = Array.isArray(arr);
+console.log(x);`
     },
     ///
     {
         question:
-            `JS: What is the output?
+            `// JS: What is the output?
             <hr>
 <pre>function print() {
     console.log("Hello world");
@@ -867,19 +874,13 @@ console.log(typeof print);</pre>`,
             `CSS: Create a CSS rule to add a clover <strong>before the a div tag</strong>.`,
         answer:
 `div:before {
-    content: "&#92;2618 ";
-}
-
-or
-
-div:before {
-    content: "&#92;2618 ";
+    content: "&#92;2618&#92;0a";
 }`
     },
     ///
     {
         question:
-            `JS: Find the value of the first element greater than 10.
+            `// JS: Find the value of the first element greater than 10.
             <hr>
 <pre>const arr = [5, 12, 8, 130, 44];
 
@@ -907,7 +908,7 @@ console.log(answer);`
     ///
     {
         question:
-            `JS: Create a <strong>one-line</strong> function that swaps a first name and a last name.
+            `// JS: Create a <strong>one-line</strong> function that swaps a first name and a last name.
             <hr>
 <pre>function swapName(str) {
     // code here
@@ -942,7 +943,7 @@ console.log(swapName("John Doe"));`
     ///
     {
         question:
-            `JS: Create a function to swap words. Use indices.
+            `// JS: Create a function to swap words. Use indices.
             <hr>
 <pre>function swapName(str) {
     // code here
@@ -976,7 +977,7 @@ console.log(swapName("John Doe"));`
     ///
     {
         question:
-            `JS: What function do you use to round a number to the nearest integer?`,
+            `// JS: What function do you use to round a number to the nearest integer?`,
         answer:
 `Math.round()`
     },
@@ -1085,7 +1086,7 @@ console.log(repeatString("car", 3));`
     ///
     {
         question:
-            `JS: What <strong>two</strong> keywords do you use to import a file in ES5 and ES6?`,
+            `// JS: What <strong>two</strong> keywords do you use to import a file in ES5 and ES6?`,
         answer:
 `ES5
 require
@@ -1096,7 +1097,7 @@ import`
     ///
     {
         question:
-            `JS: Declare a variable that evaluates to true or false using a <strong>ternary operator</strong> and the constant <code>age</code>.
+            `// JS: Declare a variable that evaluates to true or false using a <strong>ternary operator</strong> and the constant <code>age</code>.
             <hr>
             const age = 18;`,
         answer:
@@ -1224,7 +1225,7 @@ console.log(findLongest("Where in the airport?"));</pre>`,
     ///
     {
         question:
-            `JS: Erase one item starting from index 0 in the array.
+            `// JS: Erase one item starting from index 0 in the array.
             <hr>
 <pre>const arr = ["cat", "dog", "horse", "camel"];
 
@@ -1272,7 +1273,7 @@ console.log(longestWord("Where is the airport?")`
     ///
     {
         question:
-            `JS: Besides <code>typeof</code>, what else can you use to find out if a value is of type <code>number</code>?
+            `// JS: Besides <code>typeof</code>, what else can you use to find out if a value is of type <code>number</code>?
             <hr>
 <pre>const x = 5;
 
@@ -1306,7 +1307,7 @@ console.log(newVar);`
     ///
     {
         question:
-            `JS: Create and use a simple <strong>for each</strong> loop on this array.
+            `// JS: Create and use a simple <strong>for each</strong> loop on this array.
             <hr>
             <pre>const arr = ['a', 'b', 'c'];</pre>`,
         answer:
@@ -1362,7 +1363,7 @@ The page is static.`
     ///
     {
         question:
-            `JS: Create a simple event listener that fires when a page loads.
+            `// JS: Create a simple event listener that fires when a page loads.
             <hr>
 <pre>// code here
     console.log("Page ready!");
@@ -1515,7 +1516,7 @@ function sortLetters(str) {
     ///
     {
         question:
-            `JS: How do you open a new window with JS (and not by just clicking a link).`,
+            `// JS: How do you open a new window with JS (and not by just clicking a link).`,
         answer:
 `window.open();`
     },
@@ -1577,7 +1578,7 @@ console.log(revString("hello"));<pre>`,
     ///
     {
         question:
-            `// Algorithm: What command to you type in the CLI to create a new React project?`,
+            `// JS: What command to you type in the CLI to create a new React project?`,
         answer:
 `npx create-react-app folder-name`
     },
@@ -1595,7 +1596,7 @@ console.log(revString("hello"));<pre>`,
     ///
     {
         question:
-            `JS: How do you find out more about keys that were pressed?`,
+            `// JS: How do you find out more about keys that were pressed?`,
         answer:
 `document.addEventListener("keypress", function(event) {
     console.log(event);
@@ -1604,7 +1605,7 @@ console.log(revString("hello"));<pre>`,
     ///
     {
         question:
-            `JS: What is an impure function?`,
+            `// JS: What is an impure function?`,
         answer:
 `A function where external variables are not passed in as arguments.
 This may cause side effects.`
@@ -1693,14 +1694,14 @@ console.log(addAllArray([1, 2, 4, 7, 8]));</pre>`,
     ///
     {
         question:
-            `JS: Create a line of code that turns text an <code>h3</code> tag to red.`,
+            `// JS: Create a line of code that turns text an <code>h3</code> tag to red.`,
         answer:
 `document.querySelector("h3").style.color = "red";`
     },
     ///
     {
         question:
-            `JS: Given a rectangular matrix of characters, add a border of asterisks to it.
+            `// JS: Given a rectangular matrix of characters, add a border of asterisks to it.
             <hr>
 <pre>function addBorder(arr) {
     // code here
@@ -1751,7 +1752,7 @@ console.log(addTwoDigits(29));`
     ///
     {
         question:
-            `JS: Write a barebone switch statement.
+            `// JS: Write a barebone switch statement.
             <hr>
 <pre>let myVar = "banana";</pre>`,
         answer:
@@ -1845,42 +1846,6 @@ console.log(evalAlmostIncreasing([1, 3, 1, 1]));</pre>`,
 
 console.log(evalAlmostIncreasing([1, 3, 2]));
 console.log(evalAlmostIncreasing([1, 3, 1, 1]));`
-    },
-    ///
-    {
-        question:
-            `// Algorithm: Create a function that shifts to one to the right the the letters in a word. For instance, the output for "test" should be "uftu".
-            <hr>
-<pre>function alphabeticalShift(str) {
-    // code here
-}
-
-console.log(evalAlmostIncreasing([1, 3, 2]));
-console.log(evalAlmostIncreasing([1, 3, 1, 1]));</pre>`,
-        answer:
-`function alphabeticalShift(str) {
-    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-
-    let arr = str.split("");
-    let newString = "";
-    let iCurrLetter = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-        iCurrLetter = alphabet.indexOf(arr[i]);
-
-        if (alphabet[iCurrLetter + 1] == undefined) {
-            newString += "a";
-        } else {
-            newString += alphabet[iCurrLetter + 1];
-        }
-
-    }
-
-    return newString;
-}
-
-console.log(alphabeticalShift("test"));
-console.log(alphabeticalShift("crazy"));`
     },
     ///
     {
@@ -2025,7 +1990,7 @@ console.log(areEquallyStrong(14, 11, 15, 10)); // false`
     ///
     {
         question:
-            `JS: What is passing by value and passing by reference?`,
+            `// JS: What is passing by value and passing by reference?`,
         answer:
 `// Passing by value is what happens when you create a primitive from another primitive.
 a = 5;
@@ -2053,7 +2018,7 @@ console.log(obj1, obj2);`
     ///
     {
         question:
-            `JS: What are the data types in JS?`,
+            `// JS: What are the data types in JS?`,
         answer:
 `Primitives
 - booleans
@@ -2069,18 +2034,7 @@ Non-primtives
     ///
     {
         question:
-            `// Algorithm: Given an array of integers, create a function that adds to a counter everytime it is necessary so you end up with a stricly increasing sequence.`,
-        answer:
-`function arrayChange(arr) {
-    // code here
-}
-
-console.log(arrayChange([1, 1, 1])); // should return 3`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that finds the maximal difference between two consecutive elements in an array (21).
+            `Algorithm: Create a function that finds the maximal difference between two consecutive elements in an array.
             <hr>
 <pre>function arrayMaximalAdjactentDifference(arr) {
     // your code here
@@ -2266,7 +2220,7 @@ Arrow functions don't work well with the this keyword.`
     ///
     {
         question:
-            `JS: What do you call "string" and "number"?`,
+            `// JS: What do you call "string" and "number"?`,
         answer:
 `These are two different types.`
     },
@@ -2307,7 +2261,7 @@ Arrow functions don't work well with the this keyword.`
     ///
     {
         question:
-            `JS: What do you use to know if a number is positive, negative or zero?`,
+            `// JS: What do you use to know if a number is positive, negative or zero?`,
         answer:
 `Math.sign(20);
 Math.sign(-20);
@@ -2316,7 +2270,7 @@ Math.sign(0);`
     ///
     {
         question:
-            `JS: What are some of the ways you can create an array?`,
+            `// JS: What are some of the ways you can create an array?`,
         answer:
 `const arr1 = [1]
 
@@ -2335,7 +2289,7 @@ const badArr = new Array();`
     ///
     {
         question:
-            `JS: What is the difference between undefined and null?`,
+            `// JS: What is the difference between undefined and null?`,
         answer:
 `Undefined is a variable that has not been assigned a value.
 
@@ -2354,10 +2308,11 @@ Undefined = has not been given a value yet`
     {
         question:
             `// Algorithm: Create a function that loops through an array.
-            // For every occurrence of an old value, a new value should replace it.
-            // Use a <strong>forEach</strong> loop.
             <hr>
-<pre>function arrayPreviousLess(arr, oldV, newV) {
+<pre>// For every occurrence of an old value, a new value should replace it.
+// Use a <strong>forEach</strong> loop.
+
+function arrayPreviousLess(arr, oldV, newV) {
     // your code here
 }
 
@@ -2394,7 +2349,7 @@ console.log(arrayPreviousLess([1, 2, 1], 1, 3)); // [3, 2, 3]`
     ///
     {
         question:
-            `JS: How do you find the last item in an array?
+            `// JS: How do you find the last item in an array?
             <hr>
 <pre>const arr = [1, 2, 3, 4];
 // your code here
@@ -2415,7 +2370,7 @@ console.log(last);`
     // ...
 }
 
-console.log(distCandies(10, 3));</pre>`,
+console.log(distCandies(10, 3)); // 9</pre>`,
         answer:
 `function distCandies(candies, kids) {
     const candiesPerKids = Math.floor(candies / kids);
@@ -2424,12 +2379,12 @@ console.log(distCandies(10, 3));</pre>`,
     return distributedCandies;
 }
 
-console.log(distCandies(10, 3));`
+console.log(distCandies(10, 3)); // 9`
     },
     ///
     {
         question:
-            `JS: What is the output?
+            `// JS: What is the output?
             <hr>
 <pre>console.log(0.2 + 0.1)</pre>`,
         answer:
@@ -2443,7 +2398,7 @@ Anothing possibility is to validate with a server-side language.`
     ///
     {
         question:
-            `JS: What is instanceof and when should you use it?`,
+            `// JS: What is instanceof and when should you use it?`,
         answer:
 `Instanceof should not be used to find the type of a value.
 Typeof is there for that.
@@ -2629,27 +2584,19 @@ console.log(chunkyMonkey([0, 1, 2, 3, 4, 5], 4)); // returns [[0, 1, 2, 3], [4, 
     ///
     {
         question:
-            `// Algorithm: Find common unique characters between two strings passed as arguments.
+            `// Algorithm: Find common unique characters between two arrays.
             <hr>
-<pre>function findCommonCharacters(str1, str2) {
+<pre>function findCommonCharacters(arr1, arr2) {
     // code here
 }
 
-console.log(findCommonCharacters("abccca", "acac")); // returns ["a", "c"]</pre>`,
+console.log(findCommonCharacters(["a", "b", "c"], ["d", "a", "b"])); // returns ["a", "b"]</pre>`,
         answer:
-`function findCommonCharacters(str1, str2) {
-    let arr1 = str1.split("");
-    let arr2 = str2.split("");
-
-    arr1 = [...new Set(arr1)];
-    arr2 = [...new Set(arr2)];
-
-    const intersection = arr1.filter(value => arr2.includes(value));
-
-    return intersection;
+`function findCommonCharacters(arr1, arr2) {
+    return intersection = arr1.filter(value => arr2.includes(value));
 }
 
-console.log(findCommonCharacters("abccca", "acac")); // returns ["a", "c"]`
+console.log(findCommonCharacters(["a", "b", "c"], ["d", "a", "b"])); // returns ["a", "b"]`
     },
     ///
     {
@@ -2939,6 +2886,46 @@ limit the amount of variables`
 console.log(compareIntegers("12", "13")); // less
 console.log(compareIntegers("875", "799")); // greater
 console.log(compareIntegers("1000", "1000")); // equal`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Compare two integers given as string.
+            <hr>
+<pre>function findIndex(letter) {
+    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+    // type your code here
+}
+
+console.log(findIndex("a"));
+console.log(findIndex("v"));</pre>`,
+        answer:
+`function findIndex(letter) {
+    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+    return alphabet.indexOf(letter);
+}
+
+console.log(findIndex("a"));
+console.log(findIndex("v"));`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Remove duplicates in an array.
+            <hr>
+<pre>function removeDuplicates(arr) {
+    // code here
+}
+
+console.log(removeDuplicates(["a", "b", "c", "a", "c"])); // returns ["a", "b", "c"]</pre>`,
+        answer:
+`function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}
+
+console.log(removeDuplicates(["a", "b", "c", "a", "c"])); // returns ["a", "b", "c"]`
     },
     ///
 
