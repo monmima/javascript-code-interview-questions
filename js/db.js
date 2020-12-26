@@ -2133,24 +2133,22 @@ It's better to only use === because you want to write your code in the strictest
     ///
     {
         question:
-            `Interview: It's a function that returns a function for the purpose of hiding a private variable.`,
+            `Interview: What is closure?`,
         answer:
-`Interview: It's a function that returns a function for the purpose of hiding a private variable.
+`It's a function that returns another function.
+It's used to stored secret variables.
 
 Example:
 
-const counter = (function() {
-    let counter = 0;
+function outer() {
+    var name = 'Mozilla'; // name is a local variable created by outer()
+    function inner() { // displayName() is the inner function, a closure
+        console.log(name); // use variable declared in the parent function
+    }
+    inner();
+}
 
-    return function() {
-        counter++;
-
-        return counter;
-    };
-})();
-
-console.log(counter()); // 1
-console.log(counter()); // 2
+outer();
 
 Bonus:
 Makes code relevant and easy to debug.
@@ -2192,9 +2190,11 @@ let test = "string";`
         answer:
 `'Defines that JavaScript code should be executed in "strict mode".' [w3schools.com]
 
-Prevents the accidental creation of global variables, etc. Nowadays this isn't as important being people will use Webpack with a linter, etc.
+Prevents the accidental creation of global variables, etc. Nowadays this isn't as important because people will use Webpack with a linter, etc.
 
 Example:
+
+"use strict"
 
 function doStuff() {
     x = 10; // "use strict" catches this error (no var declaration) and creates a message in the console;
@@ -2820,6 +2820,125 @@ console.log(findEmailDomain("*(%?%$T%/?&/%FD@email.com"));`,
 
 console.log(findEmailDomain("mysimpleaddress@email.com"));
 console.log(findEmailDomain("*(%?%$T%/?&/%FD@email.com"));`
+    },
+    ///
+    {
+        question:
+            `// Interview: What is object notation?`,
+        answer:
+`user.firstName // dot notation
+user["firstName"] // bracket notation
+
+Dot notation should be used as much as possible instead of bracket notation.
+`
+    },
+    ///
+    {
+        question:
+            `// Interview: What is an anonymous function?`,
+        answer:
+`It's a function that doesn't have it's own name.
+Instead, the function is store inside a variable.
+
+// Normal function
+function add(num1, num2) {
+    return num1 + num2;
+}
+
+// Anonymous function
+const add = function(num1, num2) {
+    return num1 + num2;
+}`
+    },
+    ///
+    {
+        question:
+            `// Interview: What is a higher order function?`,
+        answer:
+`- The same as a callback.
+- You pass it in.
+- They are called at a later date (synchronously or asynchronously).
+
+The map() method takes a callback, for instance.
+
+const arr = [1, 2, 3, 4, 5];
+
+const arr2 = arr.map((val) => val + 5);
+
+console.log(arr2); // [6, 7, 8, 9, 10]`
+    },
+    ///
+    {
+        question:
+            `// Interview: What is a callback?`,
+        answer:
+`- The same as a higher order function.
+- You pass it in.
+- They are called at a later date (synchronously or asynchronously).
+
+The map() method takes a callback, for instance.
+
+const arr = [1, 2, 3, 4, 5];
+
+const arr2 = arr.map((val) => val + 5);
+
+console.log(arr2); // [6, 7, 8, 9, 10]`
+    },
+    ///
+    {
+        question:
+            `// JS: What characters do you use to reuse a matched regexp pattern?`,
+        answer:
+`$1 // JS
+\1 // text editor
+\\1 // Python`
+    },
+    ///
+    {
+        question:
+            `// Sass: What is the difference between .sass and .scss files?`,
+        answer:
+`.scss // new Sass
+.sass // old Sass`
+    },
+    ///
+    {
+        question:
+            `// Interview: What are some naming conventions?`,
+        answer:
+`camelCase
+isAdult // boolean
+hasChild // boolean
+getTotal // function
+in CSS, you try to add as few selectors as possible
+in CSS, you use dash case
+CONSTANT
+limit the amount of variables`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Compare two integers given as string.`,
+        answer:
+`function compareIntegers (intStr1, intStr2) {
+    let res = "";
+    intStr1 = parseInt(intStr1);
+    intStr2 = parseInt(intStr2);
+
+    if (intStr1 > intStr2) {
+        res = "greater";
+    } else if (intStr1 < intStr2) {
+        res = "less";
+    } else {
+        res = "equal";
+    }
+
+    return res;
+}
+
+console.log(compareIntegers("12", "13")); // less
+console.log(compareIntegers("875", "799")); // greater
+console.log(compareIntegers("1000", "1000")); // equal`
     },
     ///
 
