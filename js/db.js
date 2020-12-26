@@ -2890,8 +2890,8 @@ console.log(arr2); // [6, 7, 8, 9, 10]`
             `// JS: What characters do you use to reuse a matched regexp pattern?`,
         answer:
 `$1 // JS
-\1 // text editor
-\\1 // Python`
+&bsol;1 // text editor
+&bsol;&bsol;1 // Python`
     },
     ///
     {
