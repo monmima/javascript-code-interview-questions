@@ -2929,16 +2929,16 @@ console.log(removeDuplicates(["a", "b", "c", "a", "c"])); // returns ["a", "b", 
     ///
     {
         question:
-            `// Create a function that sums up the difference between each number in an array.
+            `// Create a function that adds up the difference between each number in an array.
             <hr>
 <pre>function sumUpDifference(arr) {
     // code here
 }
 
-console.log(sumUpDifference([1, 2, 3])); // (3 - 2) + (2 - 1) = 2
-console.log(sumUpDifference([1, 3])); // 3 - 1 = 2</pre>`,
+console.log(addUpDifference([1, 2, 3])); // (3 - 2) + (2 - 1) = 2
+console.log(addUpDifference([1, 3])); // 3 - 1 = 2</pre>`,
         answer:
-`function sumUpDifference(arr) {
+`function addUpDifference(arr) {
     let sumDiff = 0;
 
     for (let i = arr.length - 1; i > 0; i--) {
@@ -2950,6 +2950,25 @@ console.log(sumUpDifference([1, 3])); // 3 - 1 = 2</pre>`,
 
 console.log(sumUpDifference([1, 2, 3])); // (3 - 2) + (2 - 1) = 2
 console.log(sumUpDifference([1, 3])); // 3 - 1 = 2`
+    },
+    ///
+    {
+        question:
+            `// // Create a function that turns a number to a string array.
+            <hr>
+<pre>function convertToString(num) {
+    // your code here
+}
+
+console.log(convertToString(56)); // ["56"]
+</pre>`,
+        answer:
+`function convertToString(num) {
+    return [num.toString()];
+}
+
+console.log(convertToString(56)); // ["56"]
+`
     },
     ///
 
