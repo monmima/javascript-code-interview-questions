@@ -82,8 +82,7 @@ arr = [...arr, "end"];
     // code here
 }
 
-console.log(reverseLetters("hello"));</pre>;
-            `,
+console.log(reverseLetters("hello"));</pre>;`,
         answer:
 `function reverseLetters(str) {
     let arr = str.split("");
@@ -2593,7 +2592,7 @@ console.log(chunkyMonkey([0, 1, 2, 3, 4, 5], 4)); // returns [[0, 1, 2, 3], [4, 
 console.log(findCommonCharacters(["a", "b", "c"], ["d", "a", "b"])); // returns ["a", "b"]</pre>`,
         answer:
 `function findCommonCharacters(arr1, arr2) {
-    return intersection = arr1.filter(value => arr2.includes(value));
+    return intersection = arr1.filter(val => arr2.includes(val));
 }
 
 console.log(findCommonCharacters(["a", "b", "c"], ["d", "a", "b"])); // returns ["a", "b"]`
@@ -2926,6 +2925,31 @@ console.log(removeDuplicates(["a", "b", "c", "a", "c"])); // returns ["a", "b", 
 }
 
 console.log(removeDuplicates(["a", "b", "c", "a", "c"])); // returns ["a", "b", "c"]`
+    },
+    ///
+    {
+        question:
+            `// Create a function that sums up the difference between each number in an array.
+            <hr>
+<pre>function sumUpDifference(arr) {
+    // code here
+}
+
+console.log(sumUpDifference([1, 2, 3])); // (3 - 2) + (2 - 1) = 2
+console.log(sumUpDifference([1, 3])); // 3 - 1 = 2</pre>`,
+        answer:
+`function sumUpDifference(arr) {
+    let sumDiff = 0;
+
+    for (let i = arr.length - 1; i > 0; i--) {
+        sumDiff += arr[i] - arr[i - 1];
+    }
+
+    return sumDiff;
+}
+
+console.log(sumUpDifference([1, 2, 3])); // (3 - 2) + (2 - 1) = 2
+console.log(sumUpDifference([1, 3])); // 3 - 1 = 2`
     },
     ///
 
