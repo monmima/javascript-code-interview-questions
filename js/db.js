@@ -82,7 +82,7 @@ arr = [...arr, "end"];
     // code here
 }
 
-console.log(reverseLetters("hello"));</pre>;`,
+console.log(reverseLetters("hello"));</pre>`,
         answer:
 `function reverseLetters(str) {
     let arr = str.split("");
@@ -1011,7 +1011,7 @@ console.log(swapName("John Doe"));`
     // code here
 }
 
-console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
+console.log(removeOdds([1, 2, 3, 4, 5])); // [2, 4]</pre>`,
         answer:
 `function removeOdds(arr) {
     const evenArr = [];
@@ -1023,7 +1023,17 @@ console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
     }
 
     return evenArr;
-}`
+}
+
+or
+
+function removeOdds(arr) {
+    return arr.filter(function(i) {
+        return i % 2 === 0;
+    });
+}
+
+console.log(removeOdds([1, 2, 3, 4, 5])); // [2, 4]`
     },
     ///
     {
@@ -1441,7 +1451,7 @@ id`
     // code here
 }
 
-console.log(removeStrings(["word", 34, "another", 78, "one"]));</pre>`,
+console.log(removeStrings(["word", 34, "another", 78, "one"])); // [34, 78]</pre>`,
         answer:
 `<pre>function removeStrings(arr) {
     return arr.filter(function (i) {
@@ -1457,7 +1467,7 @@ function removeStrings(arr) {
     })
 }
 
-console.log(removeStrings(["word", 34, "another", 78, "one"]));</pre>`
+console.log(removeStrings(["word", 34, "another", 78, "one"])); // [34, 78]</pre>`
     },
     ///
     {
@@ -1515,9 +1525,9 @@ function sortLetters(str) {
     ///
     {
         question:
-            `// JS: How do you open a new window with JS (and not by just clicking a link).`,
+            `// JS: How do you open a new tab with JS (and not by just clicking a link).`,
         answer:
-`window.open();`
+`window.open("https://www.wikipedia.org");`
     },
     ///
     {
@@ -1532,46 +1542,6 @@ console.log(revString("hello"));<pre>`,
         answer:
 `function revString(str) {
     return [...str].reverse().join("");
-}`
-    },
-    ///
-    {
-        question:
-            `// Algorithm: Create a function that reverses a string with the <strong>for loop</strong>, starting at the <strong>end of the array</strong>.
-            <hr>
-<pre>function revString(str) {
-    // code here
-}
-
-console.log(revString("hello"));<pre>`,
-        answer:
-`function revString(str) {
-    let revStr = "";
-
-    for (let i = str.length - 1; i >= 0; i--) {
-        revStr += str[i];
-    }
-
-    return revStr;
-}`
-    },
-    ///
-    {
-        question:
-            `// Algorithm: Create a function that reverses a string with the <strong>for of</strong> loop, adding new letters to the <strong>beginning</strong> of the string.
-            <hr>
-<pre>function revString(str) {
-    // code here
-}
-
-console.log(revString("hello"));<pre>`,
-        answer:
-`function revString(str) {
-    let newStr = "";
-    for (let i of str) {
-        newStr = i + newStr;
-    }
-    return newStr;
 }`
     },
     ///
@@ -1641,7 +1611,7 @@ console.log(isPalindrome("word"));`
     ///
     {
         question:
-            `// Algorithm: Give an example of an invalid variable name.`,
+            `// JS: Give an example of an invalid variable name.`,
         answer:
 `let 1stName = "John";
 
@@ -1693,7 +1663,7 @@ console.log(addAllArray([1, 2, 4, 7, 8]));</pre>`,
     ///
     {
         question:
-            `// JS: Create a line of code that turns text an <code>h3</code> tag to red.`,
+            `// JS: Create a line of code that turns text from an <code>h3</code> tag to red.`,
         answer:
 `document.querySelector("h3").style.color = "red";`
     },
@@ -1911,52 +1881,30 @@ console.log(isAlphabetical("abczz"));`
     ///
     {
         question:
-            `// Algorithm: Given an array with individual weights, create two groups (even group and odd group) and return an array of two elements: total weight for group one and total weight for group two. Use a <strong>forEach loop</strong>.
+            `// Algorithm: Return an array of two elements: total weight for group one (index even) and total weight for group two (index odd). Use a <strong>forEach loop</strong>.
             <hr>
-<pre>const weights = [50, 60, 60, 45, 70];
-
-function alternativeSums(weights) {
+<pre>function alternativeSums(weights) {
     // code here
 }
 
-console.log(alternativeSums(weights));</pre>`,
+console.log(alternativeSums([50, 60, 60, 45, 70])); // [180, 105]</pre>`,
         answer:
-`const weights = [50, 60, 60, 45, 70];
+`function alternativeSums(weights) {
+    let sumEven = 0;
+    let sumOdd = 0;
 
-function alternativeSums(weights) {
-    let groupEven = 0;
-    let groupOdd = 0;
-
-    for (let i = 0; i < weights.length; i++) {
+    weights.forEach((v, i) => {
         if (i % 2 === 0) {
-            groupEven += weights[i];
+            sumEven += v;
         } else {
-            groupOdd += weights[i];
-        }
-    }
-
-    return [groupEven, groupOdd];
-}
-
-or
-
-function alternativeSums(weights) {
-    let groupEven = 0;
-    let groupOdd = 0;
-
-    weights.forEach((element, index) => {
-        
-        if (index % 2 === 0) {
-            groupEven += element;
-        } else {
-            groupOdd += element;
+            sumOdd += v;
         }
     });
 
-    return [groupEven, groupOdd];
+    return [sumEven, sumOdd];
 }
 
-console.log(alternativeSums(weights));`
+console.log(alternativeSums([50, 60, 60, 45, 70])); // [180, 105]`
     },
     ///
     {
@@ -2089,7 +2037,7 @@ It's better to only use === because you want to write your code in the strictest
             `Interview: What is closure?`,
         answer:
 `It's a function that returns another function.
-It's used to stored secret variables.
+It's used to stored private variables.
 
 Example:
 
@@ -2288,7 +2236,7 @@ const badArr = new Array();`
     ///
     {
         question:
-            `// JS: What is the difference between undefined and null?`,
+            `// Interview: What is the difference between undefined and null?`,
         answer:
 `Undefined is a variable that has not been assigned a value.
 
@@ -2709,15 +2657,15 @@ console.log(isNaN(NaN)); // true`
 }
 
 console.log(celsiusToF(-30)); // -22
-console.log(celsiusToF(-10)); // -14
+console.log(celsiusToF(-10)); // 14
 console.log(celsiusToF(0)); // 32</pre>`,
         answer:
 `function celsiusToF(celcius) {
-    return num * (9 / 5) + 32;
+    return celcius * (9 / 5) + 32;
 }
 
 console.log(celsiusToF(-30)); // -22
-console.log(celsiusToF(-10)); // -14
+console.log(celsiusToF(-10)); // 14
 console.log(celsiusToF(0)); // 32`
     },
     ///
@@ -2976,6 +2924,293 @@ console.log(convertToString(56)); // ["56"]
             `// Terminal: How do you empty the terminal window?`,
         answer:
 `clear`
+    },
+    ///
+    {
+        question:
+            `// Interview: How do you empty an array?
+            <hr>
+<pre>let x = 15;</pre>`,
+        answer:
+`let x = 15;
+x = [];
+
+or 
+
+let arr = [1, 2, 3];
+console.log(arr); // [1, 2, 3]
+
+arr.splice(0);
+console.log(arr); // []
+
+or
+
+while (arr.length > 0) {
+    arr.pop();
+}
+
+or 
+
+let arr = [1, 2, 3];
+console.log(arr); // [1, 2, 3]
+
+arr.length = 0;
+console.log(arr); // []`
+    },
+    ///
+    {
+        question:
+            `// Interview: What is a MUL function?`,
+        answer:
+`MUL stands for multiplication.
+It's a function that returns one or many nested anonymous functions.
+It's not necessarily a good idea. It's dirty.
+
+Example:
+
+function example(x) {
+    return (y) => {
+        return (z) => {
+            return x * y * z;
+        }
+    }
+}
+
+console.log(example(5)(2)(4)); // 40`
+    },
+    ///
+    {
+        question:
+            `// JS: How do you add a prop to the class?
+            <hr>
+<pre>class Test {
+    constructor(string) {
+        this.string = string;
+    }
+
+    printString() {
+        console.log(this.string);
+    }
+}
+
+let inst = new Test("myString");</pre>`,
+        answer:
+`class Test {
+    constructor(string) {
+        this.string = string;
+    }
+
+    printString() {
+        console.log(this.string);
+    }
+}
+
+let inst = new Test("myString");
+inst.age = 25;
+console.log(inst); // Test { string: "myString", age: 25 }`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Insert the words "car" and "truck", starting at index 2 of an array.
+            <hr>
+<pre>function insertInArr(arr) {
+    // code here
+}
+
+console.log(insertInArr([1, 2, 3, 4])); // [1, 2, "car", "truck", 3, 4]
+console.log(insertInArr(["a", "b", "c", "d"])); // ["a", "b", "car", "truck", "c", "d"]</pre>`,
+        answer:
+`function insertInArr(arr) {
+    arr.splice(2, 0, "car", "truck");;
+
+    return arr;
+}
+
+console.log(insertInArr([1, 2, 3, 4])); // [1, 2, "car", "truck", 3, 4]
+console.log(insertInArr(["a", "b", "c", "d"])); // ["a", "b", "car", "truck", "c", "d"]`
+    },
+    ///
+    {
+        question:
+            `// Interview: What is an IIFE?`,
+        answer:
+`- Stands for "immediately invoked function expression"
+- Runs as soon as it is defined
+- Mainly used to avoid global variables
+- Not as useful as it used to be since the introduction of "let" and "const" in ES6
+- Used in frameworks/libraries such as jQuery
+
+Example:
+
+(function() {
+    console.log("my logic");
+})();`
+    },
+    ///
+    {
+        question:
+            `// JS: Write a barebone IIFE.`,
+        answer:
+`(function() {
+    console.log("my logic");
+})();`
+    },
+    ///
+    {
+        question:
+            `// JS: What is the output?
+            <hr>
+<pre>console.log(0 / 0);</pre>`,
+        answer:
+`NaN`
+    },
+    ///
+    {
+        question:
+            `// JS: What is the output?
+            <hr>
+<pre>console.log(typeof NaN);</pre>`,
+        answer:
+`number
+
+This would be the solution to really find out:
+
+console.log(isNaN(NaN)) // true`
+    },
+    ///
+    {
+        question:
+            `// JS: What is the output?
+            <hr>
+<pre>console.log(parseInt("hellos"));</pre>`,
+        answer:
+`NaN`
+    },
+    ///
+    {
+        question:
+            `// JS: What is the output?
+            <hr>
+<pre>console.log(0 / 0);</pre>`,
+        answer:
+`NaN`
+    },
+    ///
+    {
+        question:
+            `// Interview: What is the difference between undeclared and undefined?`,
+        answer:
+`- Undeclared: Doesn't exist at all.
+
+- Undefined: Exists, but has no value.
+-- Could be a non-existing property of an object too.`
+    },
+    ///
+    {
+        question:
+            `// Interview: Name the DOM selectors.`,
+        answer:
+`- document.getElementById("")
+- document.getElementsByClassName("")
+- document.getElementsByTagName("")
+
+Slower:
+- document.querySelector("")
+- document.querySelectorAll("")
+
+To find out more you could use console.log on any of the above.`
+    },
+    ///
+    {
+        question:
+            `// Interview: How do you copy an object?`,
+        answer:
+``
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Create a function that checks if an object is actually a reference to another one.
+            <hr>
+<pre>const user1 = {
+    name: "Jack"
+}
+
+const user2 = user1;
+
+const user3 = {
+    name: "Joe"
+}
+
+function checkIfIsSameObject(obj1, obj2) {
+    // code here
+}
+
+console.log(checkIfIsSameObject(user1, user2)); // true
+console.log(checkIfIsSameObject(user1, user3)); // false</pre>`,
+        answer:
+`const user1 = {
+    name: "Jack"
+}
+
+const user2 = user1;
+
+const user3 = {
+    name: "Joe"
+}
+
+function checkIfIsSameObject(obj1, obj2) {
+    return Object.is(obj1, obj2);
+}
+
+console.log(checkIfIsSameObject(user1, user2)); // true
+console.log(checkIfIsSameObject(user1, user3)); // false`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Create a function that creates a copy of an object.
+            <hr>
+<pre>function copyObj(obj) {
+    // code here
+}
+
+console.log(copyObj({ name: "Jack" })); // { name: "Jack" }</pre>`,
+        answer:
+`function copyObj(obj) {
+    return {...obj};
+}
+
+// or
+
+function copyObj(obj) {
+    return JSON.parse(JSON.stringify(obj));
+}
+
+console.log(copyObj({ name: "Jack" })); // { name: "Jack" }`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Create a function that tells you if obj1 is identical to obj2.
+            <hr>
+<pre>function checkIfObjIdentical(obj1, obj2) {
+    ...
+}
+
+console.log(checkIfObjIdentical({ name: "Jack" }, { name: "Jack" })); // true
+console.log(checkIfObjIdentical({ name: "Jack" }, { name: "John" })); // true</pre>`,
+        answer:
+`function checkIfObjIdentical(obj1, obj2) {
+    obj1 = JSON.stringify(obj1);
+    obj2 = JSON.stringify(obj2);
+
+    return obj1 === obj2;
+}
+
+console.log(checkIfObjIdentical({ name: "Jack" }, { name: "Jack" })); // true
+console.log(checkIfObjIdentical({ name: "Jack" }, { name: "John" })); // true`
     },
     ///
 
