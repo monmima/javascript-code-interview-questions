@@ -2929,7 +2929,7 @@ console.log(removeDuplicates(["a", "b", "c", "a", "c"])); // returns ["a", "b", 
     ///
     {
         question:
-            `// Create a function that adds up the difference between each number in an array.
+            `// Algorithm: Create a function that adds up the difference between each number in an array.
             <hr>
 <pre>function sumUpDifference(arr) {
     // code here
@@ -2954,7 +2954,7 @@ console.log(sumUpDifference([1, 3])); // 3 - 1 = 2`
     ///
     {
         question:
-            `// // Create a function that turns a number to a string array.
+            `// Algorithm: Create a function that turns a number to a string array.
             <hr>
 <pre>function convertToString(num) {
     // your code here
@@ -2969,6 +2969,13 @@ console.log(convertToString(56)); // ["56"]
 
 console.log(convertToString(56)); // ["56"]
 `
+    },
+    ///
+    {
+        question:
+            `// Terminal: How do you empty the terminal window?`,
+        answer:
+`clear`
     },
     ///
 
