@@ -3213,5 +3213,23 @@ console.log(checkIfObjIdentical({ name: "Jack" }, { name: "Jack" })); // true
 console.log(checkIfObjIdentical({ name: "Jack" }, { name: "John" })); // true`
     },
     ///
+    {
+        question:
+            `// JS: What is the difference between splice() and slice()?`,
+        answer:
+`- splice() changes the array permanently (mnemonic device: p is for permanent)
+- slice() does not
+- you can add items to the array swith splice()`
+    },
+    ///
+    {
+        question:
+            `// JS: What is the difference between map(), filter(), and reduce()?`,
+        answer:
+`- map() creates a copy of an array
+- filter() filters out items from an array
+- reduce() allows you to combine map() and filter()`
+    },
+    ///
 
 ]

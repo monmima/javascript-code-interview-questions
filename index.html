@@ -43,14 +43,11 @@
         main {
             min-height: 70vh;
         }
-        textarea {
-            margin-bottom: 20px;
-            width: 100%;
-        }
+
         .answer {
             display: none;
         }
-        .answer, .question {
+        .answer, .question, #notes {
             border: 2px solid lightgreen;
             border-radius: 10px;
             margin: 10px;
@@ -96,6 +93,8 @@
         <div class="answer">
             <pre id="id-answer"><!-- code injected here --></pre>
         </div>
+
+        <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
 
     </main>
 
