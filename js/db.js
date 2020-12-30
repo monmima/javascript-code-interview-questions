@@ -1,10 +1,5 @@
 console.log("Database loaded...");
 
-// To redo later
-// 17.
-// 19.
-// 21.
-
 const DATABASE = [
     {
         question:
@@ -201,18 +196,20 @@ let inst = new Test("myString");
     {
         question:
             `
-                JS: Store a random <strong>integer from 1 to 10</strong> in the variable.
+                // Algorithm: Create a function that returns a random <strong>integer from 1 to 10</strong>.
                 <hr>
-<pre>
-let myVar;
-// code here
-console.log(myVar);
-</pre>
+<pre>function randomInteger() {
+    // code here
+}
+
+console.log(randomInteger());</pre>
             `,
         answer:
-`let myVar;
-myVar = Math.floor((Math.random() * 10) + 1);
-console.log(myVar);`
+`function randomInteger() {
+    return Math.floor(Math.random() * 10 + 1);
+}
+
+console.log(randomInteger());`
     },
 
     {
@@ -554,24 +551,9 @@ function test() {
     ///
     {
         question:
-            `
-            JS: What is the output?
-            <hr>
-<pre>function test() {
-    console.log(this);
-}
-
-let test2 = () => {
-    console.log(this);
-}
-
-console.log(test());
-console.log(test2);</pre>`,
+            `Interview: <strong>Besides the syntax</strong>, what is the difference between an arrow function and a normal function?`,
         answer:
-`The scope is not the same.
-
-Window
-function test2()`
+`The scope (this keyword) is not the same.`
     },
     ///
     {
@@ -838,7 +820,7 @@ console.log(area);</pre>
 <pre>// code here
 console.log(x);</pre>`,
         answer:
-`let x = Array.isArray(arr);
+`let x = Array.isArray([1, 2]]);
 console.log(x);`
     },
     ///
@@ -1472,7 +1454,7 @@ console.log(removeStrings(["word", 34, "another", 78, "one"])); // [34, 78]</pre
     ///
     {
         question:
-            `// Algorithm: Create a function that restores the alphabetical order in a string..
+            `// Algorithm: Create a function that restores the alphabetical order in a string.
             <hr>
 <pre>function restoreAlpha(str) {
     // code here
@@ -1508,7 +1490,7 @@ console.log(restoreAlpha("testa"));</pre>`
     // code here
 }
 
-console.log(sortLetters("hello"));</pre>`,
+console.log(sortLetters("hello")); // ehlo</pre>`,
         answer:
 `function sortLetters(str) {
     let arr = [...str];
@@ -1538,7 +1520,7 @@ function sortLetters(str) {
     // code here
 }
 
-console.log(revString("hello"));<pre>`,
+console.log(sortLetters("hello")); // ehlo<pre>`,
         answer:
 `function revString(str) {
     return [...str].reverse().join("");
@@ -1640,15 +1622,15 @@ console.log(absoluteValueSumMinimization([1, 2, 4, 7, 8]));</pre>`,
     ///
     {
         question:
-            `// Algorithm: Create a function that adds all items in an array and returns the total. Use a <strong>forEach</strong> loop.
+            `// Algorithm: Using a <strong>forEach</strong> or a <strong>reduce</strong> loop, create a function that adds all items in an array and returns the total.
             <hr>
 <pre>function addAllArray(arr) {
     // code here
 }
 
-console.log(addAllArray([2, 4, 7]));
-console.log(addAllArray([2, 4, 7, 8]));
-console.log(addAllArray([1, 2, 4, 7, 8]));</pre>`,
+console.log(addAllArray([2, 4, 7])); // 13
+console.log(addAllArray([2, 4, 7, 8])); // 21
+console.log(addAllArray([1, 2, 4, 7, 8])); // 22</pre>`,
         answer:
 `function addAllArray(arr) {
     let total = 0;
@@ -1658,7 +1640,23 @@ console.log(addAllArray([1, 2, 4, 7, 8]));</pre>`,
     });
 
     return total;
-}`
+}
+
+// or
+
+function addAllArray(arr) {
+    let total = 0;
+
+    const reduced = arr.reduce((total, current) => {
+        return total += current;
+    }, 0);
+
+    return reduced;
+}
+
+console.log(addAllArray([2, 4, 7])); // 13
+console.log(addAllArray([2, 4, 7, 8])); // 21
+console.log(addAllArray([1, 2, 4, 7, 8])); // 22`
     },
     ///
     {
@@ -1819,41 +1817,26 @@ console.log(evalAlmostIncreasing([1, 3, 1, 1]));`
     ///
     {
         question:
-            `// Algorithm: Create a function that tells you if a sequence of letters is in alphabetical order. The function returns a boolean. The input should not have repeated characters.
+            `// Algorithm: Create a function that tells you if a sequence of letters is in alphabetical order.
             <hr>
 <pre>function isAlphabetical(str) {
     // code here
 }
 
-console.log(isAlphabetical("abef"));
-console.log(isAlphabetical("zabc"));
-console.log(isAlphabetical("abczz"));</pre>`,
+console.log(isAlphabetical("abef")); // true
+console.log(isAlphabetical("zabc")); // false
+console.log(isAlphabetical("abczz")); // true</pre>`,
         answer:
 `function isAlphabetical(str) {
-    let lastLetter = "a";
-    let arr = str.split("");
-    let uniqueValuesSet = new Set(arr);
+    const before = [...new Set(str)].join("");
+    const after = [...new Set(str)].sort().join("");
 
-    // compares the length of array and set
-    if (arr.length !== uniqueValuesSet.size) {
-        return false;
-    }
-
-    // makes sure you the string only goes forward with the alphabetical order
-    for (let i = 0; i < arr.length; i++) {
-        if (lastLetter > arr[i]) {
-            return false;
-        }
-
-        lastLetter = arr[i];
-    }
-    
-    return true;
+    return before === after;
 }
 
-console.log(isAlphabetical("abef"));
-console.log(isAlphabetical("zabc"));
-console.log(isAlphabetical("abczz"));`
+console.log(isAlphabetical("abef")); // true
+console.log(isAlphabetical("zabc")); // false
+console.log(isAlphabetical("abczz")); // true`
     },
     ///
     {
@@ -2183,9 +2166,28 @@ Arrow functions don't work well with the this keyword.`
         question:
             `CSS: What is the CSS shortcut for this?
             <hr>
-            color: #666;`,
+            <pre>color: #666666;</pre>`,
         answer:
-`c#666666`
+`c#666`
+    },
+    ///
+    {
+        question:
+            `HTML: How do you change the image depending on the screen width?`,
+        answer:
+`With srcset.`
+    },
+    ///
+    {
+        question:
+            `JS: What is the output?
+            <hr>
+<pre>let A = 5;
+let a = 6;
+
+a === A;</pre>`,
+        answer:
+`false`
     },
     ///
     {
@@ -2296,17 +2298,21 @@ console.log(arrayPreviousLess([1, 2, 1], 1, 3)); // [3, 2, 3]`
     ///
     {
         question:
-            `// JS: How do you find the last item in an array?
+            `// Algorithm: Create a function that return the last item in an array.
             <hr>
-<pre>const arr = [1, 2, 3, 4];
-// your code here
+<pre>function getLastItemArr(arr) {
+    // code here
+}
 
-console.log(last);</pre>`,
+console.log(getLastItemArr([1, 2, 3, 4]));
+</pre>`,
         answer:
-`const arr = [1, 2, 3, 4];
-const last = arr[arr.length - 1];
+`function getLastItemArr(arr) {
+    return arr[arr.length - 1];
+}
 
-console.log(last);`
+console.log(getLastItemArr([1, 2, 3, 4]));
+`
     },
     ///
     {
@@ -2369,27 +2375,25 @@ console.log(test instanceof Object);`
     ///
     {
         question:
-            `Algorithm: Create a function that tells you what century a year is.
+            `Algorithm: Create a function that tells you what century a year is in.
             <hr>
 <pre>function findCenturyForYear(year) {
     // code here
 }
 
-console.log(findCenturyForYear(1905)); // 19
+console.log(findCenturyForYear(1905)); // 20
 console.log(findCenturyForYear(1700)); // 17
 console.log(findCenturyForYear(1701)); // 18</pre>`,
         answer:
 `function findCenturyForYear(year) {
-    // for years such as 1700, 1800, etc.
     if (year % 100 === 0) {
-        return year / 100;
+        return century = year / 100;
+    } else {
+        return century = Math.floor((year / 100) + 1);
     }
-
-    // + one century since 1905 is 20th, etc.
-    return Math.floor(year / 100) + 1;
 }
 
-console.log(findCenturyForYear(1905)); // 19
+console.log(findCenturyForYear(1905)); // 20
 console.log(findCenturyForYear(1700)); // 17
 console.log(findCenturyForYear(1701)); // 18`
     },
@@ -2428,7 +2432,7 @@ console.log(findOddEven("2")); // even`
     ///
     {
         question:
-            `// Algorithm: Find the color of a cell on a chessboard, knowing that a cell whose coordinates are even is black. You'll have to convert letters to numbers too (A = 1, B = 2, etc.);.
+            `// Algorithm: Find the color of a cell on a chessboard, knowing that a cell whose coordinates are even is black. You'll have to convert letters to numbers too (A = 1, B = 2, etc.).
             <hr>
 <pre>function findChessBoardCellColor(cell) {
     // code here
@@ -2450,11 +2454,9 @@ console.log(findChessBoardCellColor("A2")); // white</pre>`,
         "H": 8
     }
 
-    // console.log(board[cell[0]] + parseInt(cell[1]));
+    const total = parseInt(board["A"]) + parseInt(cell[1]);
 
-    const evenOrOdd = (board[cell[0]] + parseInt(cell[1])) % 2 === 0;
-
-    return evenOrOdd ? "black" : "white";
+    return total % 2 === 0 ? "black" : "white";
 }
 
 console.log(findChessBoardCellColor("C6")); // white
@@ -2464,7 +2466,7 @@ console.log(findChessBoardCellColor("A2")); // white`
     ///
     {
         question:
-            `Algorithm: What line of code do you use to create a redirection to another HTML page?`,
+            `JS: What line of code do you use to create a redirection to another HTML page?`,
         answer:
 `window.location.replace("https://www.protonmail.com");
 
@@ -2540,7 +2542,7 @@ console.log(chunkyMonkey([0, 1, 2, 3, 4, 5], 4)); // returns [[0, 1, 2, 3], [4, 
 console.log(findCommonCharacters(["a", "b", "c"], ["d", "a", "b"])); // returns ["a", "b"]</pre>`,
         answer:
 `function findCommonCharacters(arr1, arr2) {
-    return intersection = arr1.filter(val => arr2.includes(val));
+    return arr1.filter(val => arr2.includes(val));
 }
 
 console.log(findCommonCharacters(["a", "b", "c"], ["d", "a", "b"])); // returns ["a", "b"]`
@@ -2685,7 +2687,6 @@ console.log(factorialize(10)); // 3628800</pre>`,
 
     for (let i = 1; i <= limit; i++) {
         total *= i;
-        console.log(total);
     }
 
     return total;
@@ -2709,7 +2710,7 @@ console.log(findEmailDomain("*(%?%$T%/?&/%FD@email.com"));`,
 `function findEmailDomain(address) {
     const lastIndex = address.lastIndexOf("@");
 
-    return address.slice(lastIndex + 1, address.length);
+    return address.slice(lastIndex + 1);
 }
 
 console.log(findEmailDomain("mysimpleaddress@email.com"));
@@ -2718,7 +2719,7 @@ console.log(findEmailDomain("*(%?%$T%/?&/%FD@email.com"));`
     ///
     {
         question:
-            `// Interview: What is object notation?`,
+            `// Interview: What can you tell about object notation?`,
         answer:
 `user.firstName // dot notation
 user["firstName"] // bracket notation
@@ -2753,6 +2754,8 @@ const add = function(num1, num2) {
 - You pass it in.
 - They are called at a later date (synchronously or asynchronously).
 
+Example:
+
 The map() method takes a callback, for instance.
 
 const arr = [1, 2, 3, 4, 5];
@@ -2769,6 +2772,8 @@ console.log(arr2); // [6, 7, 8, 9, 10]`
 `- The same as a higher order function.
 - You pass it in.
 - They are called at a later date (synchronously or asynchronously).
+
+Example:
 
 The map() method takes a callback, for instance.
 
@@ -2812,22 +2817,27 @@ limit the amount of variables`
     ///
     {
         question:
-            `// Algorithm: Compare two integers given as string.`,
+            `// Algorithm: Compare two integers given as string.
+            <hr>
+<pre>function compareIntegers (intStr1, intStr2) {
+    // code here
+}
+
+console.log(compareIntegers("12", "13")); // less
+console.log(compareIntegers("875", "799")); // greater
+console.log(compareIntegers("1000", "1000")); // equal</pre>`,
         answer:
 `function compareIntegers (intStr1, intStr2) {
-    let res = "";
     intStr1 = parseInt(intStr1);
     intStr2 = parseInt(intStr2);
 
     if (intStr1 > intStr2) {
-        res = "greater";
+        return "greater";
     } else if (intStr1 < intStr2) {
-        res = "less";
+        return "less";
     } else {
-        res = "equal";
+        return "equal";
     }
-
-    return res;
 }
 
 console.log(compareIntegers("12", "13")); // less
@@ -2837,25 +2847,25 @@ console.log(compareIntegers("1000", "1000")); // equal`
     ///
     {
         question:
-            `// Algorithm: Compare two integers given as string.
+            `// Algorithm: Find the index of a letter in the alphabet array.
             <hr>
-<pre>function findIndex(letter) {
-    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+<pre>function getIndex(letter) {
+    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
     // type your code here
 }
 
-console.log(findIndex("a"));
-console.log(findIndex("v"));</pre>`,
+console.log(getIndex("a"));
+console.log(getIndex("v"));</pre>`,
         answer:
-`function findIndex(letter) {
-    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+`function getIndex(letter) {
+    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
     return alphabet.indexOf(letter);
 }
 
-console.log(findIndex("a"));
-console.log(findIndex("v"));`
+console.log(getIndex("a"));
+console.log(getIndex("v"));`
     },
     ///
     {
@@ -3040,6 +3050,7 @@ console.log(insertInArr(["a", "b", "c", "d"])); // ["a", "b", "car", "truck", "c
 - Mainly used to avoid global variables
 - Not as useful as it used to be since the introduction of "let" and "const" in ES6
 - Used in frameworks/libraries such as jQuery
+- Arrow functions
 
 Example:
 
@@ -3228,7 +3239,206 @@ console.log(checkIfObjIdentical({ name: "Jack" }, { name: "John" })); // true`
         answer:
 `- map() creates a copy of an array
 - filter() filters out items from an array
-- reduce() allows you to combine map() and filter()`
+- reduce() allows you to combine map() and filter() AND can be used to add up all values from an array`
+    },
+    ///
+    {
+        question:
+            `// JS: Create a function that flattens an array.
+            <hr>
+<pre>function flattenArray(arr) {
+    // code here
+}
+
+console.log(flattenArray([1, 2, [3, 4]])); // [1, 2, 3, 4]</pre>`,
+        answer:
+`* Keep in mind that to flatten everything deeply, you could use arr.flat(Infinity)."
+
+function flattenArray(arr) {
+    const flat = arr.flat(1);
+    return flat;
+}
+
+console.log(flattenArray([1, 2, [3, 4]])); // [1, 2, 3, 4]`
+    },
+    ///
+    {
+        question:
+            `// Interview: Give an example of array or object destructuring.`,
+        answer:
+`const [month, day, year] = [5, 11, 1955];
+console.log(month);
+
+// or
+
+let {
+    firstName: fn,
+    lastName: ln
+} = {
+    firstName: "John",
+    lastName: "Doe"
+};
+
+console.log(fn); // John
+console.log(ln); // Doe`
+    },
+    ///
+    {
+        question:
+            `// Interview: What are the rest and spread operator?`,
+        answer:
+`Rest parameters (packs elements)
+- turns an indefinite number of arguments as an array
+
+Spread operator (unpack elements)
+- copies an array
+- concatenates arrays
+- adds to an array`
+    },
+    ///
+    {
+        question:
+            `// Interview: What are some of the new ES6 features?`,
+        answer:
+`- template litterals
+- rest parameter/sprea operators
+- let/const
+- default values in functions
+- arrow functions`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Create a function that tells you if two strings have the same specific ending.`,
+        answer:
+`function checkEndMatch(str1, str2, end) {
+    return str1.endsWith(end) && str2.endsWith(end) ? true : false;
+}
+
+console.log(checkEndMatch("This is a car.", "I like this car.", "car.")); // true
+console.log(checkEndMatch("This is a car.", "I like this car.", "car")); // false`
+    },
+    ///
+    {
+        question:
+            `// Interview: Explain event delegation`,
+        answer:
+`JS event listeners fire not only on a single DOM element, but on all its children .`
+    },
+    ///
+    {
+        question:
+            `// Interview: Describe event bubbling (aka event propagation)`,
+        answer:
+`Events on an element will buble up and also fire on all parents.`
+    },
+    ///
+    {
+        question:
+            `// JS: What is the output?
+            <hr>
+console.log("3" + 4);
+console.log("4" / "2");
+console.log("4" - "3");`,
+        answer:
+`console.log("3" + 4); // 34
+console.log("4" / "2"); // 2
+console.log("4" - "3"); // 1`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Using the <strong>every()</strong> array method, check if all digit of a given integer are even.
+            <hr>
+// * The every() method returns false as soon as the condition in the callback in not met on any iteration.
+
+function checkEven (num) {
+    // code here
+}
+
+console.log(checkEven(12345)); // false
+console.log(checkEven(24)); // true`,
+        answer:
+`function checkEven (num) {
+    const digits = num.toString().split("");
+
+    return digits.every(v => {
+        return parseInt(v) % 2 === 0;
+    });
+}
+// or
+
+function checkEven (num) {
+    const digits = num.toString().split("");
+
+    for (v of digits) {
+        if (parseInt(v) % 2 !== 0) {
+            return false;
+        }
+
+    }
+    return true;
+}
+
+console.log(checkEven(12345)); // false
+console.log(checkEven(24)); // true`
+    },
+    ///
+    {
+        question:
+            `// Interview: How can you maintain state in an application?`,
+        answer:
+`You use local storage.`
+    },
+    ///
+    {
+        question:
+            `// Interview: How can you erase duplicates from an array?`,
+        answer:
+`1. set
+2. iterate through the array and push to a new array is the value is not included in the first one`
+    },
+    ///
+    {
+        question:
+            `// Interview: What are the HTTP methods/verbs?`,
+        answer:
+`- POST (create)
+- GET (read)
+- PUT (update)
+- DELETE (delete)
+
+In summary, the HTML equivalent of CRUD is PGPD.`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Create a function that turns a lowercase word to a title-case word.`,
+        answer:
+`function myFunction(str) {
+    return str[0].toUpperCase() + str.substring(1);
+}
+
+console.log(myFunction("this is a test.")); // "This is a test".`
+    },
+    ///
+    {
+        question:
+            `// Algorithm: Create a function that tells you if a letter is part of an array of letters.
+            <hr>
+<pre>function letterInArray(arr, letter) {
+    // code here
+}
+
+console.log(letterInArray(["a", "b", "c"], "a")) // true
+console.log(letterInArray(["ab", "b", "c"], "a")) // false</pre>`,
+        answer:
+`function letterInArray(arr, letter) {
+    return arr.includes(letter);
+}
+
+console.log(letterInArray(["a", "b", "c"], "a")) // true
+console.log(letterInArray(["ab", "b", "c"], "a")) // false`
     },
     ///
 
