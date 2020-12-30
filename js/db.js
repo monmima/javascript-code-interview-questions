@@ -1520,11 +1520,13 @@ function sortLetters(str) {
     // code here
 }
 
-console.log(sortLetters("hello")); // ehlo<pre>`,
+console.log(revString("hello")); // ehllo<pre>`,
         answer:
 `function revString(str) {
     return [...str].reverse().join("");
-}`
+}
+
+console.log(revString("hello")); // ehllo`
     },
     ///
     {
@@ -3330,7 +3332,7 @@ console.log(checkEndMatch("This is a car.", "I like this car.", "car")); // fals
         question:
             `Interview: Describe event bubbling (aka event propagation)`,
         answer:
-`Events on an element will buble up and also fire on all parents.`
+`Events on an element will bubble up and also fire on all parents.`
     },
     ///
     {
@@ -3439,6 +3441,40 @@ console.log(letterInArray(["ab", "b", "c"], "a")) // false</pre>`,
 
 console.log(letterInArray(["a", "b", "c"], "a")) // true
 console.log(letterInArray(["ab", "b", "c"], "a")) // false`
+    },
+    ///
+    {
+        question:
+            `JS: Add a line to print the id to the console.
+            <hr>
+<pre>&lt;button id="test"&gt;test&lt;/button&gt;
+
+&lt;script&gt;
+
+    document.querySelector("#test").addEventListener("click", function(e) {
+        // code here
+    });
+
+&lt;/script&gt;</pre>`,
+        answer:
+`&lt;button id="test"&gt;test&lt;/button&gt;
+
+&lt;script&gt;
+
+    document.querySelector("#test").addEventListener("click", function(e) {
+        console.log(this.id); // test
+    });
+
+&lt;/script&gt;`
+    },
+    ///
+    {
+        question:
+            `HTML: What should you use instead of the <code>center</tag>?`,
+        answer:
+`margin: 0 auto
+
+* This tag is deprecated.`
     },
     ///
 
