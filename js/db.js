@@ -196,7 +196,7 @@ let inst = new Test("myString");
     {
         question:
             `
-                // Algorithm: Create a function that returns a random <strong>integer from 1 to 10</strong>.
+                Algorithm: Create a function that returns a random <strong>integer from 1 to 10</strong>.
                 <hr>
 <pre>function randomInteger() {
     // code here
@@ -796,7 +796,7 @@ console.log(area);</pre>
     ///
     {
         question:
-            `// JS: What is the output?
+            `JS: What is the output?
             <hr>
 <pre>console.log(100 / 0);</pre>
             `,
@@ -806,7 +806,7 @@ console.log(area);</pre>
     ///
     {
         question:
-            `// JS: What is the output?
+            `JS: What is the output?
             <hr>
 <pre>console.log(5 / []);</pre>`,
         answer:
@@ -815,7 +815,7 @@ console.log(area);</pre>
     ///
     {
         question:
-            `// JS: How do you find the type of an array?
+            `JS: How do you find the type of an array?
             <hr>
 <pre>// code here
 console.log(x);</pre>`,
@@ -826,7 +826,7 @@ console.log(x);`
     ///
     {
         question:
-            `// JS: What is the output?
+            `JS: What is the output?
             <hr>
 <pre>function print() {
     console.log("Hello world");
@@ -861,7 +861,7 @@ console.log(typeof print);</pre>`,
     ///
     {
         question:
-            `// JS: Find the value of the first element greater than 10.
+            `JS: Find the value of the first element greater than 10.
             <hr>
 <pre>const arr = [5, 12, 8, 130, 44];
 
@@ -889,7 +889,7 @@ console.log(answer);`
     ///
     {
         question:
-            `// JS: Create a <strong>one-line</strong> function that swaps a first name and a last name.
+            `JS: Create a <strong>one-line</strong> function that swaps a first name and a last name.
             <hr>
 <pre>function swapName(str) {
     // code here
@@ -924,7 +924,7 @@ console.log(swapName("John Doe"));`
     ///
     {
         question:
-            `// JS: Create a function to swap words. Use indices.
+            `JS: Create a function to swap words. Use indices.
             <hr>
 <pre>function swapName(str) {
     // code here
@@ -958,7 +958,7 @@ console.log(swapName("John Doe"));`
     ///
     {
         question:
-            `// JS: What function do you use to round a number to the nearest integer?`,
+            `JS: What function do you use to round a number to the nearest integer?`,
         answer:
 `Math.round()`
     },
@@ -987,7 +987,7 @@ console.log(swapName("John Doe"));`
     ///
     {
         question:
-            `// Algorithm: Create a function that uses a loop to filter out odd numbers.
+            `Algorithm: Create a function that uses a loop to filter out odd numbers.
             <hr>
 <pre>function removeOdds(arr) {
     // code here
@@ -1020,7 +1020,7 @@ console.log(removeOdds([1, 2, 3, 4, 5])); // [2, 4]`
     ///
     {
         question:
-            `// Algorithm: Create a function using the <strong>filter</strong> method to filter out odd numbers in an array.
+            `Algorithm: Create a function using the <strong>filter</strong> method to filter out odd numbers in an array.
             <hr>
 <pre>function removeOdds(arr) {
     // code here
@@ -1037,7 +1037,7 @@ console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
     ///
     {
         question:
-            `// Algorithm: Create a function that multiplies a string by a number with a <strong>for loop</strong>.
+            `Algorithm: Create a function that multiplies a string by a number with a <strong>for loop</strong>.
             <hr>
 <pre>function repeatString(str, num) {
     // code here
@@ -1062,7 +1062,7 @@ console.log(repeatString("car", 3));`
     ///
     {
         question:
-            `// Algorithm: Create a function that multiplies a string by a number with a <strong>string method</strong>.
+            `Algorithm: Create a function that multiplies a string by a number with a <strong>string method</strong>.
             <hr>
 <pre>function repeatString(str, num) {
     // code here
@@ -1077,7 +1077,7 @@ console.log(repeatString("car", 3));`
     ///
     {
         question:
-            `// JS: What <strong>two</strong> keywords do you use to import a file in ES5 and ES6?`,
+            `JS: What <strong>two</strong> keywords do you use to import a file in ES5 and ES6?`,
         answer:
 `ES5
 require
@@ -1088,7 +1088,7 @@ import`
     ///
     {
         question:
-            `// JS: Declare a variable that evaluates to true or false using a <strong>ternary operator</strong> and the constant <code>age</code>.
+            `JS: Declare a variable that evaluates to true or false using a <strong>ternary operator</strong> and the constant <code>age</code>.
             <hr>
             const age = 18;`,
         answer:
@@ -1151,7 +1151,7 @@ a:active`
     ///
     {
         question:
-            `// Algorithm: Create a function that repeats a string <code>num</code> times with a <strong>while loop</strong>.
+            `Algorithm: Create a function that repeats a string <code>num</code> times with a <strong>while loop</strong>.
             <hr>
 <pre>function rep(str, num) {
     // code here
@@ -1180,7 +1180,7 @@ console.log(rep("string", 3));`
     ///
     {
         question:
-            `// Algorithm: Create a function that finds the longest word in a string. Use regexps and <code>.replace()</code>.
+            `Algorithm: Create a function that finds the longest word in a string. Use regexps and <code>.replace()</code>.
             <hr>
 <pre>function findLongest(str) {
     // code here
@@ -1216,7 +1216,7 @@ console.log(findLongest("Where in the airport?"));</pre>`,
     ///
     {
         question:
-            `// JS: Erase one item starting from index 0 in the array.
+            `JS: Erase one item starting from index 0 in the array.
             <hr>
 <pre>const arr = ["cat", "dog", "horse", "camel"];
 
@@ -1237,7 +1237,7 @@ console.log(arr);`
     ///
     {
         question:
-            `// Algorithm: Find the longest word in a string using a <strong>for of</strong> loop.
+            `Algorithm: Find the longest word in a string using a <strong>for of</strong> loop.
             <hr>
 <pre>function longestWordLength(str) {
     // your code here
@@ -1264,7 +1264,7 @@ console.log(longestWord("Where is the airport?")`
     ///
     {
         question:
-            `// JS: Besides <code>typeof</code>, what else can you use to find out if a value is of type <code>number</code>?
+            `JS: Besides <code>typeof</code>, what else can you use to find out if a value is of type <code>number</code>?
             <hr>
 <pre>const x = 5;
 
@@ -1281,7 +1281,7 @@ console.log(newVar);`
     ///
     {
         question:
-            `// Algorithm: Create a function that removes all strings from an array with a <strong>for loop</strong>.`,
+            `Algorithm: Create a function that removes all strings from an array with a <strong>for loop</strong>.`,
         answer:
 `function removeStrings(arr) {
     const newArr = [];
@@ -1298,7 +1298,7 @@ console.log(newVar);`
     ///
     {
         question:
-            `// JS: Create and use a simple <strong>for each</strong> loop on this array.
+            `JS: Create and use a simple <strong>for each</strong> loop on this array.
             <hr>
             <pre>const arr = ['a', 'b', 'c'];</pre>`,
         answer:
@@ -1354,7 +1354,7 @@ The page is static.`
     ///
     {
         question:
-            `// JS: Create a simple event listener that fires when a page loads.
+            `JS: Create a simple event listener that fires when a page loads.
             <hr>
 <pre>// code here
     console.log("Page ready!");
@@ -1427,7 +1427,7 @@ id`
     ///
     {
         question:
-            `// Algorithm: Create a function that removes all strings from an array with the <strong>filter method</strong>.
+            `Algorithm: Create a function that removes all strings from an array with the <strong>filter method</strong>.
             <hr>
 <pre>function removeStrings(arr) {
     // code here
@@ -1454,7 +1454,7 @@ console.log(removeStrings(["word", 34, "another", 78, "one"])); // [34, 78]</pre
     ///
     {
         question:
-            `// Algorithm: Create a function that restores the alphabetical order in a string.
+            `Algorithm: Create a function that restores the alphabetical order in a string.
             <hr>
 <pre>function restoreAlpha(str) {
     // code here
@@ -1484,7 +1484,7 @@ console.log(restoreAlpha("testa"));</pre>`
     ///
     {
         question:
-            `// Algorithm: Create a function that sorts letters in a string using the <strong>spread operator</strong>.
+            `Algorithm: Create a function that sorts letters in a string using the <strong>spread operator</strong>.
             <hr>
 <pre>function sortLetters(str) {
     // code here
@@ -1507,14 +1507,14 @@ function sortLetters(str) {
     ///
     {
         question:
-            `// JS: How do you open a new tab with JS (and not by just clicking a link).`,
+            `JS: How do you open a new tab with JS (and not by just clicking a link).`,
         answer:
 `window.open("https://www.wikipedia.org");`
     },
     ///
     {
         question:
-            `// Algorithm: Create a one-line function that reverses a string with the <strong>spread operator</strong>.
+            `Algorithm: Create a one-line function that reverses a string with the <strong>spread operator</strong>.
             <hr>
 <pre>function revString(str) {
     // code here
@@ -1529,7 +1529,7 @@ console.log(sortLetters("hello")); // ehlo<pre>`,
     ///
     {
         question:
-            `// JS: What command to you type in the CLI to create a new React project?`,
+            `JS: What command to you type in the CLI to create a new React project?`,
         answer:
 `npx create-react-app folder-name`
     },
@@ -1547,7 +1547,7 @@ console.log(sortLetters("hello")); // ehlo<pre>`,
     ///
     {
         question:
-            `// JS: How do you find out more about keys that were pressed?`,
+            `JS: How do you find out more about keys that were pressed?`,
         answer:
 `document.addEventListener("keypress", function(event) {
     console.log(event);
@@ -1556,7 +1556,7 @@ console.log(sortLetters("hello")); // ehlo<pre>`,
     ///
     {
         question:
-            `// JS: What is an impure function?`,
+            `JS: What is an impure function?`,
         answer:
 `A function where external variables are not passed in as arguments.
 This may cause side effects.`
@@ -1571,7 +1571,7 @@ This may cause side effects.`
     ///
     {
         question:
-            `// Algorithm: Create a function that tells you if a word is a palindrome. Make sure to compare lower-case words.
+            `Algorithm: Create a function that tells you if a word is a palindrome. Make sure to compare lower-case words.
             <hr>
 <pre>function isPalindrome(str) {
     // your code here
@@ -1593,7 +1593,7 @@ console.log(isPalindrome("word"));`
     ///
     {
         question:
-            `// JS: Give an example of an invalid variable name.`,
+            `JS: Give an example of an invalid variable name.`,
         answer:
 `let 1stName = "John";
 
@@ -1602,7 +1602,7 @@ A variable name cannot start with a number.`
     ///
     {
         question:
-            `// Algorithm: Create a function that returns the median value (absolute value sum minimization). Use the ternary operator.
+            `Algorithm: Create a function that returns the median value (absolute value sum minimization). Use the ternary operator.
             <hr>
 <pre>
 function absoluteValueSumMinimization(num) {
@@ -1622,7 +1622,7 @@ console.log(absoluteValueSumMinimization([1, 2, 4, 7, 8]));</pre>`,
     ///
     {
         question:
-            `// Algorithm: Using a <strong>forEach</strong> or a <strong>reduce</strong> loop, create a function that adds all items in an array and returns the total.
+            `Algorithm: Using a <strong>forEach</strong> or a <strong>reduce</strong> loop, create a function that adds all items in an array and returns the total.
             <hr>
 <pre>function addAllArray(arr) {
     // code here
@@ -1661,14 +1661,14 @@ console.log(addAllArray([1, 2, 4, 7, 8])); // 22`
     ///
     {
         question:
-            `// JS: Create a line of code that turns text from an <code>h3</code> tag to red.`,
+            `JS: Create a line of code that turns text from an <code>h3</code> tag to red.`,
         answer:
 `document.querySelector("h3").style.color = "red";`
     },
     ///
     {
         question:
-            `// JS: Given a rectangular matrix of characters, add a border of asterisks to it.
+            `JS: Given a rectangular matrix of characters, add a border of asterisks to it.
             <hr>
 <pre>function addBorder(arr) {
     // code here
@@ -1700,7 +1700,7 @@ console.log(addBorder(["aaa", "bbb", "ccc"]));`
     ///
     {
         question:
-            `// Algorithm: Create a function that turns a two-digit number to the sum of the two digits. For instance, "29" should return "11".
+            `Algorithm: Create a function that turns a two-digit number to the sum of the two digits. For instance, "29" should return "11".
             <hr>
 <pre>function addTwoDigits(num) {
     // code here
@@ -1719,7 +1719,7 @@ console.log(addTwoDigits(29));`
     ///
     {
         question:
-            `// JS: Write a barebone switch statement.
+            `JS: Write a barebone switch statement.
             <hr>
 <pre>let myVar = "banana";</pre>`,
         answer:
@@ -1734,7 +1734,7 @@ console.log(addTwoDigits(29));`
     ///
     {
         question:
-            `// Algorithm: Create a function that returns the pair of adjacent elements with the highest product. The result should be 21.
+            `Algorithm: Create a function that returns the pair of adjacent elements with the highest product. The result should be 21.
             <hr>
 <pre>function adjacentElementsProduct(inputArr) {
     // code here
@@ -1759,7 +1759,7 @@ console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));`
     ///
     {
         question:
-            `// Algorithm: Find the longest strings in an array of strings and return all strings matching this length. Use <strong>forEach</strong> loops.
+            `Algorithm: Find the longest strings in an array of strings and return all strings matching this length. Use <strong>forEach</strong> loops.
             <hr>
 <pre>function findAllLongestStrings(arr) {
     // code here
@@ -1789,7 +1789,7 @@ console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));`
     ///
     {
         question:
-            `// Algorithm: Create a function that tells you if a sequence of numbers is increasing from left to right. One mistake can be tolerated in the sequence.
+            `Algorithm: Create a function that tells you if a sequence of numbers is increasing from left to right. One mistake can be tolerated in the sequence.
             <hr>
 <pre>function evalAlmostIncreasing(arr) {
     // code here
@@ -1817,7 +1817,7 @@ console.log(evalAlmostIncreasing([1, 3, 1, 1]));`
     ///
     {
         question:
-            `// Algorithm: Create a function that tells you if a sequence of letters is in alphabetical order.
+            `Algorithm: Create a function that tells you if a sequence of letters is in alphabetical order.
             <hr>
 <pre>function isAlphabetical(str) {
     // code here
@@ -1864,7 +1864,7 @@ console.log(isAlphabetical("abczz")); // true`
     ///
     {
         question:
-            `// Algorithm: Return an array of two elements: total weight for group one (index even) and total weight for group two (index odd). Use a <strong>forEach loop</strong>.
+            `Algorithm: Return an array of two elements: total weight for group one (index even) and total weight for group two (index odd). Use a <strong>forEach loop</strong>.
             <hr>
 <pre>function alternativeSums(weights) {
     // code here
@@ -1892,7 +1892,7 @@ console.log(alternativeSums([50, 60, 60, 45, 70])); // [180, 105]`
     ///
     {
         question:
-            `// Algorithm: Create a function that compares if two people are equally strong. To be equally strong, they have to be able to lift the same weight with their strong arm and their weak arm.
+            `Algorithm: Create a function that compares if two people are equally strong. To be equally strong, they have to be able to lift the same weight with their strong arm and their weak arm.
             <hr>
 <pre>function areEquallyStrong(myLeft, myRight, friendLeft, friendRight)  {
     // your code here
@@ -1920,7 +1920,7 @@ console.log(areEquallyStrong(14, 11, 15, 10)); // false`
     ///
     {
         question:
-            `// JS: What is passing by value and passing by reference?`,
+            `JS: What is passing by value and passing by reference?`,
         answer:
 `// Passing by value is what happens when you create a primitive from another primitive.
 a = 5;
@@ -1948,7 +1948,7 @@ console.log(obj1, obj2);`
     ///
     {
         question:
-            `// JS: What are the data types in JS?`,
+            `JS: What are the data types in JS?`,
         answer:
 `Primitives
 - booleans
@@ -2150,7 +2150,7 @@ Arrow functions don't work well with the this keyword.`
     ///
     {
         question:
-            `// JS: What do you call "string" and "number"?`,
+            `JS: What do you call "string" and "number"?`,
         answer:
 `These are two different types.`
     },
@@ -2210,7 +2210,7 @@ a === A;</pre>`,
     ///
     {
         question:
-            `// JS: What do you use to know if a number is positive, negative or zero?`,
+            `JS: What do you use to know if a number is positive, negative or zero?`,
         answer:
 `Math.sign(20);
 Math.sign(-20);
@@ -2219,7 +2219,7 @@ Math.sign(0);`
     ///
     {
         question:
-            `// JS: What are some of the ways you can create an array?`,
+            `JS: What are some of the ways you can create an array?`,
         answer:
 `const arr1 = [1]
 
@@ -2238,7 +2238,7 @@ const badArr = new Array();`
     ///
     {
         question:
-            `// Interview: What is the difference between undefined and null?`,
+            `Interview: What is the difference between undefined and null?`,
         answer:
 `Undefined is a variable that has not been assigned a value.
 
@@ -2256,7 +2256,7 @@ Undefined = has not been given a value yet`
     ///
     {
         question:
-            `// Algorithm: Create a function that loops through an array.
+            `Algorithm: Create a function that loops through an array.
             <hr>
 <pre>// For every occurrence of an old value, a new value should replace it.
 // Use a <strong>forEach</strong> loop.
@@ -2298,7 +2298,7 @@ console.log(arrayPreviousLess([1, 2, 1], 1, 3)); // [3, 2, 3]`
     ///
     {
         question:
-            `// Algorithm: Create a function that return the last item in an array.
+            `Algorithm: Create a function that return the last item in an array.
             <hr>
 <pre>function getLastItemArr(arr) {
     // code here
@@ -2317,7 +2317,7 @@ console.log(getLastItemArr([1, 2, 3, 4]));
     ///
     {
         question:
-            `// Algorithm: You have a stash of x candies for y children. Distribute all candies equally between the kids. Your function should return the amount that can be distributed.
+            `Algorithm: You have a stash of x candies for y children. Distribute all candies equally between the kids. Your function should return the amount that can be distributed.
             <hr>
 <pre>function distCandies(candies, kids) {
     // ...
@@ -2337,7 +2337,7 @@ console.log(distCandies(10, 3)); // 9`
     ///
     {
         question:
-            `// JS: What is the output?
+            `JS: What is the output?
             <hr>
 <pre>console.log(0.2 + 0.1)</pre>`,
         answer:
@@ -2351,7 +2351,7 @@ Anothing possibility is to validate with a server-side language.`
     ///
     {
         question:
-            `// JS: What is instanceof and when should you use it?`,
+            `JS: What is instanceof and when should you use it?`,
         answer:
 `Instanceof should not be used to find the type of a value.
 Typeof is there for that.
@@ -2400,7 +2400,7 @@ console.log(findCenturyForYear(1701)); // 18`
     ///
     {
         question:
-            `// Algorithm: Create a function that tells you is a character is a <strong>odd</strong>, <strong>even</strong> or is <strong>not even a digit</strong>.
+            `Algorithm: Create a function that tells you is a character is a <strong>odd</strong>, <strong>even</strong> or is <strong>not even a digit</strong>.
             <hr>
 <pre>function findOddEven(ch) {
     // your code here
@@ -2432,7 +2432,7 @@ console.log(findOddEven("2")); // even`
     ///
     {
         question:
-            `// Algorithm: Find the color of a cell on a chessboard, knowing that a cell whose coordinates are even is black. You'll have to convert letters to numbers too (A = 1, B = 2, etc.).
+            `Algorithm: Find the color of a cell on a chessboard, knowing that a cell whose coordinates are even is black. You'll have to convert letters to numbers too (A = 1, B = 2, etc.).
             <hr>
 <pre>function findChessBoardCellColor(cell) {
     // code here
@@ -2507,7 +2507,7 @@ Usually, it's not necessary to create globals.`
     ///
     {
         question:
-            `// Algorithm: Create a function that takes 2 arguments: an array and a number. The function should return a two-dimensional array with the second argument as the length of the nested arrays.
+            `Algorithm: Create a function that takes 2 arguments: an array and a number. The function should return a two-dimensional array with the second argument as the length of the nested arrays.
             <hr>
 <pre>function chunkyMonkey (arr, size) {
     // code here
@@ -2533,7 +2533,7 @@ console.log(chunkyMonkey([0, 1, 2, 3, 4, 5], 4)); // returns [[0, 1, 2, 3], [4, 
     ///
     {
         question:
-            `// Algorithm: Find common unique characters between two arrays.
+            `Algorithm: Find common unique characters between two arrays.
             <hr>
 <pre>function findCommonCharacters(arr1, arr2) {
     // code here
@@ -2550,7 +2550,7 @@ console.log(findCommonCharacters(["a", "b", "c"], ["d", "a", "b"])); // returns 
     ///
     {
         question:
-            `// Algorithm: Create a function that returns a boolean based on whether or not the input array contains a duplicate.
+            `Algorithm: Create a function that returns a boolean based on whether or not the input array contains a duplicate.
             <hr>
 <pre>function containsDuplicates(arr) {
     // code here
@@ -2571,7 +2571,7 @@ console.log(containsDuplicates([1, 2, 3])); // true`
     ///
     {
         question:
-            `// // Algorithm: Create a function that sorts a number array in ascending order.
+            `Algorithm: Create a function that sorts a number array in ascending order.
             <hr>
 <pre>function sortNumbers(arr) {
     // code here
@@ -2591,7 +2591,7 @@ console.log(sortNumbers([40, 100, 1, 5, 25, 10])); // [1, 5, 10, 25, 40, 100]`
     ///
     {
         question:
-            `// Interview: What is the output?
+            `Interview: What is the output?
             <hr>
 <pre>console.log(2 + 3 + "7");</pre>`,
         answer:
@@ -2601,7 +2601,7 @@ This is called type coercion.`
     ///
     {
         question:
-            `// Interview: What is type coercion?`,
+            `Interview: What is type coercion?`,
         answer:
 `Example:
 
@@ -2610,7 +2610,7 @@ console.log(2 + 3 + "7");`
     ///
     {
         question:
-            `// Interview: What is typeof?`,
+            `Interview: What is typeof?`,
         answer:
 `Tells you the type of a value.
 
@@ -2630,7 +2630,7 @@ console.log(isNaN(NaN)); // true`
     ///
     {
         question:
-            `// Interview: What is the output?
+            `Interview: What is the output?
             <hr>
 <pre>console.log(typeof NaN);</pre>`,
         answer:
@@ -2643,7 +2643,7 @@ console.log(isNaN(NaN)); // true`
     ///
     {
         question:
-            `// Interview: What is the output?
+            `Interview: What is the output?
             <hr>
 <pre>console.log(typeof undefined);</pre>`,
         answer:
@@ -2652,7 +2652,7 @@ console.log(isNaN(NaN)); // true`
     ///
     {
         question:
-            `// JS Algorithm: Convert Celcius to Fahrenheit, knowing that the formula is Celcius times 9/5 + 32.
+            `Algorithm: Convert Celcius to Fahrenheit, knowing that the formula is Celcius times 9/5 + 32.
             <hr>
 <pre>function celsiusToF(celcius) {
     // code here
@@ -2673,7 +2673,7 @@ console.log(celsiusToF(0)); // 32`
     ///
     {
         question:
-            `// Algorithm: Return the factorial of the integer provided as a parameter. For instance, for the number five: 1 * 2 * 3 * 4 * 5 = 120.
+            `Algorithm: Return the factorial of the integer provided as a parameter. For instance, for the number five: 1 * 2 * 3 * 4 * 5 = 120.
             <hr>
 <pre>function factorialize(limit) {
     // code here
@@ -2698,7 +2698,7 @@ console.log(factorialize(10)); // 3628800`
     ///
     {
         question:
-            `// Algorithm: Return the domain name from an email adress.
+            `Algorithm: Return the domain name from an email adress.
             <hr>
 <pre>function findEmailDomain(address) {
     // code here
@@ -2719,7 +2719,7 @@ console.log(findEmailDomain("*(%?%$T%/?&/%FD@email.com"));`
     ///
     {
         question:
-            `// Interview: What can you tell about object notation?`,
+            `Interview: What can you tell about object notation?`,
         answer:
 `user.firstName // dot notation
 user["firstName"] // bracket notation
@@ -2730,7 +2730,7 @@ Dot notation should be used as much as possible instead of bracket notation.
     ///
     {
         question:
-            `// Interview: What is an anonymous function?`,
+            `Interview: What is an anonymous function?`,
         answer:
 `It's a function that doesn't have it's own name.
 Instead, the function is store inside a variable.
@@ -2748,7 +2748,7 @@ const add = function(num1, num2) {
     ///
     {
         question:
-            `// Interview: What is a higher order function?`,
+            `Interview: What is a higher order function?`,
         answer:
 `- The same as a callback.
 - You pass it in.
@@ -2767,7 +2767,7 @@ console.log(arr2); // [6, 7, 8, 9, 10]`
     ///
     {
         question:
-            `// Interview: What is a callback?`,
+            `Interview: What is a callback?`,
         answer:
 `- The same as a higher order function.
 - You pass it in.
@@ -2786,7 +2786,7 @@ console.log(arr2); // [6, 7, 8, 9, 10]`
     ///
     {
         question:
-            `// JS: What characters do you use to reuse a matched regexp pattern?`,
+            `JS: What characters do you use to reuse a matched regexp pattern?`,
         answer:
 `$1 // JS
 &bsol;1 // text editor
@@ -2803,7 +2803,7 @@ console.log(arr2); // [6, 7, 8, 9, 10]`
     ///
     {
         question:
-            `// Interview: What are some naming conventions?`,
+            `Interview: What are some naming conventions?`,
         answer:
 `camelCase
 isAdult // boolean
@@ -2817,7 +2817,7 @@ limit the amount of variables`
     ///
     {
         question:
-            `// Algorithm: Compare two integers given as string.
+            `Algorithm: Compare two integers given as string.
             <hr>
 <pre>function compareIntegers (intStr1, intStr2) {
     // code here
@@ -2847,7 +2847,7 @@ console.log(compareIntegers("1000", "1000")); // equal`
     ///
     {
         question:
-            `// Algorithm: Find the index of a letter in the alphabet array.
+            `Algorithm: Find the index of a letter in the alphabet array.
             <hr>
 <pre>function getIndex(letter) {
     const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -2870,7 +2870,7 @@ console.log(getIndex("v"));`
     ///
     {
         question:
-            `// Algorithm: Remove duplicates in an array.
+            `Algorithm: Remove duplicates in an array.
             <hr>
 <pre>function removeDuplicates(arr) {
     // code here
@@ -2887,7 +2887,7 @@ console.log(removeDuplicates(["a", "b", "c", "a", "c"])); // returns ["a", "b", 
     ///
     {
         question:
-            `// Algorithm: Create a function that adds up the difference between each number in an array.
+            `Algorithm: Create a function that adds up the difference between each number in an array.
             <hr>
 <pre>function sumUpDifference(arr) {
     // code here
@@ -2912,7 +2912,7 @@ console.log(sumUpDifference([1, 3])); // 3 - 1 = 2`
     ///
     {
         question:
-            `// Algorithm: Create a function that turns a number to a string array.
+            `Algorithm: Create a function that turns a number to a string array.
             <hr>
 <pre>function convertToString(num) {
     // your code here
@@ -2938,7 +2938,7 @@ console.log(convertToString(56)); // ["56"]
     ///
     {
         question:
-            `// Interview: How do you empty an array?
+            `Interview: How do you empty an array?
             <hr>
 <pre>let x = 15;</pre>`,
         answer:
@@ -2970,7 +2970,7 @@ console.log(arr); // []`
     ///
     {
         question:
-            `// Interview: What is a MUL function?`,
+            `Interview: What is a MUL function?`,
         answer:
 `MUL stands for multiplication.
 It's a function that returns one or many nested anonymous functions.
@@ -2991,7 +2991,7 @@ console.log(example(5)(2)(4)); // 40`
     ///
     {
         question:
-            `// JS: How do you add a prop to the class?
+            `JS: How do you add a prop to the class?
             <hr>
 <pre>class Test {
     constructor(string) {
@@ -3022,7 +3022,7 @@ console.log(inst); // Test { string: "myString", age: 25 }`
     ///
     {
         question:
-            `// Algorithm: Insert the words "car" and "truck", starting at index 2 of an array.
+            `Algorithm: Insert the words "car" and "truck", starting at index 2 of an array.
             <hr>
 <pre>function insertInArr(arr) {
     // code here
@@ -3043,7 +3043,7 @@ console.log(insertInArr(["a", "b", "c", "d"])); // ["a", "b", "car", "truck", "c
     ///
     {
         question:
-            `// Interview: What is an IIFE?`,
+            `Interview: What is an IIFE?`,
         answer:
 `- Stands for "immediately invoked function expression"
 - Runs as soon as it is defined
@@ -3061,7 +3061,7 @@ Example:
     ///
     {
         question:
-            `// JS: Write a barebone IIFE.`,
+            `JS: Write a barebone IIFE.`,
         answer:
 `(function() {
     console.log("my logic");
@@ -3070,7 +3070,7 @@ Example:
     ///
     {
         question:
-            `// JS: What is the output?
+            `JS: What is the output?
             <hr>
 <pre>console.log(0 / 0);</pre>`,
         answer:
@@ -3079,7 +3079,7 @@ Example:
     ///
     {
         question:
-            `// JS: What is the output?
+            `JS: What is the output?
             <hr>
 <pre>console.log(typeof NaN);</pre>`,
         answer:
@@ -3092,7 +3092,7 @@ console.log(isNaN(NaN)) // true`
     ///
     {
         question:
-            `// JS: What is the output?
+            `JS: What is the output?
             <hr>
 <pre>console.log(parseInt("hellos"));</pre>`,
         answer:
@@ -3101,7 +3101,7 @@ console.log(isNaN(NaN)) // true`
     ///
     {
         question:
-            `// JS: What is the output?
+            `JS: What is the output?
             <hr>
 <pre>console.log(0 / 0);</pre>`,
         answer:
@@ -3110,7 +3110,7 @@ console.log(isNaN(NaN)) // true`
     ///
     {
         question:
-            `// Interview: What is the difference between undeclared and undefined?`,
+            `Interview: What is the difference between undeclared and undefined?`,
         answer:
 `- Undeclared: Doesn't exist at all.
 
@@ -3120,7 +3120,7 @@ console.log(isNaN(NaN)) // true`
     ///
     {
         question:
-            `// Interview: Name the DOM selectors.`,
+            `Interview: Name the DOM selectors.`,
         answer:
 `- document.getElementById("")
 - document.getElementsByClassName("")
@@ -3135,14 +3135,14 @@ To find out more you could use console.log on any of the above.`
     ///
     {
         question:
-            `// Interview: How do you copy an object?`,
+            `Interview: How do you copy an object?`,
         answer:
 ``
     },
     ///
     {
         question:
-            `// Algorithm: Create a function that checks if an object is actually a reference to another one.
+            `Algorithm: Create a function that checks if an object is actually a reference to another one.
             <hr>
 <pre>const user1 = {
     name: "Jack"
@@ -3181,7 +3181,7 @@ console.log(checkIfIsSameObject(user1, user3)); // false`
     ///
     {
         question:
-            `// Algorithm: Create a function that creates a copy of an object.
+            `Algorithm: Create a function that creates a copy of an object.
             <hr>
 <pre>function copyObj(obj) {
     // code here
@@ -3204,7 +3204,7 @@ console.log(copyObj({ name: "Jack" })); // { name: "Jack" }`
     ///
     {
         question:
-            `// Algorithm: Create a function that tells you if obj1 is identical to obj2.
+            `Algorithm: Create a function that tells you if obj1 is identical to obj2.
             <hr>
 <pre>function checkIfObjIdentical(obj1, obj2) {
     ...
@@ -3226,7 +3226,7 @@ console.log(checkIfObjIdentical({ name: "Jack" }, { name: "John" })); // true`
     ///
     {
         question:
-            `// JS: What is the difference between splice() and slice()?`,
+            `JS: What is the difference between splice() and slice()?`,
         answer:
 `- splice() changes the array permanently (mnemonic device: p is for permanent)
 - slice() does not
@@ -3235,7 +3235,7 @@ console.log(checkIfObjIdentical({ name: "Jack" }, { name: "John" })); // true`
     ///
     {
         question:
-            `// JS: What is the difference between map(), filter(), and reduce()?`,
+            `JS: What is the difference between map(), filter(), and reduce()?`,
         answer:
 `- map() creates a copy of an array
 - filter() filters out items from an array
@@ -3244,7 +3244,7 @@ console.log(checkIfObjIdentical({ name: "Jack" }, { name: "John" })); // true`
     ///
     {
         question:
-            `// JS: Create a function that flattens an array.
+            `JS: Create a function that flattens an array.
             <hr>
 <pre>function flattenArray(arr) {
     // code here
@@ -3264,7 +3264,7 @@ console.log(flattenArray([1, 2, [3, 4]])); // [1, 2, 3, 4]`
     ///
     {
         question:
-            `// Interview: Give an example of array or object destructuring.`,
+            `Interview: Give an example of array or object destructuring.`,
         answer:
 `const [month, day, year] = [5, 11, 1955];
 console.log(month);
@@ -3285,7 +3285,7 @@ console.log(ln); // Doe`
     ///
     {
         question:
-            `// Interview: What are the rest and spread operator?`,
+            `Interview: What are the rest and spread operator?`,
         answer:
 `Rest parameters (packs elements)
 - turns an indefinite number of arguments as an array
@@ -3298,7 +3298,7 @@ Spread operator (unpack elements)
     ///
     {
         question:
-            `// Interview: What are some of the new ES6 features?`,
+            `Interview: What are some of the new ES6 features?`,
         answer:
 `- template litterals
 - rest parameter/sprea operators
@@ -3309,7 +3309,7 @@ Spread operator (unpack elements)
     ///
     {
         question:
-            `// Algorithm: Create a function that tells you if two strings have the same specific ending.`,
+            `Algorithm: Create a function that tells you if two strings have the same specific ending.`,
         answer:
 `function checkEndMatch(str1, str2, end) {
     return str1.endsWith(end) && str2.endsWith(end) ? true : false;
@@ -3321,21 +3321,21 @@ console.log(checkEndMatch("This is a car.", "I like this car.", "car")); // fals
     ///
     {
         question:
-            `// Interview: Explain event delegation`,
+            `Interview: Explain event delegation`,
         answer:
 `JS event listeners fire not only on a single DOM element, but on all its children .`
     },
     ///
     {
         question:
-            `// Interview: Describe event bubbling (aka event propagation)`,
+            `Interview: Describe event bubbling (aka event propagation)`,
         answer:
 `Events on an element will buble up and also fire on all parents.`
     },
     ///
     {
         question:
-            `// JS: What is the output?
+            `JS: What is the output?
             <hr>
 console.log("3" + 4);
 console.log("4" / "2");
@@ -3348,7 +3348,7 @@ console.log("4" - "3"); // 1`
     ///
     {
         question:
-            `// Algorithm: Using the <strong>every()</strong> array method, check if all digit of a given integer are even.
+            `Algorithm: Using the <strong>every()</strong> array method, check if all digit of a given integer are even.
             <hr>
 // * The every() method returns false as soon as the condition in the callback in not met on any iteration.
 
@@ -3386,14 +3386,14 @@ console.log(checkEven(24)); // true`
     ///
     {
         question:
-            `// Interview: How can you maintain state in an application?`,
+            `Interview: How can you maintain state in an application?`,
         answer:
 `You use local storage.`
     },
     ///
     {
         question:
-            `// Interview: How can you erase duplicates from an array?`,
+            `Interview: How can you erase duplicates from an array?`,
         answer:
 `1. set
 2. iterate through the array and push to a new array is the value is not included in the first one`
@@ -3401,7 +3401,7 @@ console.log(checkEven(24)); // true`
     ///
     {
         question:
-            `// Interview: What are the HTTP methods/verbs?`,
+            `Interview: What are the HTTP methods/verbs?`,
         answer:
 `- POST (create)
 - GET (read)
@@ -3413,7 +3413,7 @@ In summary, the HTML equivalent of CRUD is PGPD.`
     ///
     {
         question:
-            `// Algorithm: Create a function that turns a lowercase word to a title-case word.`,
+            `Algorithm: Create a function that turns a lowercase word to a title-case word.`,
         answer:
 `function myFunction(str) {
     return str[0].toUpperCase() + str.substring(1);
@@ -3424,7 +3424,7 @@ console.log(myFunction("this is a test.")); // "This is a test".`
     ///
     {
         question:
-            `// Algorithm: Create a function that tells you if a letter is part of an array of letters.
+            `Algorithm: Create a function that tells you if a letter is part of an array of letters.
             <hr>
 <pre>function letterInArray(arr, letter) {
     // code here
