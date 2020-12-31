@@ -1119,7 +1119,7 @@ The page is static.`
     ///
     {
         question:
-            `Terminal: How do you erase a folder with the name "test"?`,
+            `Terminal: How do you list the files from a folder?`,
         answer:
 `dir
 
@@ -1138,7 +1138,7 @@ id`
     ///
     {
         question:
-            `Terminal: How do you list the files from a folder`,
+            `Terminal: How do you erase a folder with the name "test"?`,
         answer:
             `rm -r test/`
     },
