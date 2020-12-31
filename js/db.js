@@ -990,6 +990,15 @@ a:active`
     ///
     {
         question:
+            `HTML: How do open a link in a new tab?
+            <hr>
+<pre>&lt;a href="www.site.com" title=""&gt;</pre>`,
+        answer:
+`You give the link the attribute <code>target="_blank"</code>.`
+    },
+    ///
+    {
+        question:
             `JS: Erase one item starting from index 0 in the array.
             <hr>
 <pre>const arr = ["cat", "dog", "horse", "camel"];
