@@ -94,7 +94,7 @@
             <pre id="id-answer"><!-- code injected here --></pre>
         </div>
 
-        <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+        <!-- <textarea name="notes" id="notes" cols="30" rows="10"></textarea> -->
 
     </main>
 
@@ -133,23 +133,23 @@
             //         <div class="card-header" id="heading-${whatNumber}">
             //             <h5 class="mb-0">
             //                 <div class="collapsed" data-toggle="collapse" data-target="#key-${whatNumber}" aria-expanded="false" aria-controls="key-${whatNumber}">
-            //                     ${DATABASE[whatNumber].question}
+            //                     ${database[whatNumber].question}
             //                 </div>
             //             </h5>
             //         </div>
 
             //         <div id="key-${whatNumber}" class="collapse" aria-labelledby="key-${whatNumber}" data-parent="#accordion">
             //             <div >
-            //                 <pre>${DATABASE[whatNumber].answer}</pre>
+            //                 <pre>${database[whatNumber].answer}</pre>
             //             </div>
             //         </div>
 
             //     </div>
             // `;
 
-            document.querySelector("#id-question").innerHTML = `// ${DATABASE[whatNumber].question}`;
+            document.querySelector("#id-question").innerHTML = `// ${database[whatNumber].question}`;
 
-            document.querySelector("#id-answer").innerHTML = `${DATABASE[whatNumber].answer}`;
+            document.querySelector("#id-answer").innerHTML = `${database[whatNumber].answer}`;
 
             eraseLastQuestion(whatNumber);
 
@@ -157,14 +157,14 @@
 
         function eraseLastQuestion(numToErase) {
             // Delete the item that was just shown so it is not repeated during the session
-            // console.log(DATABASE[whatNumber].question);
-            DATABASE.splice(numToErase, 1);
+            // console.log(database[whatNumber].question);
+            database.splice(numToErase, 1);
 
             return;
         }
 
         function updateQuestionNumber(whatNumber) {
-            document.querySelector("#question-number").innerHTML = `${whatNumber} / ${DATABASE.length}`;
+            document.querySelector("#question-number").innerHTML = `${whatNumber} / ${database.length}`;
             document.querySelector("#question-count").innerHTML = `Question ${count + 1}`;
         }
 
@@ -204,8 +204,8 @@
 
         function main() {
             // if there are questions to be asked...
-            if (DATABASE.length > 1) {
-                const number = dice.rollDice(DATABASE.length - 1);
+            if (database.length > 1) {
+                const number = dice.rollDice(database.length - 1);
 
                 printQuestion(number);
                 updateQuestionNumber(number);

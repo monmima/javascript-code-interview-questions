@@ -1,6 +1,6 @@
 console.log("Database loaded...");
 
-const DATABASE = [
+const database = [
     {
         question:
             `
@@ -66,32 +66,6 @@ arr.push("end");
 
 arr = [...arr, "end"];
 `
-    },
-    ///
-    {
-        question:
-            `
-                JS: Create a function that returns a reversed string using JS methods.
-                <hr>
-<pre>function reverseLetters(str) {
-    // code here
-}
-
-console.log(reverseLetters("hello"));</pre>`,
-        answer:
-`function reverseLetters(str) {
-    let arr = str.split("");
-    arr = arr.reverse();
-    return arr.join("");
-}
-
-or
-
-function reverseLetters(str) {
-    return str.split("").reverse().join("");
-}
-
-console.log(reverseLetters("hello"));`
     },
     ///
     {
@@ -193,24 +167,7 @@ let inst = new Test("myString");
 `inst.printString();`
     },
 
-    {
-        question:
-            `
-                Algorithm: Create a function that returns a random <strong>integer from 1 to 10</strong>.
-                <hr>
-<pre>function randomInteger() {
-    // code here
-}
-
-console.log(randomInteger());</pre>
-            `,
-        answer:
-`function randomInteger() {
-    return Math.floor(Math.random() * 10 + 1);
-}
-
-console.log(randomInteger());`
-    },
+///
 
     {
         question:
@@ -924,25 +881,6 @@ console.log(swapName("John Doe"));`
     ///
     {
         question:
-            `JS: Create a function to swap words. Use indices.
-            <hr>
-<pre>function swapName(str) {
-    // code here
-}
-
-console.log(swapName("John Doe"));</pre>`,
-        answer:
-`function swapName(str) {
-    const arr = str.split(" ");
-
-    return arr[1] + " " + arr[0];
-}
-
-console.log(swapName("John Doe"));`
-    },
-    ///
-    {
-        question:
             `CSS: Create a rule making images responsive.
             <hr>
 <pre>img.responsive {
@@ -984,96 +922,7 @@ console.log(swapName("John Doe"));`
     <!--  code here -->
 }`
     },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that uses a loop to filter out odd numbers.
-            <hr>
-<pre>function removeOdds(arr) {
-    // code here
-}
 
-console.log(removeOdds([1, 2, 3, 4, 5])); // [2, 4]</pre>`,
-        answer:
-`function removeOdds(arr) {
-    const evenArr = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 === 0) {
-            evenArr.push(arr[i]);
-        }
-    }
-
-    return evenArr;
-}
-
-or
-
-function removeOdds(arr) {
-    return arr.filter(function(i) {
-        return i % 2 === 0;
-    });
-}
-
-console.log(removeOdds([1, 2, 3, 4, 5])); // [2, 4]`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function using the <strong>filter</strong> method to filter out odd numbers in an array.
-            <hr>
-<pre>function removeOdds(arr) {
-    // code here
-}
-
-console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
-        answer:
-`function removeOdds(arr) {
-    return arr.filter(function(i) {
-        return i % 2 === 0;
-    });
-}`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that multiplies a string by a number with a <strong>for loop</strong>.
-            <hr>
-<pre>function repeatString(str, num) {
-    // code here
-}</pre>
-
-console.log(repeatString("car", 3));`,
-        answer:
-`function repeatString(str, num) {
-    let res = "";
-
-    if (num > 0) {
-        for (let i = 0; i < num; i++) {
-            res += str;
-        }
-    }
-
-    return res;
-}
-
-console.log(repeatString("car", 3));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that multiplies a string by a number with a <strong>string method</strong>.
-            <hr>
-<pre>function repeatString(str, num) {
-    // code here
-}</pre>`,
-        answer:
-`function repeatString(str, num) {
-    let res = "";
-
-    return res = str.repeat(num);
-}`
-    },
     ///
     {
         question:
@@ -1125,84 +974,9 @@ a:active`
     ///
     {
         question:
-            `CSS: Create two rules to hide two different <code>divs</code> in different manners.
-            <hr>
-<pre>.div-1 {
-    <!--  code here -->
-}
-.div-2 {
-    <!--  code here -->
-}</pre>`,
-        answer:
-`.div-1 {
-    display: none;
-}
-.div-2 {
-    visibility: hidden;
-}`
-    },
-    ///
-    {
-        question:
             `HTML: What tag do you use around a sample output from a computer program?`,
         answer:
 `&lt;samp&gt;`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that repeats a string <code>num</code> times with a <strong>while loop</strong>.
-            <hr>
-<pre>function rep(str, num) {
-    // code here
-}
-
-console.log(rep("string", 3));</pre>`,
-        answer:
-`function rep(str, num) {
-    let newStr = "";
-    let i = 0;
-
-    if (num <= 0) {
-        return newStr;
-    }
-
-    while (i < num) {
-        newStr += str;
-        i++;
-    }
-
-    return newStr;
-}
-
-console.log(rep("string", 3));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that finds the longest word in a string. Use regexps and <code>.replace()</code>.
-            <hr>
-<pre>function findLongest(str) {
-    // code here
-}
-
-console.log(findLongest("Where in the airport?"));</pre>`,
-        answer:
-`function findLongest(str) {
-    let cleanString = str.replace(/\W/g, " ");
-
-    let inMemory = "";
-
-    let arr = cleanString.split(" ");
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length > inMemory.length) {
-            inMemory = arr[i];
-        }
-    }
-
-    return inMemory.length;
-}`
     },
     ///
     {
@@ -1234,34 +1008,7 @@ arr.shift();
 
 console.log(arr);`
     },
-    ///
-    {
-        question:
-            `Algorithm: Find the longest word in a string using a <strong>for of</strong> loop.
-            <hr>
-<pre>function longestWordLength(str) {
-    // your code here
-}
 
-console.log(longestWord("Where is the airport?")</pre>`,
-        answer:
-`function longestWordLength(str) {
-    let inMemory = "";
-    let cleanString = str.replace(/W/g, " ");
-    const arr = cleanString.split(" ");
-
-    for (let i of arr) {
-        if (inMemory.length < i.length) {
-            inMemory = i;
-        }
-    }
-
-    return inMemory.length;
-}
-
-console.log(longestWord("Where is the airport?")`
-    },
-    ///
     {
         question:
             `JS: Besides <code>typeof</code>, what else can you use to find out if a value is of type <code>number</code>?
@@ -1277,23 +1024,6 @@ console.log(newVar);<pre>`,
 const newVar = Number.isInteger(x);
 
 console.log(newVar);`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that removes all strings from an array with a <strong>for loop</strong>.`,
-        answer:
-`function removeStrings(arr) {
-    const newArr = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] === "number") {
-            newArr.push(arr[i]);
-        }
-    }
-
-    return newArr;
-};`
     },
     ///
     {
@@ -1427,106 +1157,9 @@ id`
     ///
     {
         question:
-            `Algorithm: Create a function that removes all strings from an array with the <strong>filter method</strong>.
-            <hr>
-<pre>function removeStrings(arr) {
-    // code here
-}
-
-console.log(removeStrings(["word", 34, "another", 78, "one"])); // [34, 78]</pre>`,
-        answer:
-`<pre>function removeStrings(arr) {
-    return arr.filter(function (i) {
-        return typeof i === "number";
-    })
-}
-
-or
-
-function removeStrings(arr) {
-    return arr.filter(function (i) {
-        return Number.isInteger(i);
-    })
-}
-
-console.log(removeStrings(["word", 34, "another", 78, "one"])); // [34, 78]</pre>`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that restores the alphabetical order in a string.
-            <hr>
-<pre>function restoreAlpha(str) {
-    // code here
-}
-
-console.log(restoreAlpha("testa"));</pre>`,
-        answer:
-`<pre>function restoreAlpha(str) {
-    // 1. turn string into array
-    let arr = str.split("");
-
-    // 2. sort array
-    arr.sort();
-
-    // 3. join array and spit out result
-    return arr.join("");
-}
-
-or
-
-function restoreAlpha(str) {
-    return str.split("").sort().join("");
-}
-
-console.log(restoreAlpha("testa"));</pre>`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that sorts letters in a string using the <strong>spread operator</strong>.
-            <hr>
-<pre>function sortLetters(str) {
-    // code here
-}
-
-console.log(sortLetters("hello")); // ehlo</pre>`,
-        answer:
-`function sortLetters(str) {
-    let arr = [...str];
-    arr = arr.sort();
-    return arr.join("");
-}
-
-or
-
-function sortLetters(str) {
-    return [...str].sort().join("");
-}</pre>`
-    },
-    ///
-    {
-        question:
             `JS: How do you open a new tab with JS (and not by just clicking a link).`,
         answer:
 `window.open("https://www.wikipedia.org");`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a one-line function that reverses a string with the <strong>spread operator</strong>.
-            <hr>
-<pre>function revString(str) {
-    // code here
-}
-
-console.log(revString("hello")); // ehllo<pre>`,
-        answer:
-`function revString(str) {
-    return [...str].reverse().join("");
-}
-
-console.log(revString("hello")); // ehllo`
     },
     ///
     {
@@ -1573,92 +1206,11 @@ This may cause side effects.`
     ///
     {
         question:
-            `Algorithm: Create a function that tells you if a word is a palindrome. Make sure to compare lower-case words.
-            <hr>
-<pre>function isPalindrome(str) {
-    // your code here
-}
-
-console.log(isPalindrome("Laval"));
-console.log(isPalindrome("word"));</pre>`,
-        answer:
-`function isPalindrome(str) {
-    const before = str.toLowerCase();
-    const after = str.split("").reverse().join("").toLowerCase();
-
-    return before === after;
-}
-
-console.log(isPalindrome("Laval"));
-console.log(isPalindrome("word"));`
-    },
-    ///
-    {
-        question:
             `JS: Give an example of an invalid variable name.`,
         answer:
 `let 1stName = "John";
 
 A variable name cannot start with a number.`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that returns the median value (absolute value sum minimization). Use the ternary operator.
-            <hr>
-<pre>
-function absoluteValueSumMinimization(num) {
-    // code here
-}
-
-console.log(absoluteValueSumMinimization([2, 4, 7]));
-console.log(absoluteValueSumMinimization([2, 4, 7, 8]));
-console.log(absoluteValueSumMinimization([1, 2, 4, 7, 8]));</pre>`,
-        answer:
-`function absoluteValueSumMinimization(num) {
-    const isEven = num.length % 2 === 0;
-
-    return isEven ? num[num.length / 2 - 1] : num[Math.floor(num.length / 2)];
-}`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Using a <strong>forEach</strong> or a <strong>reduce</strong> loop, create a function that adds all items in an array and returns the total.
-            <hr>
-<pre>function addAllArray(arr) {
-    // code here
-}
-
-console.log(addAllArray([2, 4, 7])); // 13
-console.log(addAllArray([2, 4, 7, 8])); // 21
-console.log(addAllArray([1, 2, 4, 7, 8])); // 22</pre>`,
-        answer:
-`function addAllArray(arr) {
-    let total = 0;
-
-    arr.forEach(element => {
-        total += element;
-    });
-
-    return total;
-}
-
-// or
-
-function addAllArray(arr) {
-    let total = 0;
-
-    const reduced = arr.reduce((total, current) => {
-        return total += current;
-    }, 0);
-
-    return reduced;
-}
-
-console.log(addAllArray([2, 4, 7])); // 13
-console.log(addAllArray([2, 4, 7, 8])); // 21
-console.log(addAllArray([1, 2, 4, 7, 8])); // 22`
     },
     ///
     {
@@ -1702,25 +1254,6 @@ console.log(addBorder(["aaa", "bbb", "ccc"]));`
     ///
     {
         question:
-            `Algorithm: Create a function that turns a two-digit number to the sum of the two digits. For instance, "29" should return "11".
-            <hr>
-<pre>function addTwoDigits(num) {
-    // code here
-}
-
-console.log(addTwoDigits(29));</pre>`,
-        answer:
-`function addTwoDigits(num) {
-    const arr = num.toString().split("");
-
-    return parseInt(arr[0]) + parseInt(arr[1]);
-}
-
-console.log(addTwoDigits(29));`
-    },
-    ///
-    {
-        question:
             `JS: Write a barebone switch statement.
             <hr>
 <pre>let myVar = "banana";</pre>`,
@@ -1733,114 +1266,6 @@ console.log(addTwoDigits(29));`
         console.log("This is not a banana.");
 }`
     },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that returns the pair of adjacent elements with the highest product. The result should be 21.
-            <hr>
-<pre>function adjacentElementsProduct(inputArr) {
-    // code here
-}
-
-console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));</pre>`,
-        answer:
-`function adjacentElementsProduct(inputArr) {
-    let largestProduct = inputArr[0] * inputArr[1];
-
-    for (let i = 1; i < inputArr.length - 1; i++) {
-        const product = inputArr[i] * inputArr[i + 1];
-        
-        largestProduct = largestProduct < product ? product : largestProduct;
-    }
-
-    return largestProduct;
-}
-
-console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Find the longest strings in an array of strings and return all strings matching this length. Use <strong>forEach</strong> loops.
-            <hr>
-<pre>function findAllLongestStrings(arr) {
-    // code here
-}
-
-console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));</pre>`,
-        answer:
-`function findAllLongestStrings(arr) {
-    let topLength = 0;
-    let newArr = [];
-
-    arr.forEach(i => {
-        topLength = topLength > i.length ? topLength : i.length;
-    });
-
-    arr.forEach(i => {
-        if (topLength === i.length) {
-            newArr.push(i);
-        }
-    });
-
-    return newArr;
-}
-
-console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that tells you if a sequence of numbers is increasing from left to right. One mistake can be tolerated in the sequence.
-            <hr>
-<pre>function evalAlmostIncreasing(arr) {
-    // code here
-}
-
-console.log(evalAlmostIncreasing([1, 3, 2]));
-console.log(evalAlmostIncreasing([1, 3, 1, 1]));</pre>`,
-        answer:
-`function evalAlmostIncreasing(arr) {
-    let countMistakes = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] <= arr[i - 1]) {
-            countMistakes++;
-        }
-    }
-
-    // as long as there is one mistake or less, returns true
-    return countMistakes <= 1;
-}
-
-console.log(evalAlmostIncreasing([1, 3, 2]));
-console.log(evalAlmostIncreasing([1, 3, 1, 1]));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that tells you if a sequence of letters is in alphabetical order.
-            <hr>
-<pre>function isAlphabetical(str) {
-    // code here
-}
-
-console.log(isAlphabetical("abef")); // true
-console.log(isAlphabetical("zabc")); // false
-console.log(isAlphabetical("abczz")); // true</pre>`,
-        answer:
-`function isAlphabetical(str) {
-    const before = [...new Set(str)].join("");
-    const after = [...new Set(str)].sort().join("");
-
-    return before === after;
-}
-
-console.log(isAlphabetical("abef")); // true
-console.log(isAlphabetical("zabc")); // false
-console.log(isAlphabetical("abczz")); // true`
-    },
-    ///
     {
         question:
             `HTML: List the names of 7 semantic elements.`,
@@ -1862,62 +1287,6 @@ console.log(isAlphabetical("abczz")); // true`
         answer:
 `right 20px = position
 30% = size`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Return an array of two elements: total weight for group one (index even) and total weight for group two (index odd). Use a <strong>forEach loop</strong>.
-            <hr>
-<pre>function alternativeSums(weights) {
-    // code here
-}
-
-console.log(alternativeSums([50, 60, 60, 45, 70])); // [180, 105]</pre>`,
-        answer:
-`function alternativeSums(weights) {
-    let sumEven = 0;
-    let sumOdd = 0;
-
-    weights.forEach((v, i) => {
-        if (i % 2 === 0) {
-            sumEven += v;
-        } else {
-            sumOdd += v;
-        }
-    });
-
-    return [sumEven, sumOdd];
-}
-
-console.log(alternativeSums([50, 60, 60, 45, 70])); // [180, 105]`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that compares if two people are equally strong. To be equally strong, they have to be able to lift the same weight with their strong arm and their weak arm.
-            <hr>
-<pre>function areEquallyStrong(myLeft, myRight, friendLeft, friendRight)  {
-    // your code here
-}
-
-console.log(areEquallyStrong(10, 15, 15, 10)); // true
-console.log(areEquallyStrong(15, 10, 15, 10)); // true
-console.log(areEquallyStrong(15, 10, 15, 9)); // false
-console.log(areEquallyStrong(14, 11, 15, 10)); // false</pre>`,
-        answer:
-`function areEquallyStrong(myLeft, myRight, friendLeft, friendRight)  {
-    const myStrongArm = myLeft >= myRight ? myLeft : myRight;
-    const myweakArm = myLeft <= myRight ? myLeft : myRight;
-    const friendStrong = friendLeft >= friendRight ? friendLeft : friendRight;
-    const friendWeak = friendLeft <= friendRight ? friendLeft : friendRight;
-
-    return myStrongArm === friendStrong && myweakArm === friendWeak;
-}
-
-console.log(areEquallyStrong(10, 15, 15, 10)); // true
-console.log(areEquallyStrong(15, 10, 15, 10)); // true
-console.log(areEquallyStrong(15, 10, 15, 9)); // false
-console.log(areEquallyStrong(14, 11, 15, 10)); // false`
     },
     ///
     {
@@ -1962,35 +1331,6 @@ console.log(obj1, obj2);`
 Non-primtives
 - objects
 - arrays (technically are objects)`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that finds the maximal difference between two consecutive elements in an array.
-            <hr>
-<pre>function arrayMaximalAdjactentDifference(arr) {
-    // your code here
-}
-
-console.log(arrayMaximalAdjactentDifference([2, 4, 1, 0])); // returns 3 (4 - 3 = 1);</pre>`,
-        answer:
-`function arrayMaximalAdjactentDifference(arr) {
-    let inMemory = 0;
-
-
-    // "arr.length" - 1 to make sure you don't go beyond the limit
-    for (let i = 0; i < arr.length - 1; i++) {
-        let difference = Math.abs(arr[i] - arr[i + 1]);
-
-        if (difference > inMemory) {
-            inMemory = difference;
-        }
-    }
-
-    return inMemory;
-}
-
-console.log(arrayMaximalAdjactentDifference([2, 4, 1, 0])); // returns 3 (4 - 3 = 1);`
     },
     ///
     {
@@ -2258,6 +1598,1369 @@ Undefined = has not been given a value yet`
     ///
     {
         question:
+            `JS: What is the output?
+            <hr>
+<pre>console.log(0.2 + 0.1)</pre>`,
+        answer:
+`0.30000000000000004
+
+One thing that can be done to solve this issues is:
+console.log((0.2 + 0.1).toFixed(2))
+
+Anothing possibility is to validate with a server-side language.`
+    },
+    ///
+    {
+        question:
+            `JS: What is instanceof and when should you use it?`,
+        answer:
+`Instanceof should not be used to find the type of a value.
+Typeof is there for that.
+
+// Bad practice
+console.log("string" instanceof String); // false
+
+// Instance of tells you is something is a class.
+class Test {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+let test = new Test("mytest");
+console.log(test instanceof Test);
+
+// careful! A class is also an Object.
+console.log(test instanceof Object);`
+    },
+    ///
+    {
+        question:
+            `JS: What line of code do you use to create a redirection to another HTML page?`,
+        answer:
+`window.location.replace("https://www.protonmail.com");
+
+or
+
+location.replace("https://www.protonmail.com");`
+    },
+    ///
+    {
+        question:
+            `Interview: What are falsy values?`,
+        answer:
+`Everything is truthy, except for 6 values.
+These values are falsy:
+
+undefined
+null
+NaN
+0
+""
+false`
+    },
+    ///
+    {
+        question:
+            `Interview: Tell me about global variables.`,
+        answer:
+`In Javascript, the window object is a global variable.
+
+In day-to-day life, it's better to avoid global variables.
+
+Their scope is global, hence the name.
+
+It's a bad coding convention to use globals.
+
+Usually, it's not necessary to create globals.`
+    },
+    ///
+    {
+        question:
+            `Interview: What is the output?
+            <hr>
+<pre>console.log(2 + 3 + "7");</pre>`,
+        answer:
+`57
+This is called type coercion.`
+    },
+    ///
+    {
+        question:
+            `Interview: What is type coercion?`,
+        answer:
+`Example:
+
+console.log(2 + 3 + "7");`
+    },
+    ///
+    {
+        question:
+            `Interview: What is typeof?`,
+        answer:
+`Tells you the type of a value.
+
+Example:
+
+console.log(typeof 5); // returns number
+console.log(typeof "5"); // returns string
+
+Bonus:
+
+console.log(typeof [1, 2, 3]); // returns object
+console.log(Array.isArray([1, 2, 3])); // returns true
+
+console.log(typeof NaN); // number
+console.log(isNaN(NaN)); // true`
+    },
+    ///
+    {
+        question:
+            `Interview: What is the output?
+            <hr>
+<pre>console.log(typeof NaN);</pre>`,
+        answer:
+`number
+
+To solve this, use:
+
+console.log(isNaN(NaN)); // true`
+    },
+    ///
+    {
+        question:
+            `Interview: What is the output?
+            <hr>
+<pre>console.log(typeof undefined);</pre>`,
+        answer:
+`undefined`
+    },
+    ///
+    {
+        question:
+            `Interview: What can you tell about object notation?`,
+        answer:
+`user.firstName // dot notation
+user["firstName"] // bracket notation
+
+Dot notation should be used as much as possible instead of bracket notation.
+`
+    },
+    ///
+    {
+        question:
+            `Interview: What is an anonymous function?`,
+        answer:
+`It's a function that doesn't have it's own name.
+Instead, the function is store inside a variable.
+
+// Normal function
+function add(num1, num2) {
+    return num1 + num2;
+}
+
+// Anonymous function
+const add = function(num1, num2) {
+    return num1 + num2;
+}`
+    },
+    ///
+    {
+        question:
+            `Interview: What is a higher order function?`,
+        answer:
+`- The same as a callback.
+- You pass it in.
+- They are called at a later date (synchronously or asynchronously).
+
+Example:
+
+The map() method takes a callback, for instance.
+
+const arr = [1, 2, 3, 4, 5];
+
+const arr2 = arr.map((val) => val + 5);
+
+console.log(arr2); // [6, 7, 8, 9, 10]`
+    },
+    ///
+    {
+        question:
+            `Interview: What is a callback?`,
+        answer:
+`- The same as a higher order function.
+- You pass it in.
+- They are called at a later date (synchronously or asynchronously).
+
+Example:
+
+The map() method takes a callback, for instance.
+
+const arr = [1, 2, 3, 4, 5];
+
+const arr2 = arr.map((val) => val + 5);
+
+console.log(arr2); // [6, 7, 8, 9, 10]`
+    },
+    ///
+    {
+        question:
+            `JS: What characters do you use to reuse a matched regexp pattern?`,
+        answer:
+`$1 // JS
+&bsol;1 // text editor
+&bsol;&bsol;1 // Python`
+    },
+    ///
+    {
+        question:
+            `Sass: What is the difference between .sass and .scss files?`,
+        answer:
+`.scss // new Sass
+.sass // old Sass`
+    },
+    ///
+    {
+        question:
+            `Interview: What are some naming conventions?`,
+        answer:
+`camelCase
+isAdult // boolean
+hasChild // boolean
+getTotal // function
+in CSS, you try to add as few selectors as possible
+in CSS, you use dash case
+CONSTANT
+limit the amount of variables`
+    },
+    ///
+    {
+        question:
+            `Terminal: How do you empty the terminal window?`,
+        answer:
+`clear`
+    },
+    ///
+    {
+        question:
+            `Interview: How do you empty an array?
+            <hr>
+<pre>let x = 15;</pre>`,
+        answer:
+`let x = 15;
+x = [];
+
+or 
+
+let arr = [1, 2, 3];
+console.log(arr); // [1, 2, 3]
+
+arr.splice(0);
+console.log(arr); // []
+
+or
+
+while (arr.length > 0) {
+    arr.pop();
+}
+
+or 
+
+let arr = [1, 2, 3];
+console.log(arr); // [1, 2, 3]
+
+arr.length = 0;
+console.log(arr); // []`
+    },
+    ///
+    {
+        question:
+            `Interview: What is a MUL function?`,
+        answer:
+`MUL stands for multiplication.
+It's a function that returns one or many nested anonymous functions.
+It's not necessarily a good idea. It's dirty.
+
+Example:
+
+function example(x) {
+    return (y) => {
+        return (z) => {
+            return x * y * z;
+        }
+    }
+}
+
+console.log(example(5)(2)(4)); // 40`
+    },
+    ///
+    {
+        question:
+            `JS: How do you add a prop to the class?
+            <hr>
+<pre>class Test {
+    constructor(string) {
+        this.string = string;
+    }
+
+    printString() {
+        console.log(this.string);
+    }
+}
+
+let inst = new Test("myString");</pre>`,
+        answer:
+`class Test {
+    constructor(string) {
+        this.string = string;
+    }
+
+    printString() {
+        console.log(this.string);
+    }
+}
+
+let inst = new Test("myString");
+inst.age = 25;
+console.log(inst); // Test { string: "myString", age: 25 }`
+    },
+    ///
+    {
+        question:
+            `Interview: What is an IIFE?`,
+        answer:
+`- Stands for "immediately invoked function expression"
+- Runs as soon as it is defined
+- Mainly used to avoid global variables
+- Not as useful as it used to be since the introduction of "let" and "const" in ES6
+- Used in frameworks/libraries such as jQuery
+- Arrow functions
+
+Example:
+
+(function() {
+    console.log("my logic");
+})();`
+    },
+    ///
+    {
+        question:
+            `JS: Write a barebone IIFE.`,
+        answer:
+`(function() {
+    console.log("my logic");
+})();`
+    },
+    ///
+    {
+        question:
+            `JS: What is the output?
+            <hr>
+<pre>console.log(0 / 0);</pre>`,
+        answer:
+`NaN`
+    },
+    ///
+    {
+        question:
+            `JS: What is the output?
+            <hr>
+<pre>console.log(typeof NaN);</pre>`,
+        answer:
+`number
+
+This would be the solution to really find out:
+
+console.log(isNaN(NaN)) // true`
+    },
+    ///
+    {
+        question:
+            `JS: What is the output?
+            <hr>
+<pre>console.log(parseInt("hellos"));</pre>`,
+        answer:
+`NaN`
+    },
+    ///
+    {
+        question:
+            `JS: What is the output?
+            <hr>
+<pre>console.log(0 / 0);</pre>`,
+        answer:
+`NaN`
+    },
+    ///
+    {
+        question:
+            `Interview: What is the difference between undeclared and undefined?`,
+        answer:
+`- Undeclared: Doesn't exist at all.
+
+- Undefined: Exists, but has no value.
+-- Could be a non-existing property of an object too.`
+    },
+    ///
+    {
+        question:
+            `Interview: Name the DOM selectors.`,
+        answer:
+`- document.getElementById("")
+- document.getElementsByClassName("")
+- document.getElementsByTagName("")
+
+Slower:
+- document.querySelector("")
+- document.querySelectorAll("")
+
+To find out more you could use console.log on any of the above.`
+    },
+    ///
+    {
+        question:
+            `Interview: How do you copy an object?`,
+        answer:
+`With the spread operator.
+
+Example:
+
+const newObj = {...oldObj};`
+    },
+    ///
+    {
+        question:
+            `JS: What is the difference between splice() and slice()?`,
+        answer:
+`- splice() changes the array permanently (mnemonic device: p is for permanent)
+- slice() does not
+- you can add items to the array swith splice()`
+    },
+    ///
+    {
+        question:
+            `JS: What is the difference between map(), filter(), and reduce()?`,
+        answer:
+`- map() creates a copy of an array
+- filter() filters out items from an array
+- reduce() allows you to combine map() and filter() AND can be used to add up all values from an array`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that flattens an array.
+            <hr>
+<pre>function flattenArray(arr) {
+    // code here
+}
+
+console.log(flattenArray([1, 2, [3, 4]])); // [1, 2, 3, 4]</pre>`,
+        answer:
+`* Keep in mind that to flatten everything deeply, you could use arr.flat(Infinity)."
+
+function flattenArray(arr) {
+    const flat = arr.flat(1);
+    return flat;
+}
+
+console.log(flattenArray([1, 2, [3, 4]])); // [1, 2, 3, 4]`
+    },
+    ///
+    {
+        question:
+            `Interview: Give an example of array or object destructuring.`,
+        answer:
+`const [month, day, year] = [5, 11, 1955];
+console.log(month);
+
+// or
+
+let {
+    firstName: fn,
+    lastName: ln
+} = {
+    firstName: "John",
+    lastName: "Doe"
+};
+
+console.log(fn); // John
+console.log(ln); // Doe`
+    },
+    ///
+    {
+        question:
+            `Interview: What are the rest and spread operator?`,
+        answer:
+`Rest parameters (packs elements)
+- turns an indefinite number of arguments as an array
+
+Spread operator (unpack elements)
+- copies an array
+- concatenates arrays
+- adds to an array`
+    },
+    ///
+    {
+        question:
+            `Interview: What are some of the new ES6 features?`,
+        answer:
+`- template litterals
+- rest parameter/sprea operators
+- let/const
+- default values in functions
+- arrow functions`
+    },
+    ///
+    {
+        question:
+            `Interview: Explain event delegation`,
+        answer:
+`JS event listeners fire not only on a single DOM element, but on all its children .`
+    },
+    ///
+    {
+        question:
+            `Interview: Describe event bubbling (aka event propagation)`,
+        answer:
+`Events on an element will bubble up and also fire on all parents.`
+    },
+    ///
+    {
+        question:
+            `JS: What is the output?
+            <hr>
+console.log("3" + 4);
+console.log("4" / "2");
+console.log("4" - "3");`,
+        answer:
+`console.log("3" + 4); // 34
+console.log("4" / "2"); // 2
+console.log("4" - "3"); // 1`
+    },
+    ///
+    {
+        question:
+            `Interview: How can you maintain state in an application?`,
+        answer:
+`You use local storage.`
+    },
+    ///
+    {
+        question:
+            `Interview: How can you erase duplicates from an array?`,
+        answer:
+`1. set
+2. iterate through the array and push to a new array is the value is not included in the first one`
+    },
+    ///
+    {
+        question:
+            `Interview: What are the HTTP methods/verbs?`,
+        answer:
+`- POST (create)
+- GET (read)
+- PUT (update)
+- DELETE (delete)
+
+In summary, the HTML equivalent of CRUD is PGPD.`
+    },
+    ///
+    {
+        question:
+            `JS: Add a line to print the id to the console.
+            <hr>
+<pre>&lt;button id="test"&gt;test&lt;/button&gt;
+
+&lt;script&gt;
+
+    document.querySelector("#test").addEventListener("click", function(e) {
+        // code here
+    });
+
+&lt;/script&gt;</pre>`,
+        answer:
+`&lt;button id="test"&gt;test&lt;/button&gt;
+
+&lt;script&gt;
+
+    document.querySelector("#test").addEventListener("click", function(e) {
+        console.log(this.id); // test
+    });
+
+&lt;/script&gt;`
+    },
+    ///
+    {
+        question:
+            `HTML: What should you use instead of the <code>center</tag>?`,
+        answer:
+`margin: 0 auto
+
+* This tag is deprecated.`
+    },
+    ///
+    {
+        question:
+            `Interview: What are HTML status code? List them and explain what they are for.`,
+        answer:
+`- 100: Information code.
+- 200: Works.
+- 300: Redirect.
+- 400: Problem on the client side.
+- 500: Problem on the server side.`
+    },
+    ///
+    {
+        question:
+            `Interview: What is the difference between synchronous and asynchronous code?`,
+        answer:
+`- Synchronous: Top to bottom. Line by line.
+- Asynchronous: Top to bottom, except for asynchronous tasks.
+
+Example:
+
+A call to a database.`
+    },
+    ///
+    {
+        question:
+            `Interview: What are some timer methods in JS?`,
+        answer:
+`- setTimeOut: Single instance (happens once).
+- setInterval: Multiple instance (happens many time).`
+    },
+    ///
+    {
+        question:
+            `Interview: What is a promise?`,
+        answer:
+`- A promise is an easy of handling asynchronous data.
+- A promise will always resolve (rejected case or successful case).
+
+Example:
+- Getting 
+
+Bonus:
+- Important question!`
+    },
+    ///
+    {
+        question:
+            `Interview: What is a promise?`,
+        answer:
+`- A promise is an easy of handling asynchronous data.
+- A promise will always resolve (rejected case or successful case).
+
+Example:
+
+- Getting 
+
+Bonus:
+
+- Important question!`
+    },
+    ///
+    {
+        question:
+            `Interview: What is async/await for?`,
+        answer:
+`It makes it possible to wait to turn an asynchronous method to a synchronous one.
+
+Example:
+
+You make a fetch call and you want to wait for the result before doing anything else.
+
+Bonus:
+
+Ideally, you should wrap this is a try / catch block.`
+    },
+    ///
+    {
+        question:
+            `Interview: Name some CSS properties.`,
+        answer:
+`- border
+- margin
+- font-size
+- padding
+- box-shadow`
+    },
+    ///
+    {
+        question:
+            `Interview: Name some CSS properties.`,
+        answer:
+`- border
+- margin
+- font-size
+- padding
+- box-shadow`
+    },
+    ///
+    {
+        question:
+            `Interview: What is the difference between <code>display: none</code> and <code>visibility: hidden</code>?`,
+        answer:
+`- display: none; | spacing of the element removed
+- visibility: hidden; | the spacing remains there;`
+    },
+    ///
+    {
+        question:
+            `Interview: What is the difference between a <code>span</code> and a <code>div</div> tag?`,
+        answer:
+`- span: inline element
+- div: block element`
+    },
+]
+
+const databaseAlgo = [
+    ///
+    {
+        question:
+            `Algorithm: Given an array of integers, remove the item located at an index.
+            <hr>
+<pre>function extractEachKth(arr, indexToDelete) {
+    // code here
+}
+
+console.log(extractEachKth([1, 2, 3, 4, 5], 3)); // [1, 2, 3, 5]</pre>`,
+        answer:
+`function extractEachKth(arr, indexToDelete) {
+    return arr.filter((v, i) => {
+        return i !== indexToDelete;
+    });
+}
+
+console.log(extractEachKth([1, 2, 3, 4, 5], 3)); // [1, 2, 3, 5]`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Extract all kth numbers from the matrix and create a new arr with them.
+            <hr>
+<pre>function extractMatrixColumn(matrix, num) {
+    // code here
+}
+
+console.log(extractMatrixColumn([[1, 1, 1, 2], [0, 5, 0, 4], [2, 1, 3, 6]], 2)); // [1, 0, 3] </pre>`,
+        answer:
+`function extractMatrixColumn(matrix, num) {
+    let res = [];
+
+    for (let i = 0; i < matrix.length; i++) {
+        res.push(matrix[i][num]);
+    }
+
+    return res;
+}
+
+console.log(extractMatrixColumn([[1, 1, 1, 2], [0, 5, 0, 4], [2, 1, 3, 6]], 2)); // [1, 0, 3] `
+    },
+    ///
+    {
+        question:
+            `
+                Algorithm: Create a function that returns a random <strong>integer from 1 to 10</strong>.
+                <hr>
+<pre>function randomInteger() {
+    // code here
+}
+
+console.log(randomInteger());</pre>
+            `,
+        answer:
+`function randomInteger() {
+    return Math.floor(Math.random() * 10 + 1);
+}
+
+console.log(randomInteger());`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that uses a loop to filter out odd numbers.
+            <hr>
+<pre>function removeOdds(arr) {
+    // code here
+}
+
+console.log(removeOdds([1, 2, 3, 4, 5])); // [2, 4]</pre>`,
+        answer:
+`function removeOdds(arr) {
+    const evenArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            evenArr.push(arr[i]);
+        }
+    }
+
+    return evenArr;
+}
+
+or
+
+function removeOdds(arr) {
+    return arr.filter(function(v) {
+        return v % 2 === 0;
+    });
+}
+
+console.log(removeOdds([1, 2, 3, 4, 5])); // [2, 4]`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function using the <strong>filter</strong> method to filter out odd numbers in an array.
+            <hr>
+<pre>function removeOdds(arr) {
+    // code here
+}
+
+console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
+        answer:
+`function removeOdds(arr) {
+    return arr.filter(function(i) {
+        return i % 2 === 0;
+    });
+}`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that multiplies a string by a number with a <strong>for loop</strong>.
+            <hr>
+<pre>function repeatString(str, num) {
+    // code here
+}</pre>
+
+console.log(repeatString("car", 3));`,
+        answer:
+`function repeatString(str, num) {
+    let res = "";
+
+    if (num > 0) {
+        for (let i = 0; i < num; i++) {
+            res += str;
+        }
+    }
+
+    return res;
+}
+
+console.log(repeatString("car", 3));`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that multiplies a string by a number with a <strong>string method</strong>.
+            <hr>
+<pre>function repeatString(str, num) {
+    // code here
+}</pre>`,
+        answer:
+`function repeatString(str, num) {
+    let res = "";
+
+    return res = str.repeat(num);
+}`
+    },
+    ///
+    ///
+    {
+        question:
+            `Algorithm: Create a function that repeats a string <code>num</code> times with a <strong>while loop</strong>.
+            <hr>
+<pre>function rep(str, num) {
+    // code here
+}
+
+console.log(rep("string", 3));</pre>`,
+        answer:
+`function rep(str, num) {
+    let newStr = "";
+    let i = 0;
+
+    if (num <= 0) {
+        return newStr;
+    }
+
+    while (i < num) {
+        newStr += str;
+        i++;
+    }
+
+    return newStr;
+}
+
+console.log(rep("string", 3));`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that finds the longest word in a string. Use regexps and <code>.replace()</code>.
+            <hr>
+<pre>function findLongest(str) {
+    // code here
+}
+
+console.log(findLongest("Where in the airport?"));</pre>`,
+        answer:
+`function findLongest(str) {
+    let cleanString = str.replace(/\W/g, " ");
+
+    let inMemory = "";
+
+    let arr = cleanString.split(" ");
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > inMemory.length) {
+            inMemory = arr[i];
+        }
+    }
+
+    return inMemory.length;
+}`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a one-line function that reverses a string with the <strong>spread operator</strong>.
+            <hr>
+<pre>function revString(str) {
+    // code here
+}
+
+console.log(revString("hello")); // ehllo<pre>`,
+        answer:
+`function revString(str) {
+    return [...str].reverse().join("");
+}
+
+console.log(revString("hello")); // ehllo`
+    },
+    ///
+    ///
+    {
+        question:
+            `Algorithm: Find the longest word in a string using a <strong>for of</strong> loop.
+            <hr>
+<pre>function longestWordLength(str) {
+    // your code here
+}
+
+console.log(longestWord("Where is the airport?")</pre>`,
+        answer:
+`function longestWordLength(str) {
+    let inMemory = "";
+    let cleanString = str.replace(/W/g, " ");
+    const arr = cleanString.split(" ");
+
+    for (let i of arr) {
+        if (inMemory.length < i.length) {
+            inMemory = i;
+        }
+    }
+
+    return inMemory.length;
+}
+
+console.log(longestWord("Where is the airport?")`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that removes all strings from an array with a <strong>for loop</strong>.`,
+        answer:
+`function removeStrings(arr) {
+    const newArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === "number") {
+            newArr.push(arr[i]);
+        }
+    }
+
+    return newArr;
+};`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that removes all strings from an array with the <strong>filter method</strong>.
+            <hr>
+<pre>function removeStrings(arr) {
+    // code here
+}
+
+console.log(removeStrings(["word", 34, "another", 78, "one"])); // [34, 78]</pre>`,
+        answer:
+`<pre>function removeStrings(arr) {
+    return arr.filter(function (i) {
+        return typeof i === "number";
+    })
+}
+
+or
+
+function removeStrings(arr) {
+    return arr.filter(function (i) {
+        return Number.isInteger(i);
+    })
+}
+
+console.log(removeStrings(["word", 34, "another", 78, "one"])); // [34, 78]</pre>`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that restores the alphabetical order in a string.
+            <hr>
+<pre>function restoreAlpha(str) {
+    // code here
+}
+
+console.log(restoreAlpha("testa"));</pre>`,
+        answer:
+`<pre>function restoreAlpha(str) {
+    // 1. turn string into array
+    let arr = str.split("");
+
+    // 2. sort array
+    arr.sort();
+
+    // 3. join array and spit out result
+    return arr.join("");
+}
+
+or
+
+function restoreAlpha(str) {
+    return str.split("").sort().join("");
+}
+
+console.log(restoreAlpha("testa"));</pre>`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that sorts letters in a string using the <strong>spread operator</strong>.
+            <hr>
+<pre>function sortLetters(str) {
+    // code here
+}
+
+console.log(sortLetters("hello")); // ehlo</pre>`,
+        answer:
+`function sortLetters(str) {
+    let arr = [...str];
+    arr = arr.sort();
+    return arr.join("");
+}
+
+or
+
+function sortLetters(str) {
+    return [...str].sort().join("");
+}</pre>`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that tells you if a word is a palindrome. Make sure to compare lower-case words.
+            <hr>
+<pre>function isPalindrome(str) {
+    // your code here
+}
+
+console.log(isPalindrome("Laval"));
+console.log(isPalindrome("word"));</pre>`,
+        answer:
+`function isPalindrome(str) {
+    const before = str.toLowerCase();
+    const after = str.split("").reverse().join("").toLowerCase();
+
+    return before === after;
+}
+
+console.log(isPalindrome("Laval"));
+console.log(isPalindrome("word"));`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that returns the median value (absolute value sum minimization). Use the ternary operator.
+            <hr>
+<pre>
+function absoluteValueSumMinimization(num) {
+    // code here
+}
+
+console.log(absoluteValueSumMinimization([2, 4, 7]));
+console.log(absoluteValueSumMinimization([2, 4, 7, 8]));
+console.log(absoluteValueSumMinimization([1, 2, 4, 7, 8]));</pre>`,
+        answer:
+`function absoluteValueSumMinimization(num) {
+    const isEven = num.length % 2 === 0;
+
+    return isEven ? num[num.length / 2 - 1] : num[Math.floor(num.length / 2)];
+}`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Using a <strong>forEach</strong> or a <strong>reduce</strong> loop, create a function that adds all items in an array and returns the total.
+            <hr>
+<pre>function addAllArray(arr) {
+    // code here
+}
+
+console.log(addAllArray([2, 4, 7])); // 13
+console.log(addAllArray([2, 4, 7, 8])); // 21
+console.log(addAllArray([1, 2, 4, 7, 8])); // 22</pre>`,
+        answer:
+`function addAllArray(arr) {
+    let total = 0;
+
+    arr.forEach(element => {
+        total += element;
+    });
+
+    return total;
+}
+
+// or
+
+function addAllArray(arr) {
+    let total = 0;
+
+    const reduced = arr.reduce((total, current) => {
+        return total += current;
+    }, 0);
+
+    return reduced;
+}
+
+console.log(addAllArray([2, 4, 7])); // 13
+console.log(addAllArray([2, 4, 7, 8])); // 21
+console.log(addAllArray([1, 2, 4, 7, 8])); // 22`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that turns a two-digit number to the sum of the two digits. For instance, "29" should return "11".
+            <hr>
+<pre>function addTwoDigits(num) {
+    // code here
+}
+
+console.log(addTwoDigits(29));</pre>`,
+        answer:
+`function addTwoDigits(num) {
+    const arr = num.toString().split("");
+
+    return parseInt(arr[0]) + parseInt(arr[1]);
+}
+
+console.log(addTwoDigits(29));`
+    },
+    ///
+    ///
+    {
+        question:
+            `Algorithm: Create a function that returns the pair of adjacent elements with the highest product. The result should be 21.
+            <hr>
+<pre>function adjacentElementsProduct(inputArr) {
+    // code here
+}
+
+console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));</pre>`,
+        answer:
+`function adjacentElementsProduct(inputArr) {
+    let largestProduct = inputArr[0] * inputArr[1];
+
+    for (let i = 1; i < inputArr.length - 1; i++) {
+        const product = inputArr[i] * inputArr[i + 1];
+        
+        largestProduct = largestProduct < product ? product : largestProduct;
+    }
+
+    return largestProduct;
+}
+
+console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Find the longest strings in an array of strings and return all strings matching this length. Use <strong>forEach</strong> loops.
+            <hr>
+<pre>function findAllLongestStrings(arr) {
+    // code here
+}
+
+console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));</pre>`,
+        answer:
+`function findAllLongestStrings(arr) {
+    let topLength = 0;
+    let newArr = [];
+
+    arr.forEach(i => {
+        topLength = topLength > i.length ? topLength : i.length;
+    });
+
+    arr.forEach(i => {
+        if (topLength === i.length) {
+            newArr.push(i);
+        }
+    });
+
+    return newArr;
+}
+
+console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that tells you if a sequence of numbers is increasing from left to right. One mistake can be tolerated in the sequence.
+            <hr>
+<pre>function evalAlmostIncreasing(arr) {
+    // code here
+}
+
+console.log(evalAlmostIncreasing([1, 3, 2]));
+console.log(evalAlmostIncreasing([1, 3, 1, 1]));</pre>`,
+        answer:
+`function evalAlmostIncreasing(arr) {
+    let countMistakes = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] <= arr[i - 1]) {
+            countMistakes++;
+        }
+    }
+
+    // as long as there is one mistake or less, returns true
+    return countMistakes <= 1;
+}
+
+console.log(evalAlmostIncreasing([1, 3, 2]));
+console.log(evalAlmostIncreasing([1, 3, 1, 1]));`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that tells you if a sequence of letters is in alphabetical order.
+            <hr>
+<pre>function isAlphabetical(str) {
+    // code here
+}
+
+console.log(isAlphabetical("abef")); // true
+console.log(isAlphabetical("zabc")); // false
+console.log(isAlphabetical("abczz")); // true</pre>`,
+        answer:
+`function isAlphabetical(str) {
+    const before = [...new Set(str)].join("");
+    const after = [...new Set(str)].sort().join("");
+
+    return before === after;
+}
+
+console.log(isAlphabetical("abef")); // true
+console.log(isAlphabetical("zabc")); // false
+console.log(isAlphabetical("abczz")); // true`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Return an array of two elements: total weight for group one (index even) and total weight for group two (index odd). Use a <strong>forEach loop</strong>.
+            <hr>
+<pre>function alternativeSums(weights) {
+    // code here
+}
+
+console.log(alternativeSums([50, 60, 60, 45, 70])); // [180, 105]</pre>`,
+        answer:
+`function alternativeSums(weights) {
+    let sumEven = 0;
+    let sumOdd = 0;
+
+    weights.forEach((v, i) => {
+        if (i % 2 === 0) {
+            sumEven += v;
+        } else {
+            sumOdd += v;
+        }
+    });
+
+    return [sumEven, sumOdd];
+}
+
+console.log(alternativeSums([50, 60, 60, 45, 70])); // [180, 105]`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that compares if two people are equally strong. To be equally strong, they have to be able to lift the same weight with their strong arm and their weak arm.
+            <hr>
+<pre>function areEquallyStrong(myLeft, myRight, friendLeft, friendRight)  {
+    // your code here
+}
+
+console.log(areEquallyStrong(10, 15, 15, 10)); // true
+console.log(areEquallyStrong(15, 10, 15, 10)); // true
+console.log(areEquallyStrong(15, 10, 15, 9)); // false
+console.log(areEquallyStrong(14, 11, 15, 10)); // false</pre>`,
+        answer:
+`function areEquallyStrong(myLeft, myRight, friendLeft, friendRight)  {
+    const myStrongArm = myLeft >= myRight ? myLeft : myRight;
+    const myweakArm = myLeft <= myRight ? myLeft : myRight;
+    const friendStrong = friendLeft >= friendRight ? friendLeft : friendRight;
+    const friendWeak = friendLeft <= friendRight ? friendLeft : friendRight;
+
+    return myStrongArm === friendStrong && myweakArm === friendWeak;
+}
+
+console.log(areEquallyStrong(10, 15, 15, 10)); // true
+console.log(areEquallyStrong(15, 10, 15, 10)); // true
+console.log(areEquallyStrong(15, 10, 15, 9)); // false
+console.log(areEquallyStrong(14, 11, 15, 10)); // false`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function that finds the maximal difference between two consecutive elements in an array.
+            <hr>
+<pre>function arrayMaximalAdjactentDifference(arr) {
+    // your code here
+}
+
+console.log(arrayMaximalAdjactentDifference([2, 4, 1, 0])); // returns 3 (4 - 3 = 1);</pre>`,
+        answer:
+`function arrayMaximalAdjactentDifference(arr) {
+    let inMemory = 0;
+
+
+    // "arr.length" - 1 to make sure you don't go beyond the limit
+    for (let i = 0; i < arr.length - 1; i++) {
+        let difference = Math.abs(arr[i] - arr[i + 1]);
+
+        if (difference > inMemory) {
+            inMemory = difference;
+        }
+    }
+
+    return inMemory;
+}
+
+console.log(arrayMaximalAdjactentDifference([2, 4, 1, 0])); // returns 3 (4 - 3 = 1);`
+    },
+    ///
+    {
+        question:
             `Algorithm: Create a function that loops through an array.
             <hr>
 <pre>// For every occurrence of an old value, a new value should replace it.
@@ -2337,43 +3040,6 @@ console.log(distCandies(10, 3)); // 9</pre>`,
 console.log(distCandies(10, 3)); // 9`
     },
     ///
-    {
-        question:
-            `JS: What is the output?
-            <hr>
-<pre>console.log(0.2 + 0.1)</pre>`,
-        answer:
-`0.30000000000000004
-
-One thing that can be done to solve this issues is:
-console.log((0.2 + 0.1).toFixed(2))
-
-Anothing possibility is to validate with a server-side language.`
-    },
-    ///
-    {
-        question:
-            `JS: What is instanceof and when should you use it?`,
-        answer:
-`Instanceof should not be used to find the type of a value.
-Typeof is there for that.
-
-// Bad practice
-console.log("string" instanceof String); // false
-
-// Instance of tells you is something is a class.
-class Test {
-    constructor(name) {
-        this.name = name;
-    }
-}
-
-let test = new Test("mytest");
-console.log(test instanceof Test);
-
-// careful! A class is also an Object.
-console.log(test instanceof Object);`
-    },
     ///
     {
         question:
@@ -2468,47 +3134,6 @@ console.log(findChessBoardCellColor("A2")); // white`
     ///
     {
         question:
-            `JS: What line of code do you use to create a redirection to another HTML page?`,
-        answer:
-`window.location.replace("https://www.protonmail.com");
-
-or
-
-location.replace("https://www.protonmail.com");`
-    },
-    ///
-    {
-        question:
-            `Interview: What are falsy values?`,
-        answer:
-`Everything is truthy, except for 6 values.
-These values are falsy:
-
-undefined
-null
-NaN
-0
-""
-false`
-    },
-    ///
-    {
-        question:
-            `Interview: Tell me about global variables.`,
-        answer:
-`In Javascript, the window object is a global variable.
-
-In day-to-day life, it's better to avoid global variables.
-
-Their scope is global, hence the name.
-
-It's a bad coding convention to use globals.
-
-Usually, it's not necessary to create globals.`
-    },
-    ///
-    {
-        question:
             `Algorithm: Create a function that takes 2 arguments: an array and a number. The function should return a two-dimensional array with the second argument as the length of the nested arrays.
             <hr>
 <pre>function chunkyMonkey (arr, size) {
@@ -2593,67 +3218,6 @@ console.log(sortNumbers([40, 100, 1, 5, 25, 10])); // [1, 5, 10, 25, 40, 100]`
     ///
     {
         question:
-            `Interview: What is the output?
-            <hr>
-<pre>console.log(2 + 3 + "7");</pre>`,
-        answer:
-`57
-This is called type coercion.`
-    },
-    ///
-    {
-        question:
-            `Interview: What is type coercion?`,
-        answer:
-`Example:
-
-console.log(2 + 3 + "7");`
-    },
-    ///
-    {
-        question:
-            `Interview: What is typeof?`,
-        answer:
-`Tells you the type of a value.
-
-Example:
-
-console.log(typeof 5); // returns number
-console.log(typeof "5"); // returns string
-
-Bonus:
-
-console.log(typeof [1, 2, 3]); // returns object
-console.log(Array.isArray([1, 2, 3])); // returns true
-
-console.log(typeof NaN); // number
-console.log(isNaN(NaN)); // true`
-    },
-    ///
-    {
-        question:
-            `Interview: What is the output?
-            <hr>
-<pre>console.log(typeof NaN);</pre>`,
-        answer:
-`number
-
-To solve this, use:
-
-console.log(isNaN(NaN)); // true`
-    },
-    ///
-    {
-        question:
-            `Interview: What is the output?
-            <hr>
-<pre>console.log(typeof undefined);</pre>`,
-        answer:
-`undefined`
-    },
-    ///
-    {
-        question:
             `Algorithm: Convert Celcius to Fahrenheit, knowing that the formula is Celcius times 9/5 + 32.
             <hr>
 <pre>function celsiusToF(celcius) {
@@ -2717,104 +3281,6 @@ console.log(findEmailDomain("*(%?%$T%/?&/%FD@email.com"));`,
 
 console.log(findEmailDomain("mysimpleaddress@email.com"));
 console.log(findEmailDomain("*(%?%$T%/?&/%FD@email.com"));`
-    },
-    ///
-    {
-        question:
-            `Interview: What can you tell about object notation?`,
-        answer:
-`user.firstName // dot notation
-user["firstName"] // bracket notation
-
-Dot notation should be used as much as possible instead of bracket notation.
-`
-    },
-    ///
-    {
-        question:
-            `Interview: What is an anonymous function?`,
-        answer:
-`It's a function that doesn't have it's own name.
-Instead, the function is store inside a variable.
-
-// Normal function
-function add(num1, num2) {
-    return num1 + num2;
-}
-
-// Anonymous function
-const add = function(num1, num2) {
-    return num1 + num2;
-}`
-    },
-    ///
-    {
-        question:
-            `Interview: What is a higher order function?`,
-        answer:
-`- The same as a callback.
-- You pass it in.
-- They are called at a later date (synchronously or asynchronously).
-
-Example:
-
-The map() method takes a callback, for instance.
-
-const arr = [1, 2, 3, 4, 5];
-
-const arr2 = arr.map((val) => val + 5);
-
-console.log(arr2); // [6, 7, 8, 9, 10]`
-    },
-    ///
-    {
-        question:
-            `Interview: What is a callback?`,
-        answer:
-`- The same as a higher order function.
-- You pass it in.
-- They are called at a later date (synchronously or asynchronously).
-
-Example:
-
-The map() method takes a callback, for instance.
-
-const arr = [1, 2, 3, 4, 5];
-
-const arr2 = arr.map((val) => val + 5);
-
-console.log(arr2); // [6, 7, 8, 9, 10]`
-    },
-    ///
-    {
-        question:
-            `JS: What characters do you use to reuse a matched regexp pattern?`,
-        answer:
-`$1 // JS
-&bsol;1 // text editor
-&bsol;&bsol;1 // Python`
-    },
-    ///
-    {
-        question:
-            `// Sass: What is the difference between .sass and .scss files?`,
-        answer:
-`.scss // new Sass
-.sass // old Sass`
-    },
-    ///
-    {
-        question:
-            `Interview: What are some naming conventions?`,
-        answer:
-`camelCase
-isAdult // boolean
-hasChild // boolean
-getTotal // function
-in CSS, you try to add as few selectors as possible
-in CSS, you use dash case
-CONSTANT
-limit the amount of variables`
     },
     ///
     {
@@ -2931,96 +3397,6 @@ console.log(convertToString(56)); // ["56"]
 `
     },
     ///
-    {
-        question:
-            `// Terminal: How do you empty the terminal window?`,
-        answer:
-`clear`
-    },
-    ///
-    {
-        question:
-            `Interview: How do you empty an array?
-            <hr>
-<pre>let x = 15;</pre>`,
-        answer:
-`let x = 15;
-x = [];
-
-or 
-
-let arr = [1, 2, 3];
-console.log(arr); // [1, 2, 3]
-
-arr.splice(0);
-console.log(arr); // []
-
-or
-
-while (arr.length > 0) {
-    arr.pop();
-}
-
-or 
-
-let arr = [1, 2, 3];
-console.log(arr); // [1, 2, 3]
-
-arr.length = 0;
-console.log(arr); // []`
-    },
-    ///
-    {
-        question:
-            `Interview: What is a MUL function?`,
-        answer:
-`MUL stands for multiplication.
-It's a function that returns one or many nested anonymous functions.
-It's not necessarily a good idea. It's dirty.
-
-Example:
-
-function example(x) {
-    return (y) => {
-        return (z) => {
-            return x * y * z;
-        }
-    }
-}
-
-console.log(example(5)(2)(4)); // 40`
-    },
-    ///
-    {
-        question:
-            `JS: How do you add a prop to the class?
-            <hr>
-<pre>class Test {
-    constructor(string) {
-        this.string = string;
-    }
-
-    printString() {
-        console.log(this.string);
-    }
-}
-
-let inst = new Test("myString");</pre>`,
-        answer:
-`class Test {
-    constructor(string) {
-        this.string = string;
-    }
-
-    printString() {
-        console.log(this.string);
-    }
-}
-
-let inst = new Test("myString");
-inst.age = 25;
-console.log(inst); // Test { string: "myString", age: 25 }`
-    },
     ///
     {
         question:
@@ -3043,104 +3419,6 @@ console.log(insertInArr([1, 2, 3, 4])); // [1, 2, "car", "truck", 3, 4]
 console.log(insertInArr(["a", "b", "c", "d"])); // ["a", "b", "car", "truck", "c", "d"]`
     },
     ///
-    {
-        question:
-            `Interview: What is an IIFE?`,
-        answer:
-`- Stands for "immediately invoked function expression"
-- Runs as soon as it is defined
-- Mainly used to avoid global variables
-- Not as useful as it used to be since the introduction of "let" and "const" in ES6
-- Used in frameworks/libraries such as jQuery
-- Arrow functions
-
-Example:
-
-(function() {
-    console.log("my logic");
-})();`
-    },
-    ///
-    {
-        question:
-            `JS: Write a barebone IIFE.`,
-        answer:
-`(function() {
-    console.log("my logic");
-})();`
-    },
-    ///
-    {
-        question:
-            `JS: What is the output?
-            <hr>
-<pre>console.log(0 / 0);</pre>`,
-        answer:
-`NaN`
-    },
-    ///
-    {
-        question:
-            `JS: What is the output?
-            <hr>
-<pre>console.log(typeof NaN);</pre>`,
-        answer:
-`number
-
-This would be the solution to really find out:
-
-console.log(isNaN(NaN)) // true`
-    },
-    ///
-    {
-        question:
-            `JS: What is the output?
-            <hr>
-<pre>console.log(parseInt("hellos"));</pre>`,
-        answer:
-`NaN`
-    },
-    ///
-    {
-        question:
-            `JS: What is the output?
-            <hr>
-<pre>console.log(0 / 0);</pre>`,
-        answer:
-`NaN`
-    },
-    ///
-    {
-        question:
-            `Interview: What is the difference between undeclared and undefined?`,
-        answer:
-`- Undeclared: Doesn't exist at all.
-
-- Undefined: Exists, but has no value.
--- Could be a non-existing property of an object too.`
-    },
-    ///
-    {
-        question:
-            `Interview: Name the DOM selectors.`,
-        answer:
-`- document.getElementById("")
-- document.getElementsByClassName("")
-- document.getElementsByTagName("")
-
-Slower:
-- document.querySelector("")
-- document.querySelectorAll("")
-
-To find out more you could use console.log on any of the above.`
-    },
-    ///
-    {
-        question:
-            `Interview: How do you copy an object?`,
-        answer:
-``
-    },
     ///
     {
         question:
@@ -3228,89 +3506,6 @@ console.log(checkIfObjIdentical({ name: "Jack" }, { name: "John" })); // true`
     ///
     {
         question:
-            `JS: What is the difference between splice() and slice()?`,
-        answer:
-`- splice() changes the array permanently (mnemonic device: p is for permanent)
-- slice() does not
-- you can add items to the array swith splice()`
-    },
-    ///
-    {
-        question:
-            `JS: What is the difference between map(), filter(), and reduce()?`,
-        answer:
-`- map() creates a copy of an array
-- filter() filters out items from an array
-- reduce() allows you to combine map() and filter() AND can be used to add up all values from an array`
-    },
-    ///
-    {
-        question:
-            `JS: Create a function that flattens an array.
-            <hr>
-<pre>function flattenArray(arr) {
-    // code here
-}
-
-console.log(flattenArray([1, 2, [3, 4]])); // [1, 2, 3, 4]</pre>`,
-        answer:
-`* Keep in mind that to flatten everything deeply, you could use arr.flat(Infinity)."
-
-function flattenArray(arr) {
-    const flat = arr.flat(1);
-    return flat;
-}
-
-console.log(flattenArray([1, 2, [3, 4]])); // [1, 2, 3, 4]`
-    },
-    ///
-    {
-        question:
-            `Interview: Give an example of array or object destructuring.`,
-        answer:
-`const [month, day, year] = [5, 11, 1955];
-console.log(month);
-
-// or
-
-let {
-    firstName: fn,
-    lastName: ln
-} = {
-    firstName: "John",
-    lastName: "Doe"
-};
-
-console.log(fn); // John
-console.log(ln); // Doe`
-    },
-    ///
-    {
-        question:
-            `Interview: What are the rest and spread operator?`,
-        answer:
-`Rest parameters (packs elements)
-- turns an indefinite number of arguments as an array
-
-Spread operator (unpack elements)
-- copies an array
-- concatenates arrays
-- adds to an array`
-    },
-    ///
-    {
-        question:
-            `Interview: What are some of the new ES6 features?`,
-        answer:
-`- template litterals
-- rest parameter/sprea operators
-- let/const
-- default values in functions
-- arrow functions`
-    },
-    ///
-    {
-        question:
             `Algorithm: Create a function that tells you if two strings have the same specific ending.`,
         answer:
 `function checkEndMatch(str1, str2, end) {
@@ -3321,32 +3516,6 @@ console.log(checkEndMatch("This is a car.", "I like this car.", "car.")); // tru
 console.log(checkEndMatch("This is a car.", "I like this car.", "car")); // false`
     },
     ///
-    {
-        question:
-            `Interview: Explain event delegation`,
-        answer:
-`JS event listeners fire not only on a single DOM element, but on all its children .`
-    },
-    ///
-    {
-        question:
-            `Interview: Describe event bubbling (aka event propagation)`,
-        answer:
-`Events on an element will bubble up and also fire on all parents.`
-    },
-    ///
-    {
-        question:
-            `JS: What is the output?
-            <hr>
-console.log("3" + 4);
-console.log("4" / "2");
-console.log("4" - "3");`,
-        answer:
-`console.log("3" + 4); // 34
-console.log("4" / "2"); // 2
-console.log("4" - "3"); // 1`
-    },
     ///
     {
         question:
@@ -3386,32 +3555,6 @@ console.log(checkEven(12345)); // false
 console.log(checkEven(24)); // true`
     },
     ///
-    {
-        question:
-            `Interview: How can you maintain state in an application?`,
-        answer:
-`You use local storage.`
-    },
-    ///
-    {
-        question:
-            `Interview: How can you erase duplicates from an array?`,
-        answer:
-`1. set
-2. iterate through the array and push to a new array is the value is not included in the first one`
-    },
-    ///
-    {
-        question:
-            `Interview: What are the HTTP methods/verbs?`,
-        answer:
-`- POST (create)
-- GET (read)
-- PUT (update)
-- DELETE (delete)
-
-In summary, the HTML equivalent of CRUD is PGPD.`
-    },
     ///
     {
         question:
@@ -3443,39 +3586,50 @@ console.log(letterInArray(["a", "b", "c"], "a")) // true
 console.log(letterInArray(["ab", "b", "c"], "a")) // false`
     },
     ///
+    ///
     {
         question:
-            `JS: Add a line to print the id to the console.
+            `
+                Algorithm: Create a function that returns a reversed string using JS methods.
+                <hr>
+<pre>function reverseLetters(str) {
+    // code here
+}
+
+console.log(reverseLetters("hello"));</pre>`,
+        answer:
+`function reverseLetters(str) {
+    let arr = str.split("");
+    arr = arr.reverse();
+    return arr.join("");
+}
+
+or
+
+function reverseLetters(str) {
+    return str.split("").reverse().join("");
+}
+
+console.log(reverseLetters("hello"));`
+    },
+    ///
+    {
+        question:
+            `Algorithm: Create a function to swap words. Use indices.
             <hr>
-<pre>&lt;button id="test"&gt;test&lt;/button&gt;
+<pre>function swapName(str) {
+    // code here
+}
 
-&lt;script&gt;
-
-    document.querySelector("#test").addEventListener("click", function(e) {
-        // code here
-    });
-
-&lt;/script&gt;</pre>`,
+console.log(swapName("John Doe"));</pre>`,
         answer:
-`&lt;button id="test"&gt;test&lt;/button&gt;
+`function swapName(str) {
+    const arr = str.split(" ");
 
-&lt;script&gt;
+    return arr[1] + " " + arr[0];
+}
 
-    document.querySelector("#test").addEventListener("click", function(e) {
-        console.log(this.id); // test
-    });
-
-&lt;/script&gt;`
+console.log(swapName("John Doe"));`
     },
     ///
-    {
-        question:
-            `HTML: What should you use instead of the <code>center</tag>?`,
-        answer:
-`margin: 0 auto
-
-* This tag is deprecated.`
-    },
-    ///
-
-]
+];
