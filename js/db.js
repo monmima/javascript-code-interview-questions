@@ -4,6 +4,29 @@ const database = [
     {
         question:
             `
+                JS: What do you use to know if an array has a character or number in it?
+            `,
+        answer:
+`arr.includes(1);
+
+Example:
+
+arr = [1, 2, 3, 4]
+console.log(arr.includes(1));`
+    },
+    ///
+    {
+        question:
+            `
+                JS: How do you find the last position of a character in a string?
+            `,
+        answer:
+`string.lastIndexOf("@");`
+    },
+    ///
+    {
+        question:
+            `
                 Node.js: How do you load the module for writing/reading files?
             `,
         answer:
@@ -2043,7 +2066,8 @@ const newObj = {...oldObj};`
         answer:
 `- splice() changes the array permanently (mnemonic device: p is for permanent)
 - slice() does not
-- you can add items to the array swith splice()`
+
+- you can add items to an array with splice()`
     },
     ///
     {
@@ -2321,1324 +2345,210 @@ Ideally, you should wrap this is a try / catch block.`
 `- span: inline element
 - div: block element`
     },
+    ///
+    {
+        question:
+            `JS: How do you turn a number to a string?`,
+        answer:
+`num.toString()`
+    },
+    ///
+    ///
+    {
+        question:
+            `JS: How do you turn a number to a string?`,
+        answer:
+`num.toString()`
+    },
+    ///
+    ///
+    {
+        question:
+            `JS: How do you write the filter method?`,
+        answer:
+`["a", "b", "c"].filter((v, i) => {
+    console.log(v, i);
+});`
+    },
+    ///
+    ///
+    {
+        question:
+            `JS: How do you generate a random number between 1 and 10?`,
+        answer:
+`Math.floor(Math.random() * 10 + 1)`
+    },
+    ///
+    ///
+    {
+        question:
+            `JS: What is the easiest way to repeat a string?`,
+        answer:
+`"car".repeat(3);`
+    },
+    ///
+    {
+        question:
+            `JS: How do you build a while loop?`,
+        answer:
+`let count = 0;
+
+while (count <= 10) {
+    console.log(count);
+    count++;
+}`
+    },
+    ///
+    ///
+    {
+        question:
+            `JS: How do you remove all punctuations in a string?`,
+        answer:
+`"This is an airport.".replace(/\W/g, " ");`
+    },
+    ///
+    ///
+    {
+        question:
+            `JS: How do you create a simple for loop?`,
+        answer:
+`arr = [1, 2, 3];
+
+for (v of arr) {
+    console.log(v);
+}`
+    },
+    ///
+    {
+        question:
+            `JS: How do you sort a string array?`,
+        answer:
+`["c", "a", "b"].sort()`
+    },
+    ///
+    {
+        question:
+            `JS: How do you turn a number of type string to a number of type number?`,
+        answer:
+`parseInt("33")`
+    },
+    ///
+    {
+        question:
+            `JS: How do you write a simple reduce function?`,
+        answer:
+`const reduced = [2, 3, 4].reduce((total, current) => {
+    return total += current;
+}, 0);`
+    },
+    ///
+    {
+        question:
+            `JS: How do you write a simple ternary operator?`,
+        answer:
+`const trueOrFalse = true ? "true" : "false";`
+    },
+    ///
+    {
+        question:
+            `JS: How do you eliminate duplicates in an array?`,
+        answer:
+`[...new Set(arr)]`
+    },
+    ///
+    {
+        question:
+            `JS: How do you get the positive value of a number?`,
+        answer:
+`Math.abs(-1)`
+    },
+    ///
+    {
+        question:
+            `JS: How do you get the last item fron an array?`,
+        answer:
+`arr[arr.length - 1]`
+    },
+    ///
+    {
+        question:
+            `JS: How do you get the first character of a string?`,
+        answer:
+`myString[0]`
+    },
+    ///
+    {
+        question:
+            `JS: How do you sort an array of number?`,
+        answer:
+`arr.sort(function(a, b) { return a - b });`
+    },
+    ///
+    {
+        question:
+            `JS: How do get all characters from a string but the first one?`,
+        answer:
+`str.substring(1)
+
+or 
+
+str.slice(1)`
+    },
+    ///
+    {
+        question:
+            `JS: How do you get the index of an item in an array?`,
+        answer:
+`letters.indexOf("a")`
+    },
+    ///
+    ///
+    {
+        question:
+            `Interview: How do you find out if an object is a copy of another object?`,
+        answer:
+`Object.is(obj1, obj2)
+
+or
+
+JSON.stringify(obj1) === JSON.stringify(obj2)`
+    },
+    ///
+    ///
+    {
+        question:
+            `Interview: How do you duplicate an object?`,
+        answer:
+`{...obj}`
+    },
+    ///
+    ///
+    {
+        question:
+            `JS: How do you write a simple every function and what is it for?`,
+        answer:
+`The every function check if all elements in an array pass a test.
+
+Example:
+
+[2, 3, 4, 5].every((i) => i < 40)`
+    },
+    ///
+    {
+        question:
+            `JS: How do you add stuff to the middle of an array?`,
+        answer:
+`With .splice().
+
+Example:
+
+arr = [1, 2, 3, 4];
+
+arr.splice(2, 0, "car", "truck")
+
+console.log(arr);`
+    },
+    ///
 ]
 
-const databaseAlgo = [
-    ///
-    {
-        question:
-            `Algorithm: Given an array of integers, remove the item located at an index.
-            <hr>
-<pre>function extractEachKth(arr, indexToDelete) {
-    // code here
-}
 
-console.log(extractEachKth([1, 2, 3, 4, 5], 3)); // [1, 2, 3, 5]</pre>`,
-        answer:
-`function extractEachKth(arr, indexToDelete) {
-    return arr.filter((v, i) => {
-        return i !== indexToDelete;
-    });
-}
-
-console.log(extractEachKth([1, 2, 3, 4, 5], 3)); // [1, 2, 3, 5]`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Extract all kth numbers from the matrix and create a new arr with them.
-            <hr>
-<pre>function extractMatrixColumn(matrix, num) {
-    // code here
-}
-
-console.log(extractMatrixColumn([[1, 1, 1, 2], [0, 5, 0, 4], [2, 1, 3, 6]], 2)); // [1, 0, 3] </pre>`,
-        answer:
-`function extractMatrixColumn(matrix, num) {
-    let res = [];
-
-    for (let i = 0; i < matrix.length; i++) {
-        res.push(matrix[i][num]);
-    }
-
-    return res;
-}
-
-console.log(extractMatrixColumn([[1, 1, 1, 2], [0, 5, 0, 4], [2, 1, 3, 6]], 2)); // [1, 0, 3] `
-    },
-    ///
-    {
-        question:
-            `
-                Algorithm: Create a function that returns a random <strong>integer from 1 to 10</strong>.
-                <hr>
-<pre>function randomInteger() {
-    // code here
-}
-
-console.log(randomInteger());</pre>
-            `,
-        answer:
-`function randomInteger() {
-    return Math.floor(Math.random() * 10 + 1);
-}
-
-console.log(randomInteger());`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that uses a loop to filter out odd numbers.
-            <hr>
-<pre>function removeOdds(arr) {
-    // code here
-}
-
-console.log(removeOdds([1, 2, 3, 4, 5])); // [2, 4]</pre>`,
-        answer:
-`function removeOdds(arr) {
-    const evenArr = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 === 0) {
-            evenArr.push(arr[i]);
-        }
-    }
-
-    return evenArr;
-}
-
-or
-
-function removeOdds(arr) {
-    return arr.filter(function(v) {
-        return v % 2 === 0;
-    });
-}
-
-console.log(removeOdds([1, 2, 3, 4, 5])); // [2, 4]`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function using the <strong>filter</strong> method to filter out odd numbers in an array.
-            <hr>
-<pre>function removeOdds(arr) {
-    // code here
-}
-
-console.log(removeOdds([1, 2, 3, 4, 5]));</pre>`,
-        answer:
-`function removeOdds(arr) {
-    return arr.filter(function(i) {
-        return i % 2 === 0;
-    });
-}`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that multiplies a string by a number with a <strong>for loop</strong>.
-            <hr>
-<pre>function repeatString(str, num) {
-    // code here
-}</pre>
-
-console.log(repeatString("car", 3));`,
-        answer:
-`function repeatString(str, num) {
-    let res = "";
-
-    if (num > 0) {
-        for (let i = 0; i < num; i++) {
-            res += str;
-        }
-    }
-
-    return res;
-}
-
-console.log(repeatString("car", 3));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that multiplies a string by a number with a <strong>string method</strong>.
-            <hr>
-<pre>function repeatString(str, num) {
-    // code here
-}</pre>`,
-        answer:
-`function repeatString(str, num) {
-    let res = "";
-
-    return res = str.repeat(num);
-}`
-    },
-    ///
-    ///
-    {
-        question:
-            `Algorithm: Create a function that repeats a string <code>num</code> times with a <strong>while loop</strong>.
-            <hr>
-<pre>function rep(str, num) {
-    // code here
-}
-
-console.log(rep("string", 3));</pre>`,
-        answer:
-`function rep(str, num) {
-    let newStr = "";
-    let i = 0;
-
-    if (num <= 0) {
-        return newStr;
-    }
-
-    while (i < num) {
-        newStr += str;
-        i++;
-    }
-
-    return newStr;
-}
-
-console.log(rep("string", 3));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that finds the longest word in a string. Use regexps and <code>.replace()</code>.
-            <hr>
-<pre>function findLongest(str) {
-    // code here
-}
-
-console.log(findLongest("Where in the airport?"));</pre>`,
-        answer:
-`function findLongest(str) {
-    let cleanString = str.replace(/\W/g, " ");
-
-    let inMemory = "";
-
-    let arr = cleanString.split(" ");
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length > inMemory.length) {
-            inMemory = arr[i];
-        }
-    }
-
-    return inMemory.length;
-}`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a one-line function that reverses a string with the <strong>spread operator</strong>.
-            <hr>
-<pre>function revString(str) {
-    // code here
-}
-
-console.log(revString("hello")); // ehllo<pre>`,
-        answer:
-`function revString(str) {
-    return [...str].reverse().join("");
-}
-
-console.log(revString("hello")); // ehllo`
-    },
-    ///
-    ///
-    {
-        question:
-            `Algorithm: Find the longest word in a string using a <strong>for of</strong> loop.
-            <hr>
-<pre>function longestWordLength(str) {
-    // your code here
-}
-
-console.log(longestWord("Where is the airport?")</pre>`,
-        answer:
-`function longestWordLength(str) {
-    let inMemory = "";
-    let cleanString = str.replace(/W/g, " ");
-    const arr = cleanString.split(" ");
-
-    for (let i of arr) {
-        if (inMemory.length < i.length) {
-            inMemory = i;
-        }
-    }
-
-    return inMemory.length;
-}
-
-console.log(longestWord("Where is the airport?")`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that removes all strings from an array with a <strong>for loop</strong>.`,
-        answer:
-`function removeStrings(arr) {
-    const newArr = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] === "number") {
-            newArr.push(arr[i]);
-        }
-    }
-
-    return newArr;
-};`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that removes all strings from an array with the <strong>filter method</strong>.
-            <hr>
-<pre>function removeStrings(arr) {
-    // code here
-}
-
-console.log(removeStrings(["word", 34, "another", 78, "one"])); // [34, 78]</pre>`,
-        answer:
-`<pre>function removeStrings(arr) {
-    return arr.filter(function (i) {
-        return typeof i === "number";
-    })
-}
-
-or
-
-function removeStrings(arr) {
-    return arr.filter(function (i) {
-        return Number.isInteger(i);
-    })
-}
-
-console.log(removeStrings(["word", 34, "another", 78, "one"])); // [34, 78]</pre>`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that restores the alphabetical order in a string.
-            <hr>
-<pre>function restoreAlpha(str) {
-    // code here
-}
-
-console.log(restoreAlpha("testa"));</pre>`,
-        answer:
-`<pre>function restoreAlpha(str) {
-    // 1. turn string into array
-    let arr = str.split("");
-
-    // 2. sort array
-    arr.sort();
-
-    // 3. join array and spit out result
-    return arr.join("");
-}
-
-or
-
-function restoreAlpha(str) {
-    return str.split("").sort().join("");
-}
-
-console.log(restoreAlpha("testa"));</pre>`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that sorts letters in a string using the <strong>spread operator</strong>.
-            <hr>
-<pre>function sortLetters(str) {
-    // code here
-}
-
-console.log(sortLetters("hello")); // ehlo</pre>`,
-        answer:
-`function sortLetters(str) {
-    let arr = [...str];
-    arr = arr.sort();
-    return arr.join("");
-}
-
-or
-
-function sortLetters(str) {
-    return [...str].sort().join("");
-}</pre>`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that tells you if a word is a palindrome. Make sure to compare lower-case words.
-            <hr>
-<pre>function isPalindrome(str) {
-    // your code here
-}
-
-console.log(isPalindrome("Laval"));
-console.log(isPalindrome("word"));</pre>`,
-        answer:
-`function isPalindrome(str) {
-    const before = str.toLowerCase();
-    const after = str.split("").reverse().join("").toLowerCase();
-
-    return before === after;
-}
-
-console.log(isPalindrome("Laval"));
-console.log(isPalindrome("word"));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that returns the median value (absolute value sum minimization). Use the ternary operator.
-            <hr>
-<pre>
-function absoluteValueSumMinimization(num) {
-    // code here
-}
-
-console.log(absoluteValueSumMinimization([2, 4, 7]));
-console.log(absoluteValueSumMinimization([2, 4, 7, 8]));
-console.log(absoluteValueSumMinimization([1, 2, 4, 7, 8]));</pre>`,
-        answer:
-`function absoluteValueSumMinimization(num) {
-    const isEven = num.length % 2 === 0;
-
-    return isEven ? num[num.length / 2 - 1] : num[Math.floor(num.length / 2)];
-}`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Using a <strong>forEach</strong> or a <strong>reduce</strong> loop, create a function that adds all items in an array and returns the total.
-            <hr>
-<pre>function addAllArray(arr) {
-    // code here
-}
-
-console.log(addAllArray([2, 4, 7])); // 13
-console.log(addAllArray([2, 4, 7, 8])); // 21
-console.log(addAllArray([1, 2, 4, 7, 8])); // 22</pre>`,
-        answer:
-`function addAllArray(arr) {
-    let total = 0;
-
-    arr.forEach(element => {
-        total += element;
-    });
-
-    return total;
-}
-
-// or
-
-function addAllArray(arr) {
-    let total = 0;
-
-    const reduced = arr.reduce((total, current) => {
-        return total += current;
-    }, 0);
-
-    return reduced;
-}
-
-console.log(addAllArray([2, 4, 7])); // 13
-console.log(addAllArray([2, 4, 7, 8])); // 21
-console.log(addAllArray([1, 2, 4, 7, 8])); // 22`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that turns a two-digit number to the sum of the two digits. For instance, "29" should return "11".
-            <hr>
-<pre>function addTwoDigits(num) {
-    // code here
-}
-
-console.log(addTwoDigits(29));</pre>`,
-        answer:
-`function addTwoDigits(num) {
-    const arr = num.toString().split("");
-
-    return parseInt(arr[0]) + parseInt(arr[1]);
-}
-
-console.log(addTwoDigits(29));`
-    },
-    ///
-    ///
-    {
-        question:
-            `Algorithm: Create a function that returns the pair of adjacent elements with the highest product. The result should be 21.
-            <hr>
-<pre>function adjacentElementsProduct(inputArr) {
-    // code here
-}
-
-console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));</pre>`,
-        answer:
-`function adjacentElementsProduct(inputArr) {
-    let largestProduct = inputArr[0] * inputArr[1];
-
-    for (let i = 1; i < inputArr.length - 1; i++) {
-        const product = inputArr[i] * inputArr[i + 1];
-        
-        largestProduct = largestProduct < product ? product : largestProduct;
-    }
-
-    return largestProduct;
-}
-
-console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Find the longest strings in an array of strings and return all strings matching this length. Use <strong>forEach</strong> loops.
-            <hr>
-<pre>function findAllLongestStrings(arr) {
-    // code here
-}
-
-console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));</pre>`,
-        answer:
-`function findAllLongestStrings(arr) {
-    let topLength = 0;
-    let newArr = [];
-
-    arr.forEach(i => {
-        topLength = topLength > i.length ? topLength : i.length;
-    });
-
-    arr.forEach(i => {
-        if (topLength === i.length) {
-            newArr.push(i);
-        }
-    });
-
-    return newArr;
-}
-
-console.log(findAllLongestStrings(["aaa", "bba", "aa", "cc", "dde"]));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that tells you if a sequence of numbers is increasing from left to right. One mistake can be tolerated in the sequence.
-            <hr>
-<pre>function evalAlmostIncreasing(arr) {
-    // code here
-}
-
-console.log(evalAlmostIncreasing([1, 3, 2]));
-console.log(evalAlmostIncreasing([1, 3, 1, 1]));</pre>`,
-        answer:
-`function evalAlmostIncreasing(arr) {
-    let countMistakes = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] <= arr[i - 1]) {
-            countMistakes++;
-        }
-    }
-
-    // as long as there is one mistake or less, returns true
-    return countMistakes <= 1;
-}
-
-console.log(evalAlmostIncreasing([1, 3, 2]));
-console.log(evalAlmostIncreasing([1, 3, 1, 1]));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that tells you if a sequence of letters is in alphabetical order.
-            <hr>
-<pre>function isAlphabetical(str) {
-    // code here
-}
-
-console.log(isAlphabetical("abef")); // true
-console.log(isAlphabetical("zabc")); // false
-console.log(isAlphabetical("abczz")); // true</pre>`,
-        answer:
-`function isAlphabetical(str) {
-    const before = [...new Set(str)].join("");
-    const after = [...new Set(str)].sort().join("");
-
-    return before === after;
-}
-
-console.log(isAlphabetical("abef")); // true
-console.log(isAlphabetical("zabc")); // false
-console.log(isAlphabetical("abczz")); // true`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Return an array of two elements: total weight for group one (index even) and total weight for group two (index odd). Use a <strong>forEach loop</strong>.
-            <hr>
-<pre>function alternativeSums(weights) {
-    // code here
-}
-
-console.log(alternativeSums([50, 60, 60, 45, 70])); // [180, 105]</pre>`,
-        answer:
-`function alternativeSums(weights) {
-    let sumEven = 0;
-    let sumOdd = 0;
-
-    weights.forEach((v, i) => {
-        if (i % 2 === 0) {
-            sumEven += v;
-        } else {
-            sumOdd += v;
-        }
-    });
-
-    return [sumEven, sumOdd];
-}
-
-console.log(alternativeSums([50, 60, 60, 45, 70])); // [180, 105]`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that compares if two people are equally strong. To be equally strong, they have to be able to lift the same weight with their strong arm and their weak arm.
-            <hr>
-<pre>function areEquallyStrong(myLeft, myRight, friendLeft, friendRight)  {
-    // your code here
-}
-
-console.log(areEquallyStrong(10, 15, 15, 10)); // true
-console.log(areEquallyStrong(15, 10, 15, 10)); // true
-console.log(areEquallyStrong(15, 10, 15, 9)); // false
-console.log(areEquallyStrong(14, 11, 15, 10)); // false</pre>`,
-        answer:
-`function areEquallyStrong(myLeft, myRight, friendLeft, friendRight)  {
-    const myStrongArm = myLeft >= myRight ? myLeft : myRight;
-    const myweakArm = myLeft <= myRight ? myLeft : myRight;
-    const friendStrong = friendLeft >= friendRight ? friendLeft : friendRight;
-    const friendWeak = friendLeft <= friendRight ? friendLeft : friendRight;
-
-    return myStrongArm === friendStrong && myweakArm === friendWeak;
-}
-
-console.log(areEquallyStrong(10, 15, 15, 10)); // true
-console.log(areEquallyStrong(15, 10, 15, 10)); // true
-console.log(areEquallyStrong(15, 10, 15, 9)); // false
-console.log(areEquallyStrong(14, 11, 15, 10)); // false`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that finds the maximal difference between two consecutive elements in an array.
-            <hr>
-<pre>function arrayMaximalAdjactentDifference(arr) {
-    // your code here
-}
-
-console.log(arrayMaximalAdjactentDifference([2, 4, 1, 0])); // returns 3 (4 - 3 = 1);</pre>`,
-        answer:
-`function arrayMaximalAdjactentDifference(arr) {
-    let inMemory = 0;
-
-
-    // "arr.length" - 1 to make sure you don't go beyond the limit
-    for (let i = 0; i < arr.length - 1; i++) {
-        let difference = Math.abs(arr[i] - arr[i + 1]);
-
-        if (difference > inMemory) {
-            inMemory = difference;
-        }
-    }
-
-    return inMemory;
-}
-
-console.log(arrayMaximalAdjactentDifference([2, 4, 1, 0])); // returns 3 (4 - 3 = 1);`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that loops through an array.
-            <hr>
-<pre>// For every occurrence of an old value, a new value should replace it.
-// Use a <strong>forEach</strong> loop.
-
-function arrayPreviousLess(arr, oldV, newV) {
-    // your code here
-}
-
-console.log(arrayPreviousLess([1, 2, 1], 1, 3)); // [3, 2, 3]</pre>`,
-        answer:
-`function arrayPreviousLess(arr, oldV, newV) {
-    const newArr = [...arr];
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === oldV) {
-            newArr[i] = newV;
-        }
-    }
-
-    return newArr;
-}
-
-// or
-
-function arrayPreviousLess(arr, oldV, newV) {
-    const newArr = [...arr];
-
-    arr.forEach((element, i) => {
-        if (element === oldV) {
-            newArr[i] = newV;
-        }
-    });
-
-    return newArr;
-}
-
-console.log(arrayPreviousLess([1, 2, 1], 1, 3)); // [3, 2, 3]`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that return the last item in an array.
-            <hr>
-<pre>function getLastItemArr(arr) {
-    // code here
-}
-
-console.log(getLastItemArr([1, 2, 3, 4]));
-</pre>`,
-        answer:
-`function getLastItemArr(arr) {
-    return arr[arr.length - 1];
-}
-
-console.log(getLastItemArr([1, 2, 3, 4]));
-`
-    },
-    ///
-    {
-        question:
-            `Algorithm: You have a stash of x candies for y children. Distribute all candies equally between the kids. Your function should return the amount that can be distributed.
-            <hr>
-<pre>function distCandies(candies, kids) {
-    // ...
-}
-
-console.log(distCandies(10, 3)); // 9</pre>`,
-        answer:
-`function distCandies(candies, kids) {
-    const candiesPerKids = Math.floor(candies / kids);
-    const distributedCandies = candiesPerKids * kids;
-
-    return distributedCandies;
-}
-
-console.log(distCandies(10, 3)); // 9`
-    },
-    ///
-    ///
-    {
-        question:
-            `Algorithm: Create a function that tells you what century a year is in.
-            <hr>
-<pre>function findCenturyForYear(year) {
-    // code here
-}
-
-console.log(findCenturyForYear(1905)); // 20
-console.log(findCenturyForYear(1700)); // 17
-console.log(findCenturyForYear(1701)); // 18</pre>`,
-        answer:
-`function findCenturyForYear(year) {
-    if (year % 100 === 0) {
-        return century = year / 100;
-    } else {
-        return century = Math.floor((year / 100) + 1);
-    }
-}
-
-console.log(findCenturyForYear(1905)); // 20
-console.log(findCenturyForYear(1700)); // 17
-console.log(findCenturyForYear(1701)); // 18`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that tells you is a character is a <strong>odd</strong>, <strong>even</strong> or is <strong>not even a digit</strong>.
-            <hr>
-<pre>function findOddEven(ch) {
-    // your code here
-}
-
-console.log(findOddEven(5)); // odd
-console.log(findOddEven(6)); // even
-console.log(findOddEven("q")); // not a digit
-console.log(findOddEven("2")); // even</pre>`,
-        answer:
-`function findOddEven(ch) {
-    // conversion of number strings into numbers
-    let testCh = parseInt(ch);
-
-    if (ch % 2 === 0) {
-        return "even";
-    } else if (ch % 2 > 0) {
-        return "odd";
-    } else if (isNaN(testCh)) {
-        return ("not a digit");
-    }
-}
-
-console.log(findOddEven(5)); // odd
-console.log(findOddEven(6)); // even
-console.log(findOddEven("q")); // not a digit
-console.log(findOddEven("2")); // even`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Find the color of a cell on a chessboard, knowing that a cell whose coordinates are even is black. You'll have to convert letters to numbers too (A = 1, B = 2, etc.).
-            <hr>
-<pre>function findChessBoardCellColor(cell) {
-    // code here
-}
-
-console.log(findChessBoardCellColor("C6")); // white
-console.log(findChessBoardCellColor("A1")); // black
-console.log(findChessBoardCellColor("A2")); // white</pre>`,
-        answer:
-`function findChessBoardCellColor(cell) {
-    const board = {
-        "A": 1,
-        "B": 2,
-        "C": 3,
-        "D": 4,
-        "E": 5,
-        "F": 6,
-        "G": 7,
-        "H": 8
-    }
-
-    const total = parseInt(board["A"]) + parseInt(cell[1]);
-
-    return total % 2 === 0 ? "black" : "white";
-}
-
-console.log(findChessBoardCellColor("C6")); // white
-console.log(findChessBoardCellColor("A1")); // black
-console.log(findChessBoardCellColor("A2")); // white`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that takes 2 arguments: an array and a number. The function should return a two-dimensional array with the second argument as the length of the nested arrays.
-            <hr>
-<pre>function chunkyMonkey (arr, size) {
-    // code here
-}
-
-console.log(chunkyMonkey(["a", "b", "c", "d"], 2)); // returns [["a", "b"], ["c", "d"]]
-console.log(chunkyMonkey([0, 1, 2, 3, 4, 5], 4)); // returns [[0, 1, 2, 3], [4, 5]]</pre>`,
-        answer:
-`function chunkyMonkey (arr, size) {
-    const nested = [];
-    let count = 0;
-
-    while (count < arr.length) {
-        nested.push(arr.slice(count, count += size));
-    }
-
-    return nested;
-}
-
-console.log(chunkyMonkey(["a", "b", "c", "d"], 2)); // returns [["a", "b"], ["c", "d"]]
-console.log(chunkyMonkey([0, 1, 2, 3, 4, 5], 4)); // returns [[0, 1, 2, 3], [4, 5]]`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Find common unique characters between two arrays.
-            <hr>
-<pre>function findCommonCharacters(arr1, arr2) {
-    // code here
-}
-
-console.log(findCommonCharacters(["a", "b", "c"], ["d", "a", "b"])); // returns ["a", "b"]</pre>`,
-        answer:
-`function findCommonCharacters(arr1, arr2) {
-    return arr1.filter(val => arr2.includes(val));
-}
-
-console.log(findCommonCharacters(["a", "b", "c"], ["d", "a", "b"])); // returns ["a", "b"]`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that returns a boolean based on whether or not the input array contains a duplicate.
-            <hr>
-<pre>function containsDuplicates(arr) {
-    // code here
-}
-
-console.log(containsDuplicates([1, 2, 3, 3])); // false
-console.log(containsDuplicates([1, 2, 3])); // true</pre>`,
-        answer:
-`function containsDuplicates(arr) {
-    const cleanArr = [...new Set(arr)];
-
-    return arr.length === cleanArr.length;
-}
-
-console.log(containsDuplicates([1, 2, 3, 3])); // false
-console.log(containsDuplicates([1, 2, 3])); // true`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that sorts a number array in ascending order.
-            <hr>
-<pre>function sortNumbers(arr) {
-    // code here
-}
-
-console.log(sortNumbers([40, 100, 1, 5, 25, 10])); // [1, 5, 10, 25, 40, 100]</pre>`,
-        answer:
-`function sortNumbers(arr) {
-    arr.sort(function(a, b) {
-        return a - b;
-    });
-    return arr;
-}
-
-console.log(sortNumbers([40, 100, 1, 5, 25, 10])); // [1, 5, 10, 25, 40, 100]`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Convert Celcius to Fahrenheit, knowing that the formula is Celcius times 9/5 + 32.
-            <hr>
-<pre>function celsiusToF(celcius) {
-    // code here
-}
-
-console.log(celsiusToF(-30)); // -22
-console.log(celsiusToF(-10)); // 14
-console.log(celsiusToF(0)); // 32</pre>`,
-        answer:
-`function celsiusToF(celcius) {
-    return celcius * (9 / 5) + 32;
-}
-
-console.log(celsiusToF(-30)); // -22
-console.log(celsiusToF(-10)); // 14
-console.log(celsiusToF(0)); // 32`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Return the factorial of the integer provided as a parameter. For instance, for the number five: 1 * 2 * 3 * 4 * 5 = 120.
-            <hr>
-<pre>function factorialize(limit) {
-    // code here
-}
-
-console.log(factorialize(5)); // 120
-console.log(factorialize(10)); // 3628800</pre>`,
-        answer:
-`function factorialize(limit) {
-    let total = 1;
-
-    for (let i = 1; i <= limit; i++) {
-        total *= i;
-    }
-
-    return total;
-}
-
-console.log(factorialize(5)); // 120
-console.log(factorialize(10)); // 3628800`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Return the domain name from an email adress.
-            <hr>
-<pre>function findEmailDomain(address) {
-    // code here
-}
-
-console.log(findEmailDomain("mysimpleaddress@email.com"));
-console.log(findEmailDomain("*(%?%$T%/?&/%FD@email.com"));`,
-        answer:
-`function findEmailDomain(address) {
-    const lastIndex = address.lastIndexOf("@");
-
-    return address.slice(lastIndex + 1);
-}
-
-console.log(findEmailDomain("mysimpleaddress@email.com"));
-console.log(findEmailDomain("*(%?%$T%/?&/%FD@email.com"));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Compare two integers given as string.
-            <hr>
-<pre>function compareIntegers (intStr1, intStr2) {
-    // code here
-}
-
-console.log(compareIntegers("12", "13")); // less
-console.log(compareIntegers("875", "799")); // greater
-console.log(compareIntegers("1000", "1000")); // equal</pre>`,
-        answer:
-`function compareIntegers (intStr1, intStr2) {
-    intStr1 = parseInt(intStr1);
-    intStr2 = parseInt(intStr2);
-
-    if (intStr1 > intStr2) {
-        return "greater";
-    } else if (intStr1 < intStr2) {
-        return "less";
-    } else {
-        return "equal";
-    }
-}
-
-console.log(compareIntegers("12", "13")); // less
-console.log(compareIntegers("875", "799")); // greater
-console.log(compareIntegers("1000", "1000")); // equal`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Find the index of a letter in the alphabet array.
-            <hr>
-<pre>function getIndex(letter) {
-    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-    // type your code here
-}
-
-console.log(getIndex("a"));
-console.log(getIndex("v"));</pre>`,
-        answer:
-`function getIndex(letter) {
-    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-    return alphabet.indexOf(letter);
-}
-
-console.log(getIndex("a"));
-console.log(getIndex("v"));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Remove duplicates in an array.
-            <hr>
-<pre>function removeDuplicates(arr) {
-    // code here
-}
-
-console.log(removeDuplicates(["a", "b", "c", "a", "c"])); // returns ["a", "b", "c"]</pre>`,
-        answer:
-`function removeDuplicates(arr) {
-    return [...new Set(arr)];
-}
-
-console.log(removeDuplicates(["a", "b", "c", "a", "c"])); // returns ["a", "b", "c"]`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that adds up the difference between each number in an array.
-            <hr>
-<pre>function sumUpDifference(arr) {
-    // code here
-}
-
-console.log(addUpDifference([1, 2, 3])); // (3 - 2) + (2 - 1) = 2
-console.log(addUpDifference([1, 3])); // 3 - 1 = 2</pre>`,
-        answer:
-`function addUpDifference(arr) {
-    let sumDiff = 0;
-
-    for (let i = arr.length - 1; i > 0; i--) {
-        sumDiff += arr[i] - arr[i - 1];
-    }
-
-    return sumDiff;
-}
-
-console.log(sumUpDifference([1, 2, 3])); // (3 - 2) + (2 - 1) = 2
-console.log(sumUpDifference([1, 3])); // 3 - 1 = 2`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that turns a number to a string array.
-            <hr>
-<pre>function convertToString(num) {
-    // your code here
-}
-
-console.log(convertToString(56)); // ["56"]
-</pre>`,
-        answer:
-`function convertToString(num) {
-    return [num.toString()];
-}
-
-console.log(convertToString(56)); // ["56"]
-`
-    },
-    ///
-    ///
-    {
-        question:
-            `Algorithm: Insert the words "car" and "truck", starting at index 2 of an array.
-            <hr>
-<pre>function insertInArr(arr) {
-    // code here
-}
-
-console.log(insertInArr([1, 2, 3, 4])); // [1, 2, "car", "truck", 3, 4]
-console.log(insertInArr(["a", "b", "c", "d"])); // ["a", "b", "car", "truck", "c", "d"]</pre>`,
-        answer:
-`function insertInArr(arr) {
-    arr.splice(2, 0, "car", "truck");;
-
-    return arr;
-}
-
-console.log(insertInArr([1, 2, 3, 4])); // [1, 2, "car", "truck", 3, 4]
-console.log(insertInArr(["a", "b", "c", "d"])); // ["a", "b", "car", "truck", "c", "d"]`
-    },
-    ///
-    ///
-    {
-        question:
-            `Algorithm: Create a function that checks if an object is actually a reference to another one.
-            <hr>
-<pre>const user1 = {
-    name: "Jack"
-}
-
-const user2 = user1;
-
-const user3 = {
-    name: "Joe"
-}
-
-function checkIfIsSameObject(obj1, obj2) {
-    // code here
-}
-
-console.log(checkIfIsSameObject(user1, user2)); // true
-console.log(checkIfIsSameObject(user1, user3)); // false</pre>`,
-        answer:
-`const user1 = {
-    name: "Jack"
-}
-
-const user2 = user1;
-
-const user3 = {
-    name: "Joe"
-}
-
-function checkIfIsSameObject(obj1, obj2) {
-    return Object.is(obj1, obj2);
-}
-
-console.log(checkIfIsSameObject(user1, user2)); // true
-console.log(checkIfIsSameObject(user1, user3)); // false`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that creates a copy of an object.
-            <hr>
-<pre>function copyObj(obj) {
-    // code here
-}
-
-console.log(copyObj({ name: "Jack" })); // { name: "Jack" }</pre>`,
-        answer:
-`function copyObj(obj) {
-    return {...obj};
-}
-
-// or
-
-function copyObj(obj) {
-    return JSON.parse(JSON.stringify(obj));
-}
-
-console.log(copyObj({ name: "Jack" })); // { name: "Jack" }`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that tells you if obj1 is identical to obj2.
-            <hr>
-<pre>function checkIfObjIdentical(obj1, obj2) {
-    ...
-}
-
-console.log(checkIfObjIdentical({ name: "Jack" }, { name: "Jack" })); // true
-console.log(checkIfObjIdentical({ name: "Jack" }, { name: "John" })); // true</pre>`,
-        answer:
-`function checkIfObjIdentical(obj1, obj2) {
-    obj1 = JSON.stringify(obj1);
-    obj2 = JSON.stringify(obj2);
-
-    return obj1 === obj2;
-}
-
-console.log(checkIfObjIdentical({ name: "Jack" }, { name: "Jack" })); // true
-console.log(checkIfObjIdentical({ name: "Jack" }, { name: "John" })); // true`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that tells you if two strings have the same specific ending.`,
-        answer:
-`function checkEndMatch(str1, str2, end) {
-    return str1.endsWith(end) && str2.endsWith(end) ? true : false;
-}
-
-console.log(checkEndMatch("This is a car.", "I like this car.", "car.")); // true
-console.log(checkEndMatch("This is a car.", "I like this car.", "car")); // false`
-    },
-    ///
-    ///
-    {
-        question:
-            `Algorithm: Using the <strong>every()</strong> array method, check if all digit of a given integer are even.
-            <hr>
-// * The every() method returns false as soon as the condition in the callback in not met on any iteration.
-
-function checkEven (num) {
-    // code here
-}
-
-console.log(checkEven(12345)); // false
-console.log(checkEven(24)); // true`,
-        answer:
-`function checkEven (num) {
-    const digits = num.toString().split("");
-
-    return digits.every(v => {
-        return parseInt(v) % 2 === 0;
-    });
-}
-// or
-
-function checkEven (num) {
-    const digits = num.toString().split("");
-
-    for (v of digits) {
-        if (parseInt(v) % 2 !== 0) {
-            return false;
-        }
-
-    }
-    return true;
-}
-
-console.log(checkEven(12345)); // false
-console.log(checkEven(24)); // true`
-    },
-    ///
-    ///
-    {
-        question:
-            `Algorithm: Create a function that turns a lowercase word to a title-case word.`,
-        answer:
-`function myFunction(str) {
-    return str[0].toUpperCase() + str.substring(1);
-}
-
-console.log(myFunction("this is a test.")); // "This is a test".`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function that tells you if a letter is part of an array of letters.
-            <hr>
-<pre>function letterInArray(arr, letter) {
-    // code here
-}
-
-console.log(letterInArray(["a", "b", "c"], "a")) // true
-console.log(letterInArray(["ab", "b", "c"], "a")) // false</pre>`,
-        answer:
-`function letterInArray(arr, letter) {
-    return arr.includes(letter);
-}
-
-console.log(letterInArray(["a", "b", "c"], "a")) // true
-console.log(letterInArray(["ab", "b", "c"], "a")) // false`
-    },
-    ///
-    ///
-    {
-        question:
-            `
-                Algorithm: Create a function that returns a reversed string using JS methods.
-                <hr>
-<pre>function reverseLetters(str) {
-    // code here
-}
-
-console.log(reverseLetters("hello"));</pre>`,
-        answer:
-`function reverseLetters(str) {
-    let arr = str.split("");
-    arr = arr.reverse();
-    return arr.join("");
-}
-
-or
-
-function reverseLetters(str) {
-    return str.split("").reverse().join("");
-}
-
-console.log(reverseLetters("hello"));`
-    },
-    ///
-    {
-        question:
-            `Algorithm: Create a function to swap words. Use indices.
-            <hr>
-<pre>function swapName(str) {
-    // code here
-}
-
-console.log(swapName("John Doe"));</pre>`,
-        answer:
-`function swapName(str) {
-    const arr = str.split(" ");
-
-    return arr[1] + " " + arr[0];
-}
-
-console.log(swapName("John Doe"));`
-    },
-    ///
-];
